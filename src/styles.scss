@@ -8,7 +8,7 @@
 
 html {
   @include col(stretch, stretch);
-  font-size: 1em;
+  font-size: 0.875em;
   height: 100%;
 }
 
@@ -16,15 +16,19 @@ body {
   @include expand();
   @include col(stretch, stretch);
   @include type(body);
+
+  font-family: $font-family;
 }
 
 .app {
   @include expand();
-  @include row($y: center);
+  @include col($x: center);
 }
 
 h1 {
   @include type(h1);
+  
+  color: color(brand);
 }
 
 h2 {

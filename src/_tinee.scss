@@ -1,4 +1,8 @@
+// Baseline of the system, used to keep a vertical and coherent rhythm
 $baseline: 1.5 !default;
+
+// Base font-family
+$font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue",Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 
 // baseline($ratio)
 //
@@ -63,7 +67,32 @@ $types: (
   @include align($y, $x, column);
 }
 
-@mixin expand($grow: 1, $shrink: 1) {
+@mixin expand($basis: 0, $grow: 1, $shrink: 1) {
   flex-grow: $grow;
   flex-shrink: $shrink;
+  flex-basis: $basis;
+}
+
+$colors: (
+  text: rgba(#000, 0.87),
+  brand: #9c4949
+);
+
+@function color($name, $variant: 0) {
+  $definition: map-get($colors, $name);
+
+  @if ($variant == -1) {
+    @return darken($definition, 15%);
+  }
+  @else if ($variant == -2) {
+    @return darken($definition, 25%);
+  }
+  @else if($variant == 1) {
+    @return lighten($definition, 15%);
+  }
+  @else if($variant == 2) {
+    @return lighten($definition, 25%);
+  }
+
+  @return $definition;
 }

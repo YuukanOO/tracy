@@ -1,9 +1,13 @@
 import Vue from 'vue';
-import app from './components/app.vue';
+import createStore from './store';
+import App from './components/App.vue';
 import './styles.scss';
 
+const store = createStore();
+
 const vm = new Vue({
-  render: h => h(app),
+  store,
+  render: h => h(App),
 });
 
 vm.$mount('#root');
