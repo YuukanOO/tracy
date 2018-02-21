@@ -1,12 +1,16 @@
 import Vue from 'vue';
+
 import createStore from './store';
-import App from './components/App.vue';
-import './styles.scss';
+import createRouter from './router';
+
+import App from './layouts/App.vue';
 
 const store = createStore();
+const router = createRouter();
 
 const vm = new Vue({
   store,
+  router,
   render: h => h(App),
 });
 
