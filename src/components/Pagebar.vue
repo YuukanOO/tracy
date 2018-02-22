@@ -1,10 +1,8 @@
 <template>
   <div class="pagebar">
-    <div class="pagebar__wrapper">
-      <h1 class="pagebar__title">{{title}}</h1>
-      <div class="pagebar__actions">
-        <slot />
-      </div>
+    <h1 class="pagebar__title">{{title}}</h1>
+    <div class="pagebar__actions">
+      <slot />
     </div>
   </div>
 </template>
@@ -23,6 +21,8 @@ export default {
 @import "./../_vars.scss";
 
 .pagebar {
+  @include row($x: space-between, $y: center);
+
   padding: baseline(0.5) 0;
 
   &__title {
@@ -33,13 +33,6 @@ export default {
 
   &__actions {
     @include row($x: flex-start, $y: center);
-  }
-
-  &__wrapper {
-    @include row($x: space-between, $y: center);
-    margin: 0 auto;
-    max-width: $max-width;
-    width: 100%;
   }
 }
 </style>

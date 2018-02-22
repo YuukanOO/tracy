@@ -1,5 +1,5 @@
 <template>
-  <button @click="$emit('click', $event)" :class="{ 'btn': true, 'btn--inverse': inverse }">
+  <button @click="$emit('click', $event)" :class="{ 'btn': true, 'btn--inverse': inverse, 'btn--secondary': secondary }">
     <slot />
   </button>
 </template>
@@ -9,6 +9,10 @@ export default {
   name: 'Btn',
   props: {
     inverse: {
+      type: Boolean,
+      default: false,
+    },
+    secondary: {
       type: Boolean,
       default: false,
     },
@@ -34,7 +38,7 @@ export default {
   transition: all 0.2s;
 
   & + & {
-    margin-left: baseline();
+    margin-left: baseline(0.5);
   }
 
   &:focus {
@@ -64,6 +68,23 @@ export default {
     &:hover {
       background-color: color(text-inverse);
       color: color(brand);
+    }
+  }
+
+  &--secondary {
+    border-color: color(text, 1);
+    color: color(text, 1);
+
+    &:focus {
+      box-shadow: 0 0 10px color(text, 1);
+    }
+
+    &:hover {
+      background-color: color(text, 1);
+    }
+
+    &:active {
+      border-color: color(text, 1);
     }
   }
 }

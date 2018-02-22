@@ -3,7 +3,7 @@ $palette: (
   accent: #0277BD,
   divider: rgba(black, 0.12),
   text: (black, rgba(black, 0.87), rgba(black, 0.54)),
-  text-inverse: white,
+  text-inverse: (10%, white, rgba(white, 0.54)),
 );
 
 $types: (
