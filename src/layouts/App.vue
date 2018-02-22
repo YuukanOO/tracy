@@ -43,11 +43,5 @@ body {
 .app {
   @include col($x: stretch);
   flex: 1;
-
-  &__content {
-    margin: 0 auto;
-    max-width: $max-width;
-    width: 100%;
-  }
 }
 </style>

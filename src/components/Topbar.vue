@@ -21,12 +21,12 @@
 
   &__link {
     @include type(small);
-    color: color(text-inverse, -1);
+    color: color(text-inverse);
     text-decoration: none;
 
     &:hover,
     &:focus {
-      color: color(text-inverse);
+      color: color(text-inverse, -1);
     }
   }
 }
