@@ -1,5 +1,5 @@
 <template>
-  <button @click="$emit('click', $event)" :class="{ 'btn': true, 'btn--inverse': inverse, 'btn--secondary': secondary }">
+  <button @click="$emit('click', $event)" :type="submit ? 'submit' : 'button'" :class="{ 'btn': true, 'btn--inverse': inverse, 'btn--secondary': secondary }">
     <slot />
   </button>
 </template>
@@ -8,6 +8,10 @@
 export default {
   name: 'Btn',
   props: {
+    submit: {
+      type: Boolean,
+      default: false,
+    },
     inverse: {
       type: Boolean,
       default: false,
@@ -72,7 +76,7 @@ export default {
   }
 
   &--secondary {
-    border-color: color(text, 1);
+    border-color: to-rgb(color(text, 1));
     color: color(text, 1);
 
     &:focus {
@@ -84,7 +88,7 @@ export default {
     }
 
     &:active {
-      border-color: color(text, 1);
+      border-color: to-rgb(color(text, 1));
     }
   }
 }

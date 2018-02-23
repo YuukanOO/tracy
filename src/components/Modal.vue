@@ -46,7 +46,7 @@ export default {
 
   background-color: rgba(black, 0.42);
   padding: baseline();
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;

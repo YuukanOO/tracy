@@ -23,6 +23,7 @@ export default {
 .pagebar {
   @include row($x: space-between, $y: center);
 
+  margin-bottom: baseline();
   padding: baseline(0.5) 0;
 
   &__title {

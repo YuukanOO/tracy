@@ -16,7 +16,12 @@
   &__wrapper {
     margin: 0 auto;
     max-width: $max-width;
+    padding: 0 baseline();
     width: 100%;
+
+    @include on(desktop) {
+      padding: 0;
+    }
   }
 
   &__link {
