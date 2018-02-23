@@ -1,6 +1,8 @@
 <template>
   <div class="pagebar">
-    <h1 class="pagebar__title">{{title}}</h1>
+    <div>
+      <h1 class="pagebar__title">{{title}} <small>{{subtitle}}</small></h1>
+    </div>
     <div class="pagebar__actions">
       <slot />
     </div>
@@ -12,6 +14,7 @@ export default {
   name: 'Pagebar',
   props: {
     title: { type: String, required: true },
+    subtitle: String,
   },
 }
 </script>
@@ -30,6 +33,12 @@ export default {
     @include type(body);
     color: color(text-inverse);
     font-weight: bold;
+
+    small {
+      @include type(small);
+      color: color(text-inverse, 1);
+      font-weight: normal;
+    }
   }
 
   &__actions {

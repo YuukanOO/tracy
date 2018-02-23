@@ -2,6 +2,11 @@
   <div class="topbar">
     <div class="topbar__wrapper">
       <router-link class="topbar__link" to="/">rasa-tinyui</router-link>
+      <div>
+        <router-link class="topbar__link" :to="{ name: 'agents' }">agents</router-link>
+        <router-link class="topbar__link" :to="{ name: 'skills' }">skills</router-link>
+        <router-link class="topbar__link" :to="{ name: 'entities' }">entities</router-link>
+      </div>
     </div>
   </div>
 </template>
@@ -14,6 +19,8 @@
   padding: baseline(0.5) 0;
 
   &__wrapper {
+    @include row($x: space-between, $y: center);
+
     margin: 0 auto;
     max-width: $max-width;
     padding: 0 baseline();
@@ -28,6 +35,10 @@
     @include type(small);
     color: color(text-inverse);
     text-decoration: none;
+
+    & + & {
+      margin-left: baseline();
+    }
 
     &:hover,
     &:focus {

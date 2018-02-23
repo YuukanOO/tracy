@@ -9,14 +9,15 @@
     </blankslate>
 
     <transition-group class="agents__list" name="pop" tag="div">
-      <a href="#" @click.prevent="edit(agent)" v-for="agent in agents" :key="agent.id" class="agent-item">
+      <router-link :to="{ name: 'agent', params: { id: agent.id } }" v-for="agent in agents" :key="agent.id" class="agent-item">
           <span class="agent-item__name">{{agent.name}}</span>
           <span class="agent-item__description">{{agent.description}}</span>
-      </a>
+          <span class="agent-item__meta">{{agent.skills.length}} skill{{agent.skills.length > 1 ? 's' : ''}}</span>
+      </router-link>
     </transition-group>
 
     <form>
-      <modal :title="`${agent.id ? 'Update' : 'Create'} an agent`" v-model="agentModal">
+      <modal title="Create an agent" v-model="agentModal">
         <textinput label="Name" v-model="agent.name" />
         <textinput label="Description" v-model="agent.description" />
 
@@ -50,16 +51,12 @@ export default {
   },
   methods: {
     create() {
-      this.agent = { id: 0, name: '', description: '' };
+      this.agent = { name: '', description: '' };
       this.agentModal = true;
     },
     async save() {
       await this.$store.dispatch(actions.upsertAgent.name, this.agent);
       this.agentModal = false;
-    },
-    edit(agent) {
-      this.agent = { ...agent };
-      this.agentModal = true;
     },
   },
 }
@@ -90,14 +87,15 @@ export default {
   }
 
   background-color: white;
-  border-radius: 100px;
+  border-radius: 35px;
   outline: none;
-  padding: baseline();
   text-decoration: none;
   transition: all 0.2s;
 
   &__name {
     color: color(brand);
+    padding: baseline();
+    padding-bottom: 0;
     display: block;
     font-weight: bold;
   }
@@ -106,6 +104,17 @@ export default {
     @include type(small);
     color: color(text, 1);
     display: block;
+    padding: baseline();
+    padding-top: 0;
+  }
+
+  &__meta {
+    @include type(small);
+    border-top: 1px solid color(divider);
+    color: color(text, 1);
+    display: block;
+    text-align: right;
+    padding: baseline(0.5) baseline();
   }
 
   transform: scale(1);
