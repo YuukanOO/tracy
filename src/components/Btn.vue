@@ -37,7 +37,7 @@ export default {
 
   background-color: transparent;
   border: 2px solid color(brand);
-  border-radius: 100px;
+  border-radius: 25px;
   font-weight: bold;
   color: color(brand);
   cursor: pointer;

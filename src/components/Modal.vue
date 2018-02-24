@@ -75,7 +75,7 @@ export default {
   &__card {
     background-color: color(text-inverse);
     box-shadow: 0 0 10px color(text);
-    border-radius: 35px;
+    border-radius: 25px;
     width: 100%;
     transition: all 0.2s;
     transform: scale(1);

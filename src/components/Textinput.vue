@@ -2,11 +2,16 @@
   <div class="textinput">
     <label :for="_uid" class="textinput__label">{{label}}</label>
     <input 
+      v-if="multiple === false"
       type="text" 
       :id="_uid" 
       class="textinput__input" 
       :value="value" 
       @input="$emit('input', $event.target.value)" />
+    <textarea v-else class="textinput__input textinput--multiple"
+      :value="value" 
+      @input="$emit('input', $event.target.value)"
+    />
   </div>
 </template>
 
@@ -16,6 +21,10 @@ export default {
   props: {
     value: {},
     label: String,
+    multiple: {
+      type: Boolean,
+      default: false,
+    },
   },
 }
 </script>
@@ -24,7 +33,7 @@ export default {
 @import "./../_vars.scss";
 
 .textinput {
-  & + & {
+  & + * {
     margin-top: baseline();
   }
 
@@ -40,7 +49,8 @@ export default {
     @include type(small);
     background-color: transparent;
     border: 2px solid color(divider);
-    border-radius: 100px;
+    border-radius: 25px;
+    font-family: inherit;
     outline: none;
     padding: baseline(0.25) baseline(0.5);
     width: 100%;
