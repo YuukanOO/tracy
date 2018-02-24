@@ -1,21 +1,21 @@
+import Vue from 'vue';
+
 const mutations = {
   addAgent(state, { name, description }) {
-    state.agents.push({
-      id: state.agents.length + 1,
+    const id = Object.keys(state.agents).length + 1;
+
+    Vue.set(state.agents, id, {
+      id,
       name,
       description,
       skills: [],
     });
   },
   deleteAgent(state, id) {
-    const idx = state.agents.findIndex(o => o.id === id);
-
-    if (idx >= 0) {
-      state.agents.splice(idx, 1);
-    }
+    Vue.delete(state.agents, id);
   },
   setAgent(state, { id, name, description }) {
-    const agent = state.agents.find(o => o.id === id);
+    const agent = state.agents[id];
 
     if (agent) {
       agent.name = name;
@@ -38,16 +38,16 @@ export const actions = {
 };
 
 const getters = {
-  agents: state => state.agents,
-  skills: state => state.skills,
-  entities: state => state.entities,
-  agent: state => id => state.agents[id - 1],
+  agents: state => Object.values(state.agents),
+  skills: state => Object.values(state.skills),
+  entities: state => Object.values(state.entities),
+  agent: state => id => state.agents[id],
 };
 
 const state = {
-  agents: [],
-  skills: [],
-  entities: [],
+  agents: {},
+  skills: {},
+  entities: {},
 };
 
 export default {
