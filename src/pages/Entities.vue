@@ -9,13 +9,16 @@
     </blankslate>
 
     <list-item class="entities__list">
-      <entity-item 
+      <card
         @click.prevent="edit(entity)"
+        to="#"
         v-for="entity in entities" 
         :key="entity.id" 
         class="entities__item" 
-        :entity="entity" 
-      />
+        :title="entity.name" 
+      >
+        {{entity.type}}
+      </card>
     </list-item>
 
     <form>
@@ -40,7 +43,7 @@ import { mapGetters } from 'vuex';
 
 import ListItem from './../animations/ListItem.vue';
 
-import EntityItem from './../components/EntityItem.vue';
+import Card from './../components/Card.vue';
 import Textinput from './../components/Textinput.vue';
 import Radio from './../components/Radio.vue';
 import Pagebar from './../components/Pagebar.vue';
@@ -52,7 +55,7 @@ import { actions } from './../store/agents';
 
 export default {
   name: 'Entities',
-  components: { Pagebar, Btn, Blankslate, Modal, Textinput, Radio, EntityItem, ListItem },
+  components: { Pagebar, Btn, Blankslate, Modal, Textinput, Radio, Card, ListItem },
   data() {
     return {
       entityModal: false,

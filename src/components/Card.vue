@@ -1,19 +1,25 @@
 <template>
-  <router-link :to="{ name: 'agent', params: { id: agent.id } }" class="agent-item">
-    <span class="agent-item__name">{{agent.name}}</span>
-    <span class="agent-item__description">{{agent.description}}</span>
-    <span class="agent-item__meta">{{agent.skills.length}} skill{{agent.skills.length > 1 ? 's' : ''}}</span>
+  <router-link :class="{ 'card': true, 'card--title-only': !subtitle }" :to="to" @click.native="$emit('click', $event)">
+    <span class="card__title">{{title}}</span>
+    <span class="card__subtitle" v-if="subtitle">{{subtitle}}</span>
+    <span class="card__meta">
+      <slot />
+    </span>
   </router-link>
 </template>
 
 <script>
 export default {
-  name: 'AgentItem',
+  name: 'Card',
   props: {
-    agent: {
-      type: Object,
+    to: {
       required: true,
     },
+    title: {
+      type: String,
+      required: true,
+    },
+    subtitle: String,
   },
 }
 </script>
@@ -21,14 +27,14 @@ export default {
 <style lang="scss">
 @import "./../_vars.scss";
 
-.agent-item {
+.card {
   background-color: white;
   border-radius: 35px;
   outline: none;
   text-decoration: none;
   transition: all 0.2s;
 
-  &__name {
+  &__title {
     color: color(brand);
     padding: baseline();
     padding-bottom: 0;
@@ -36,7 +42,13 @@ export default {
     font-weight: bold;
   }
 
-  &__description {
+  &--title-only {
+    .card__title {
+      padding-bottom: baseline();
+    }
+  }
+
+  &__subtitle {
     @include type(small);
     color: color(text, 1);
     display: block;

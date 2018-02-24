@@ -9,12 +9,16 @@
     </blankslate>
 
     <list-item class="agents__list">
-      <agent-item 
-        v-for="agent in agents" 
-        :key="agent.id" 
-        class="agents__item" 
-        :agent="agent" 
-      />
+      <card 
+        v-for="agent in agents"
+        :key="agent.id"
+        class="agents__item"
+        :to="{ name: 'agent', params: { id: agent.id } }"
+        :title="agent.name"
+        :subtitle="agent.description"
+      >
+        {{agent.skills.length}} skill{{agent.skills.length > 1 ? 's' : ''}}
+      </card>
     </list-item>
 
     <form>
@@ -31,12 +35,12 @@
 <script>
 import { mapGetters } from 'vuex';
 
-import AgentItem from './../components/AgentItem.vue';
 import Blankslate from './../components/Blankslate.vue';
 import Pagebar from './../components/Pagebar.vue';
 import Btn from './../components/Btn.vue';
 import Modal from './../components/Modal.vue';
 import Textinput from './../components/Textinput.vue';
+import Card from './../components/Card.vue';
 
 import ListItem from './../animations/ListItem.vue';
 
@@ -44,7 +48,7 @@ import { actions } from './../store/agents';
 
 export default {
   name: 'Agents',
-  components: { AgentItem, Pagebar, Btn, Modal, Blankslate, Textinput, ListItem },
+  components: { Pagebar, Btn, Modal, Blankslate, Textinput, ListItem, Card },
   data() {
     return {
       agentModal: false,
