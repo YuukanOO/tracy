@@ -10,6 +10,7 @@
       @input="$emit('input', $event.target.value)" />
     <textarea v-else class="textinput__input textinput--multiple"
       :value="value" 
+      :id="_uid"
       @input="$emit('input', $event.target.value)"
     />
   </div>
