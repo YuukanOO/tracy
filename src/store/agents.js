@@ -1,8 +1,10 @@
 import Vue from 'vue';
 
+const generateId = obj => Math.max(...Object.keys(obj)) + 1;
+
 const mutations = {
   addAgent(state, { name, description }) {
-    const id = Object.keys(state.agents).length + 1;
+    const id = generateId(state.agents);
 
     Vue.set(state.agents, id, {
       id,
@@ -22,6 +24,30 @@ const mutations = {
       agent.description = description;
     }
   },
+  addEntity(state, { name, type, content }) {
+    const id = generateId(state.entities);
+
+    Vue.set(state.entities, id, {
+      id,
+      name,
+      type,
+      content,
+    });
+  },
+  deleteEntity(state, id) {
+    Vue.delete(state.entities, id);
+  },
+  setEntity(state, {
+    id, name, type, content,
+  }) {
+    const entity = state.entities[id];
+
+    if (entity) {
+      entity.name = name;
+      entity.type = type;
+      entity.content = content;
+    }
+  },
 };
 
 export const actions = {
@@ -34,6 +60,16 @@ export const actions = {
   },
   removeAgent({ commit }, id) {
     commit(mutations.deleteAgent.name, id);
+  },
+  upsertEntity({ commit }, data) {
+    if (data.id) {
+      commit(mutations.setEntity.name, data);
+    } else {
+      commit(mutations.addEntity.name, data);
+    }
+  },
+  removeEntity({ commit }, id) {
+    commit(mutations.deleteEntity.name, id);
   },
 };
 
