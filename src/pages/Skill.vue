@@ -4,6 +4,18 @@
       <btn inverse @click.prevent="edit">Edit skill</btn>
     </pagebar>
 
+    <c-section title="Slots">
+      <blankslate title="No slot yet">
+        Add a slot to extract entities from text!
+      </blankslate>
+    </c-section>
+
+    <c-section title="Training data">
+      <blankslate title="No training data yet">
+        Add training data to train your skill!
+      </blankslate>
+    </c-section>
+
     <form>
       <modal title="Edit skill" v-model="skillModal">
         <textinput label="Name" v-model="data.name" />
@@ -19,6 +31,8 @@
 <script>
 import { actions } from './../store/agents';
 
+import CSection from './../components/Section.vue';
+import Blankslate from './../components/Blankslate.vue';
 import Modal from './../components/Modal.vue';
 import Textinput from './../components/Textinput.vue';
 import Btn from './../components/Btn.vue';
@@ -26,7 +40,7 @@ import Pagebar from './../components/Pagebar.vue';
 
 export default {
   name: 'Skill',
-  components: { Pagebar, Btn, Modal, Textinput },
+  components: { Pagebar, Btn, Modal, Textinput, CSection, Blankslate },
   data() {
     return {
       skillModal: false,
@@ -36,7 +50,7 @@ export default {
   computed: {
     skill() {
       return this.$store.getters.skill(this.$route.params.id);
-    }
+    },
   },
   methods: {
     edit() {

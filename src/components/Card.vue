@@ -30,6 +30,7 @@ export default {
 .card {
   background-color: white;
   border-radius: 35px;
+  box-shadow: 0 0 5px color(brand, -1);
   outline: none;
   text-decoration: none;
   transition: all 0.2s;

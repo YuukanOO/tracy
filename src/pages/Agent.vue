@@ -4,6 +4,12 @@
       <btn inverse @click.prevent="edit">Edit agent</btn>
     </pagebar>
 
+    <c-section title="Skills">
+      <blankslate title="No skill yet">
+        Add a skill to your agent to make it useful!
+      </blankslate>
+    </c-section>
+
     <form>
       <modal title="Edit agent" v-model="agentModal">
         <textinput label="Name" v-model="data.name" />
@@ -19,6 +25,8 @@
 <script>
 import { actions } from './../store/agents';
 
+import CSection from './../components/Section.vue';
+import Blankslate from './../components/Blankslate.vue';
 import Modal from './../components/Modal.vue';
 import Textinput from './../components/Textinput.vue';
 import Btn from './../components/Btn.vue';
@@ -26,7 +34,7 @@ import Pagebar from './../components/Pagebar.vue';
 
 export default {
   name: 'Agent',
-  components: { Pagebar, Btn, Modal, Textinput },
+  components: { Pagebar, Btn, Modal, Textinput, CSection, Blankslate },
   data() {
     return {
       agentModal: false,
@@ -36,7 +44,7 @@ export default {
   computed: {
     agent() {
       return this.$store.getters.agent(this.$route.params.id);
-    }
+    },
   },
   methods: {
     edit() {

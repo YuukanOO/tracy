@@ -39,6 +39,7 @@ export default {
 
   &__content {
     @include col($x: center, $y: center);
+    padding: baseline() 0;
   }
 }
 </style>
