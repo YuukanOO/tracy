@@ -5,6 +5,7 @@
     </pagebar>
 
     <c-section title="Skills">
+      <btn slot="actions" inverse>Add a skill</btn>
       <blankslate title="No skill yet">
         Add a skill to your agent to make it useful!
       </blankslate>

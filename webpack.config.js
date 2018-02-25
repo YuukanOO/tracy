@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const pkg = require('./package.json');
 
 module.exports = {
   entry: {
@@ -38,6 +39,9 @@ module.exports = {
       filename: 'index.html',
       chunks: ['polyfill', 'app'],
       template: path.resolve(__dirname, './src/index.html'),
+    }),
+    new webpack.DefinePlugin({
+      VERSION: JSON.stringify(pkg.version),
     }),
     new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin(),

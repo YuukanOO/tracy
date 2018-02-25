@@ -1,6 +1,6 @@
 <template>
   <div class="pagebar">
-    <h1 class="pagebar__title">{{title}} <small>{{subtitle}}</small></h1>
+    <h1 class="pagebar__title"><span v-if="prefix">{{prefix}} <span class="pagebar__delimiter">/ </span></span>{{title}} <small>{{subtitle}}</small></h1>
     <div class="pagebar__actions">
       <slot />
     </div>
@@ -13,6 +13,7 @@ export default {
   props: {
     title: { type: String, required: true },
     subtitle: String,
+    prefix: String,
   },
 }
 </script>
@@ -40,6 +41,10 @@ export default {
       color: color(text-inverse, 1);
       font-weight: normal;
     }
+  }
+
+  &__delimiter {
+    color: color(text-inverse, 1);
   }
 
   &__actions {

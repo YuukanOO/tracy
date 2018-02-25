@@ -1,6 +1,6 @@
 <template>
   <div class="intent">
-    <pagebar :title="`${skill.name} / ${intent.name}`" :subtitle="intent.description">
+    <pagebar :prefix="skill.name" :title="intent.name" :subtitle="intent.description">
       <btn inverse @click.prevent="edit">Edit intent</btn>
     </pagebar>
 
