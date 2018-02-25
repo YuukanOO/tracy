@@ -1,6 +1,14 @@
 import Vue from 'vue';
 
 function generateId(obj) {
+  if (obj.length !== undefined) {
+    if (obj.length === 0) {
+      return 1;
+    }
+
+    return Math.max(...obj.map(o => o.id)) + 1;
+  }
+
   const max = Math.max(...Object.keys(obj));
 
   if (max < 0) {
@@ -9,6 +17,16 @@ function generateId(obj) {
 
   return max + 1;
 }
+
+const getters = {
+  agents: state => Object.values(state.agents),
+  skills: state => Object.values(state.skills),
+  entities: state => Object.values(state.entities),
+  entity: state => id => state.entities[id],
+  agent: state => id => state.agents[id],
+  skill: state => id => state.skills[id],
+  intent: state => skill => id => state.skills[skill].intents.find(o => o.id === id),
+};
 
 const mutations = {
   addAgent(state, { name, description }) {
@@ -25,7 +43,7 @@ const mutations = {
     Vue.delete(state.agents, id);
   },
   setAgent(state, { id, name, description }) {
-    const agent = state.agents[id];
+    const agent = getters.agent(state)(id);
 
     if (agent) {
       agent.name = name;
@@ -48,7 +66,7 @@ const mutations = {
   setEntity(state, {
     id, name, type, content,
   }) {
-    const entity = state.entities[id];
+    const entity = getters.entity(state)(id);
 
     if (entity) {
       entity.name = name;
@@ -67,7 +85,7 @@ const mutations = {
     });
   },
   setSkill(state, { id, name, description }) {
-    const skill = state.skills[id];
+    const skill = getters.skill(state)(id);
 
     if (skill) {
       skill.name = name;
@@ -76,6 +94,41 @@ const mutations = {
   },
   deleteSkill(state, id) {
     Vue.delete(state.skills, id);
+  },
+  addIntent(state, { name, description, skillID }) {
+    const skill = state.skills[skillID];
+
+    if (skill) {
+      const id = generateId(skill.intents);
+
+      skill.intents.push({
+        id,
+        skillID,
+        name,
+        description,
+        slots: {},
+        training: [],
+      });
+    }
+  },
+  setIntent(state, {
+    id, skillID, name, description,
+  }) {
+    const intent = getters.intent(state)(skillID)(id);
+
+    if (intent) {
+      intent.name = name;
+      intent.description = description;
+    }
+  },
+  deleteIntent(state, { id, skillID }) {
+    const skill = getters.skill(state)(skillID);
+
+    if (skill) {
+      const idx = skill.intents.findIndex(o => o.id === id);
+
+      skill.intents.splice(idx, 1);
+    }
   },
 };
 
@@ -110,14 +163,16 @@ export const actions = {
   removeSkill({ commit }, id) {
     commit(mutations.deleteSkill.name, id);
   },
-};
-
-const getters = {
-  agents: state => Object.values(state.agents),
-  skills: state => Object.values(state.skills),
-  entities: state => Object.values(state.entities),
-  agent: state => id => state.agents[id],
-  skill: state => id => state.skills[id],
+  upsertIntent({ commit }, data) {
+    if (data.id) {
+      commit(mutations.setIntent.name, data);
+    } else {
+      commit(mutations.addIntent.name, data);
+    }
+  },
+  removeIntent({ commit }, ids) {
+    commit(mutations.deleteIntent.name, ids);
+  },
 };
 
 const state = {

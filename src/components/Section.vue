@@ -1,6 +1,11 @@
 <template>
   <div class="section">
-    <h2 class="section__title">{{title}}</h2>
+    <div class="section__header">
+      <h2 class="section__title">{{title}}</h2>
+      <div class="section__actions">
+        <slot name="actions" />
+      </div>
+    </div>
     <div class="section__content">
       <slot />
     </div>
@@ -31,11 +36,15 @@ export default {
     margin-top: baseline();
   }
 
+  &__header {
+    @include row($x: space-between, $y: center);
+    border-bottom: 1px solid color(brand, 2);
+    padding: baseline(0.5) baseline();
+  }
+
   &__title {
     @include type(body);
-    border-bottom: 1px solid color(brand, 2);
     color: color(text-inverse, 0);
-    padding: baseline(0.5) baseline();
     font-weight: bold;
   }
 

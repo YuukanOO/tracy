@@ -5,6 +5,7 @@ import Agents from './../pages/Agents.vue';
 import Agent from './../pages/Agent.vue';
 import Skills from './../pages/Skills.vue';
 import Skill from './../pages/Skill.vue';
+import Intent from './../pages/Intent.vue';
 import Entities from './../pages/Entities.vue';
 
 Vue.use(Router);
@@ -36,6 +37,11 @@ export default function createRouter() {
         path: '/skill/:id',
         name: 'skill',
         component: Skill,
+      },
+      {
+        path: '/skill/:skillID/intent/:id',
+        name: 'intent',
+        component: Intent,
       },
     ],
   });
