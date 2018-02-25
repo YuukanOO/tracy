@@ -63,15 +63,15 @@ const mutations = {
       id,
       name,
       description,
-      slots: {},
-      data: [],
+      intents: [],
     });
   },
-  setSkill(state, { id }) {
+  setSkill(state, { id, name, description }) {
     const skill = state.skills[id];
 
     if (skill) {
-
+      skill.name = name;
+      skill.description = description;
     }
   },
   deleteSkill(state, id) {
@@ -107,6 +107,9 @@ export const actions = {
       commit(mutations.addSkill.name, data);
     }
   },
+  removeSkill({ commit }, id) {
+    commit(mutations.deleteSkill.name, id);
+  },
 };
 
 const getters = {
@@ -114,6 +117,7 @@ const getters = {
   skills: state => Object.values(state.skills),
   entities: state => Object.values(state.entities),
   agent: state => id => state.agents[id],
+  skill: state => id => state.skills[id],
 };
 
 const state = {

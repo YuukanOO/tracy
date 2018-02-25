@@ -4,10 +4,6 @@
       <btn inverse @click.prevent="create">Add an entity</btn>
     </pagebar>
 
-    <blankslate v-if="entities.length === 0" title="No entity yet!">
-      Looks like you do not have any entity yet! Go ahead and create one!
-    </blankslate>
-
     <list-item class="entities__list">
       <card
         @click.prevent="edit(entity)"
@@ -20,6 +16,10 @@
         {{entity.type}}
       </card>
     </list-item>
+
+    <blankslate v-if="entities.length === 0" title="No entity yet!">
+      Looks like you do not have any entity yet! Go ahead and create one!
+    </blankslate>
 
     <form>
       <modal v-model="entityModal" :title="`${entity.id ? 'Update' : 'Create'} an entity`">

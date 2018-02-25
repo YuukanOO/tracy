@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server",
     "build": "webpack",
-    "lint": "eslint src",
+    "lint": "eslint -c .eslintrc.json src",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Julien LEICHER",
@@ -22,6 +22,7 @@
     "eslint": "^4.18.1",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-vue": "^4.3.0",
     "html-webpack-plugin": "^2.30.1",
     "node-sass": "^4.7.2",
     "sass-loader": "^6.0.6",

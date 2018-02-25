@@ -4,10 +4,6 @@
       <btn inverse @click.prevent="create">Add an agent</btn>
     </pagebar>
 
-    <blankslate v-if="agents.length === 0" title="No agent yet!">
-      Looks like you do not have any agent yet! Go ahead and create one!
-    </blankslate>
-
     <list-item class="agents__list">
       <card 
         v-for="agent in agents"
@@ -21,6 +17,10 @@
       </card>
     </list-item>
 
+    <blankslate v-if="agents.length === 0" title="No agent yet!">
+      Looks like you do not have any agent yet! Go ahead and create one!
+    </blankslate>
+    
     <form>
       <modal title="Create an agent" v-model="agentModal">
         <textinput label="Name" v-model="agent.name" />

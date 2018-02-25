@@ -1,8 +1,6 @@
 <template>
   <div class="pagebar">
-    <div>
-      <h1 class="pagebar__title">{{title}} <small>{{subtitle}}</small></h1>
-    </div>
+    <h1 class="pagebar__title">{{title}} <small>{{subtitle}}</small></h1>
     <div class="pagebar__actions">
       <slot />
     </div>
@@ -24,7 +22,7 @@ export default {
 @import "./../_vars.scss";
 
 .pagebar {
-  @include row($x: space-between, $y: center);
+  @include row($x: space-between, $y: center, $wrap: nowrap);
 
   margin-bottom: baseline();
   padding: baseline(0.5) 0;
@@ -33,6 +31,9 @@ export default {
     @include type(body);
     color: color(text-inverse);
     font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 
     small {
       @include type(small);
