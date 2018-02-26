@@ -81,7 +81,7 @@ export default {
     transform: scale(1);
 
     @include on(tablet) {
-      width: 400px;
+      width: 450px;
     }
   }
 

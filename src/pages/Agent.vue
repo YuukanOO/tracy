@@ -5,7 +5,7 @@
     </pagebar>
 
     <c-section title="Skills">
-      <btn slot="actions" inverse>Add a skill</btn>
+      <btn slot="actions" inverse @click.prevent="editSkills">Edit skills</btn>
       <blankslate title="No skill yet">
         Add a skill to your agent to make it useful!
       </blankslate>
@@ -18,6 +18,12 @@
 
         <btn slot="actions" danger @click.prevent="remove">Delete</btn>
         <btn submit slot="actions" @click.prevent="save">Save</btn>
+      </modal>
+    </form>
+
+    <form>
+      <modal title="Edit skills" v-model="skillsModal">
+
       </modal>
     </form>
   </div>
@@ -39,6 +45,7 @@ export default {
   data() {
     return {
       agentModal: false,
+      skillsModal: false,
       data: {}
     };
   },
@@ -48,6 +55,9 @@ export default {
     },
   },
   methods: {
+    editSkills() {
+      this.skillsModal = true;
+    },
     edit() {
       this.data = { ...this.agent };
       this.agentModal = true;
