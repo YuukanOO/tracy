@@ -24,10 +24,10 @@
     <form>
       <modal v-model="entityModal" :title="`${entity.id ? 'Update' : 'Create'} an entity`">
         <textinput label="Name" v-model="entity.name" />
-        <div class="entity__types">
+        <radio-group>
           <radio label="Values" value="values" v-model="entity.type" />
           <radio label="Regex" value="regex" v-model="entity.type" />
-        </div>
+        </radio-group>
         <textinput label="Entity values" multiple v-model="entity.content" v-if="entity.type === 'values'" />
         <textinput label="Regex value" v-model="entity.content" v-if="entity.type === 'regex'" />
 
@@ -46,6 +46,7 @@ import ListItem from './../animations/ListItem.vue';
 import Card from './../components/Card.vue';
 import Textinput from './../components/Textinput.vue';
 import Radio from './../components/Radio.vue';
+import RadioGroup from './../components/RadioGroup.vue';
 import Pagebar from './../components/Pagebar.vue';
 import Blankslate from './../components/Blankslate.vue';
 import Modal from './../components/Modal.vue';
@@ -55,7 +56,7 @@ import { actions } from './../store/agents';
 
 export default {
   name: 'Entities',
-  components: { Pagebar, Btn, Blankslate, Modal, Textinput, Radio, Card, ListItem },
+  components: { Pagebar, Btn, Blankslate, Modal, Textinput, Radio, Card, ListItem, RadioGroup },
   data() {
     return {
       entityModal: false,
@@ -107,19 +108,6 @@ export default {
     @include on(desktop) {
       @include cell(1/4, $grow: 0);
     }
-  }
-}
-
-.entity__types {
-  @include row($y: center);
-
-  & > * {
-    margin-top: 0 !important;
-    margin-right: baseline();
-  }
-
-  & + * {
-    margin-top: baseline();
   }
 }
 </style>
