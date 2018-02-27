@@ -6,15 +6,21 @@
 
     <c-section title="Intents">
       <btn inverse slot="actions" @click.prevent="createIntent">Add an intent</btn>
-      <list-item class="skill__intents">
-        <list-element
-          v-for="intent in skill.intents"
-          :to="{ name: 'intent', params: { skillID: skill.id, id: intent.id } }"
-          :key="intent.id"
-          :title="intent.name" 
-          :subtitle="intent.description"
-        />
-      </list-item>
+      <c-table>
+        <list-item tag="tbody">
+          <table-row 
+            clickable 
+            @click.prevent="$router.push({ name: 'intent', params: { skillID: skill.id, id: intent.id } })"
+            v-for="intent in skill.intents" 
+            :key="intent.id">
+            <table-col title>{{intent.name}}</table-col>
+            <table-col>{{intent.description}}</table-col>
+            <table-col>
+              {{Object.keys(intent.slots).length}} slot{{Object.keys(intent.slots).length > 1 ? 's' : ''}} - {{intent.training.length}} sample{{intent.training.length > 1 ? 's' : ''}}
+            </table-col>
+          </table-row>
+        </list-item>
+      </c-table>
       <blankslate title="No intent yet" v-if="skill.intents.length === 0">
         Add intents to your skill!
       </blankslate>
@@ -45,7 +51,9 @@
 import { actions } from './../store/agents';
 
 import ListItem from './../animations/ListItem.vue';
-import ListElement from './../components/ListElement.vue';
+import CTable from './../components/Table.vue';
+import TableRow from './../components/TableRow.vue';
+import TableCol from './../components/TableCol.vue';
 import CSection from './../components/Section.vue';
 import Blankslate from './../components/Blankslate.vue';
 import Modal from './../components/Modal.vue';
@@ -55,7 +63,10 @@ import Pagebar from './../components/Pagebar.vue';
 
 export default {
   name: 'Skill',
-  components: { Pagebar, Btn, Modal, Textinput, CSection, Blankslate, ListItem, ListElement },
+  components: { 
+    Pagebar, Btn, Modal, Textinput, CSection, Blankslate, ListItem, 
+    CTable, TableRow, TableCol
+  },
   data() {
     return {
       skillModal: false,

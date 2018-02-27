@@ -1,8 +1,21 @@
 <template>
-  <transition-group name="list-item" tag="div">
+  <transition-group name="list-item" :tag="tag">
     <slot />
   </transition-group>
 </template>
+
+<script>
+export default {
+  name: 'ListItem',
+  props: {
+    tag: {
+      type: String,
+      default: 'div',
+    },
+  },
+}
+</script>
+
 
 <style lang="scss">
 .list-item-enter, 

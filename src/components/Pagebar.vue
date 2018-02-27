@@ -25,7 +25,7 @@ export default {
 .pagebar {
   @include row($x: space-between, $y: center, $wrap: nowrap);
 
-  margin-bottom: baseline();
+  margin-bottom: baseline(0.5);
   padding: baseline(0.5) 0;
 
   &__title {
@@ -33,6 +33,7 @@ export default {
     color: color(text-inverse);
     font-weight: bold;
     overflow: hidden;
+    padding: baseline(0.5) 0;
     text-overflow: ellipsis;
     white-space: nowrap;
 
