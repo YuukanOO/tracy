@@ -45,6 +45,7 @@ export default {
   @include col($x: center, $y: center);
 
   background-color: rgba(black, 0.42);
+  overflow-y: scroll;
   padding: baseline();
   position: fixed;
   top: 0;

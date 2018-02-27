@@ -50,6 +50,13 @@ const mutations = {
       agent.description = description;
     }
   },
+  setAgentSkills(state, { id, skills }) {
+    const agent = getters.agent(state)(id);
+
+    if (agent) {
+      agent.skills = skills;
+    }
+  },
   addEntity(state, { name, type, content }) {
     const id = generateId(state.entities);
 
@@ -139,6 +146,9 @@ export const actions = {
     } else {
       commit(mutations.addAgent.name, data);
     }
+  },
+  editAgentSkills({ commit }, data) {
+    commit(mutations.setAgentSkills.name, data);
   },
   removeAgent({ commit }, id) {
     commit(mutations.deleteAgent.name, id);

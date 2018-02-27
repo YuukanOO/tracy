@@ -6,7 +6,19 @@
 
     <c-section title="Skills">
       <btn slot="actions" inverse @click.prevent="editSkills">Edit skills</btn>
-      <blankslate title="No skill yet">
+      <c-table>
+        <list-item tag="tbody">
+          <table-row 
+            clickable 
+            @click.prevent="$router.push({ name: 'skill', params: { id: skill.id } })"
+            v-for="skill in agentSkills" 
+            :key="skill.id">
+            <table-col title>{{skill.name}}</table-col>
+            <table-col>{{skill.description}}</table-col>
+          </table-row>
+        </list-item>
+      </c-table>
+      <blankslate title="No skill yet" v-if="agent.skills.length === 0">
         Add a skill to your agent to make it useful!
       </blankslate>
     </c-section>
@@ -23,7 +35,20 @@
 
     <form>
       <modal title="Edit skills" v-model="skillsModal">
+        <c-table inverse>
+          <table-row 
+            clickable
+            @click.prevent="toggleSkill(skill.id)"
+            v-for="skill in skills"
+            :key="skill.id">
+            <table-col title>{{skill.name}}</table-col>
+            <table-col class="selected-col">
+              <checkbox :value="hasSkill(skill.id)" />
+            </table-col>
+          </table-row>
+        </c-table>
 
+        <btn slot="actions" submit @click.prevent="saveSkills">Save</btn>
       </modal>
     </form>
   </div>
@@ -32,7 +57,13 @@
 <script>
 import { actions } from './../store/agents';
 
+import ListItem from './../animations/ListItem.vue';
+
+import Checkbox from './../components/Checkbox.vue';
 import CSection from './../components/Section.vue';
+import CTable from './../components/Table.vue';
+import TableRow from './../components/TableRow.vue';
+import TableCol from './../components/TableCol.vue';
 import Blankslate from './../components/Blankslate.vue';
 import Modal from './../components/Modal.vue';
 import Textinput from './../components/Textinput.vue';
@@ -41,11 +72,15 @@ import Pagebar from './../components/Pagebar.vue';
 
 export default {
   name: 'Agent',
-  components: { Pagebar, Btn, Modal, Textinput, CSection, Blankslate },
+  components: {
+    Pagebar, Btn, Modal, Textinput, CSection, Blankslate,
+    CTable, TableRow, TableCol, Checkbox, ListItem
+  },
   data() {
     return {
       agentModal: false,
       skillsModal: false,
+      selectedSkills: [],
       data: {}
     };
   },
@@ -53,10 +88,36 @@ export default {
     agent() {
       return this.$store.getters.agent(this.$route.params.id);
     },
+    agentSkills() {
+      return this.agent.skills.map(o => this.$store.getters.skill(o));
+    },
+    skills() {
+      return this.$store.getters.skills;
+    },
   },
   methods: {
+    hasSkill(id) {
+      return this.selectedSkills.indexOf(id) !== -1;
+    },
+    toggleSkill(id) {
+      const idx = this.selectedSkills.indexOf(id);
+
+      if (idx < 0) {
+        this.selectedSkills.push(id);
+      } else {
+        this.selectedSkills.splice(idx, 1);
+      }
+    },
     editSkills() {
+      this.selectedSkills = [...this.agent.skills];
       this.skillsModal = true;
+    },
+    async saveSkills() {
+      await this.$store.dispatch(actions.editAgentSkills.name, {
+        id: this.agent.id,
+        skills: this.selectedSkills,
+      });
+      this.skillsModal = false;
     },
     edit() {
       this.data = { ...this.agent };
@@ -73,3 +134,9 @@ export default {
   },
 }
 </script>
+
+<style lang="scss">
+.selected-col {
+  text-align: right;
+}
+</style>
