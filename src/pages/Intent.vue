@@ -41,7 +41,23 @@
     </c-section>
 
     <c-section title="Training data">
-      <btn inverse slot="actions">Add a sample</btn>
+      <btn inverse slot="actions" @click.prevent="createSample">Add a sample</btn>
+      <c-table>
+        <list-item tag="tbody">
+          <table-row v-for="sample in intent.training" :key="sample.id">
+            <table-col input :style="{ overflow: 'visible' }">
+              <training-input
+                :value="sample.text"
+                @input="setSampleText(sample.id, $event)"
+                :slots="slots"
+              />
+            </table-col>
+            <table-col action>
+              <delete-btn @click.prevent="removeSample(sample.id)" />
+            </table-col>
+          </table-row>
+        </list-item>
+      </c-table>
       <blankslate title="No training data yet" v-if="intent.training.length === 0">
         Add training data to train your intent!
       </blankslate>
@@ -54,6 +70,7 @@ import { actions } from './../store/agents';
 
 import ListItem from './../animations/ListItem.vue';
 
+import TrainingInput from './../components/TrainingInput.vue';
 import CTable from './../components/Table.vue';
 import TableCol from './../components/TableCol.vue';
 import TableRow from './../components/TableRow.vue';
@@ -69,7 +86,7 @@ export default {
   name: 'Intent',
   components: {
     Blankslate, CSection, Btn, Pagebar, Modal, Textinput,
-    CTable, TableCol, TableRow, ListItem, DeleteBtn,
+    CTable, TableCol, TableRow, ListItem, DeleteBtn, TrainingInput,
   },
   data() {
     return {
@@ -114,11 +131,27 @@ export default {
         ...this.ids,
       });
     },
+    async setSampleText(id, text) {
+      await this.$store.dispatch(actions.upsertSample.name, {
+        id,
+        text,
+        ...this.ids,
+      });
+    },
     async createSlot() {
       await this.$store.dispatch(actions.upsertSlot.name, this.ids);
     },
     async removeSlot(id) {
       await this.$store.dispatch(actions.removeSlot.name, {
+        id,
+        ...this.ids,
+      });
+    },
+    async createSample() {
+      await this.$store.dispatch(actions.upsertSample.name, this.ids);
+    },
+    async removeSample(id) {
+      await this.$store.dispatch(actions.removeSample.name, {
         id,
         ...this.ids,
       });

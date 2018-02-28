@@ -39,6 +39,8 @@ const getters = {
   skill: state => id => state.skills[id],
   intent: state => skill => id => state.skills[skill].intents.find(o => o.id === id),
   slot: state => skill => intent => id => getters.intent(state)(skill)(intent).slots[id],
+  sample: state => skill => intent => id =>
+    getters.intent(state)(skill)(intent).training.find(o => o.id === id),
 };
 
 const mutations = {
@@ -184,6 +186,39 @@ const mutations = {
       slot.entity = entity || slot.entity;
     }
   },
+  addSample(state, { skillID, intentID }) {
+    const intent = getters.intent(state)(skillID)(intentID);
+
+    if (intent) {
+      const id = generateId(intent.training);
+
+      intent.training.push({
+        id,
+        text: '',
+        slots: [],
+      });
+    }
+  },
+  setSample(state, {
+    id, skillID, intentID, text,
+  }) {
+    const sample = getters.sample(state)(skillID)(intentID)(id);
+
+    if (sample) {
+      sample.text = text || sample.text;
+    }
+  },
+  deleteSample(state, { id, skillID, intentID }) {
+    const intent = getters.intent(state)(skillID)(intentID);
+
+    if (intent) {
+      const idx = intent.training.findIndex(o => o.id === id);
+
+      if (idx !== -1) {
+        intent.training.splice(idx, 1);
+      }
+    }
+  },
 };
 
 export const actions = {
@@ -239,6 +274,16 @@ export const actions = {
   },
   removeSlot({ commit }, ids) {
     commit(mutations.deleteSlot.name, ids);
+  },
+  upsertSample({ commit }, data) {
+    if (data.id) {
+      commit(mutations.setSample.name, data);
+    } else {
+      commit(mutations.addSample.name, data);
+    }
+  },
+  removeSample({ commit }, ids) {
+    commit(mutations.deleteSample.name, ids);
   },
 };
 

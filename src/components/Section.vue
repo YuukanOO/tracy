@@ -31,10 +31,7 @@ export default {
   background-color: color(brand, 1);
   border-radius: 25px;
   box-shadow: 0 0 5px color(brand, -1);
-
-  & + & {
-    margin-top: baseline();
-  }
+  margin-bottom: baseline();
 
   &__header {
     @include row($x: space-between, $y: center);
