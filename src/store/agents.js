@@ -1,5 +1,17 @@
 import Vue from 'vue';
 
+const colors = [
+  '#F44336',
+  '#E91E63',
+  '#9C27B0',
+  '#673AB7',
+  '#3F51B5',
+  '#009688',
+  '#795548',
+  '#607D8B',
+  '#000000',
+];
+
 function generateId(obj) {
   if (obj.length !== undefined) {
     if (obj.length === 0) {
@@ -26,6 +38,7 @@ const getters = {
   agent: state => id => state.agents[id],
   skill: state => id => state.skills[id],
   intent: state => skill => id => state.skills[skill].intents.find(o => o.id === id),
+  slot: state => skill => intent => id => getters.intent(state)(skill)(intent).slots[id],
 };
 
 const mutations = {
@@ -137,6 +150,40 @@ const mutations = {
       skill.intents.splice(idx, 1);
     }
   },
+  addSlot(state, { skillID, intentID }) {
+    const intent = getters.intent(state)(skillID)(intentID);
+
+    if (intent) {
+      const id = generateId(intent.slots);
+      const tookColors = Object.values(intent.slots).map(o => o.color);
+      const availableColors = colors.filter(o => tookColors.indexOf(o) === -1);
+      const color = availableColors[Math.floor(Math.random() * availableColors.length)];
+
+      Vue.set(intent.slots, id, {
+        id,
+        name: '',
+        entity: '',
+        color,
+      });
+    }
+  },
+  deleteSlot(state, { id, skillID, intentID }) {
+    const intent = getters.intent(state)(skillID)(intentID);
+
+    if (intent) {
+      Vue.delete(intent.slots, id);
+    }
+  },
+  setSlot(state, {
+    id, skillID, intentID, name, entity,
+  }) {
+    const slot = getters.slot(state)(skillID)(intentID)(id);
+
+    if (slot) {
+      slot.name = name || slot.name;
+      slot.entity = entity || slot.entity;
+    }
+  },
 };
 
 export const actions = {
@@ -182,6 +229,16 @@ export const actions = {
   },
   removeIntent({ commit }, ids) {
     commit(mutations.deleteIntent.name, ids);
+  },
+  upsertSlot({ commit }, data) {
+    if (data.id) {
+      commit(mutations.setSlot.name, data);
+    } else {
+      commit(mutations.addSlot.name, data);
+    }
+  },
+  removeSlot({ commit }, ids) {
+    commit(mutations.deleteSlot.name, ids);
   },
 };
 

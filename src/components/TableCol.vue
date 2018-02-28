@@ -1,5 +1,5 @@
 <template>
-  <td :class="{ 'table-col': true, 'table-col--title': title }">
+  <td :class="{ 'table-col': true, 'table-col--title': title, 'table-col--action': action, 'table-col--input': input }">
     <slot />
   </td>
 </template>
@@ -9,6 +9,8 @@ export default {
   name: 'TableCol',
   props: {
     title: Boolean,
+    action: Boolean,
+    input: Boolean,
   },
 }
 </script>
@@ -21,12 +23,22 @@ export default {
   @include type(small);
   background-color: white;
   color: color(text, 1);
+  overflow: hidden;
   padding: baseline(0.5) baseline();
 
   &--title {
     @include type(body);
     color: color(brand);
     font-weight: bold;
+  }
+
+  &--input {
+    padding: 0;
+  }
+
+  &--action {
+    width: 40px;
+    text-align: right;
   }
 }
 </style>
