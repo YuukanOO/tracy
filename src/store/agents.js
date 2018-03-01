@@ -149,7 +149,9 @@ const mutations = {
     if (skill) {
       const idx = skill.intents.findIndex(o => o.id === id);
 
-      skill.intents.splice(idx, 1);
+      if (idx !== -1) {
+        skill.intents.splice(idx, 1);
+      }
     }
   },
   addSlot(state, { skillID, intentID }) {
@@ -200,12 +202,33 @@ const mutations = {
     }
   },
   setSample(state, {
-    id, skillID, intentID, text,
+    id, skillID, intentID, text, slot,
   }) {
     const sample = getters.sample(state)(skillID)(intentID)(id);
 
     if (sample) {
       sample.text = text || sample.text;
+
+      if (slot) {
+        if (!slot.slot) {
+          const idx = sample.slots.findIndex(o => o.start === slot.start
+            && o.end === slot.end);
+
+          if (idx !== -1) {
+            sample.slots.splice(idx, 1);
+          }
+        } else {
+          const existingSlot = sample.slots.find(o => o.start === slot.start
+                                                      && o.end === slot.end);
+
+          if (existingSlot) {
+            existingSlot.value = slot.value;
+            existingSlot.slot = slot.slot;
+          } else {
+            sample.slots.push(slot);
+          }
+        }
+      }
     }
   },
   deleteSample(state, { id, skillID, intentID }) {

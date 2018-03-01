@@ -1,5 +1,5 @@
 <template>
-  <tr :class="{ 'table-row': true, 'table-row--clickable': clickable }" @click="$emit('click', $event)">
+  <tr :class="{ 'table-row': true, 'table-row--clickable': clickable, 'table-row--scale': scale }" @click="$emit('click', $event)">
     <slot />
   </tr>
 </template>
@@ -9,6 +9,10 @@ export default {
   name: 'TableRow',
   props: {
     clickable: Boolean,
+    scale: {
+      type: Boolean,
+      default: true,
+    },
   },
 }
 </script>
@@ -52,12 +56,14 @@ export default {
     box-shadow: 0 0 10px color(brand, 2);
   }
 
-  &:hover {
-    transform: scale(1.03);
-  }
+  &--scale {
+    &:hover {
+      transform: scale(1.03);
+    }
 
-  &:active {
-    transform: scale(1);
+    &:active {
+      transform: scale(1);
+    }
   }
 }
 </style>

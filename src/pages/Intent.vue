@@ -44,12 +44,14 @@
       <btn inverse slot="actions" @click.prevent="createSample">Add a sample</btn>
       <c-table>
         <list-item tag="tbody">
-          <table-row v-for="sample in intent.training" :key="sample.id">
+          <table-row :scale="false" v-for="sample in intent.training" :key="sample.id">
             <table-col input :style="{ overflow: 'visible' }">
               <training-input
                 :value="sample.text"
                 @input="setSampleText(sample.id, $event)"
-                :slots="slots"
+                @slotted="setSampleSlot(sample.id, $event)"
+                :slots="intent.slots"
+                :entities="sample.slots"
               />
             </table-col>
             <table-col action>
@@ -138,6 +140,13 @@ export default {
         ...this.ids,
       });
     },
+    async setSampleSlot(id, slot) {
+      await this.$store.dispatch(actions.upsertSample.name, {
+        id,
+        slot,
+        ...this.ids,
+      });
+    },
     async createSlot() {
       await this.$store.dispatch(actions.upsertSlot.name, this.ids);
     },
@@ -193,6 +202,7 @@ export default {
       @include type(small);
       border: none;
       color: color(text, 1);
+      outline: none;
       padding: baseline(0.25) baseline(0.5);
       width: 100%;
     }

@@ -1,11 +1,22 @@
 <template>
   <div class="training-input">
-    <div contenteditable ref="input" class="training-input__input" @keyup="$emit('input', $refs.input.innerText)" @blur="resetCurrent" v-html="textHtml" @mouseup="textSelected">
+    <div contenteditable ref="input" class="training-input__input" @keyup="$emit('input', $refs.input.innerText)" v-html="textHtml" @mouseup.stop="textSelected">
       
     </div>
-    <div class="training-input__popup" v-if="popupVisible" :style="{ left: left + 'px' }">
-      <button class="training-input__button" v-for="slot in slots" :key="slot.id">
+    <div class="training-input__popup" ref="popup" v-if="popupVisible" :style="{ top: top + 'px', left: left + 'px' }">
+      <button 
+        @click.prevent="slotSelected(slot.id)" 
+        class="training-input__button" 
+        v-for="slot in availableSlots" 
+        :key="slot.id"
+        :style="{ color: slot.color }"
+        >
         {{slot.name}}
+      </button>
+      <button 
+        class="training-input__button"
+        @click.prevent="slotSelected(null)">
+        Remove
       </button>
     </div>
   </div>
@@ -16,7 +27,18 @@ export default {
   name: 'TrainingInput',
   props: {
     value: String,
-    slots: Array,
+    slots: Object,
+    entities: {
+      type: Array,
+      default: () => [],
+    }
+  },
+  mounted() {
+    this.globalClick = this.globalClick.bind(this);
+    window.addEventListener('click', this.globalClick);
+  },
+  destroyed() {
+    window.removeEventListener('click', this.globalClick);
   },
   data() {
   	return {
@@ -26,30 +48,38 @@ export default {
         end: -1,
         value: '',
       },
+      top: 0,
       left: 0,
-      entities: [],
     };
   },
   computed: {
+    availableSlots() {
+      return Object.values(this.slots);
+    },
     popupVisible() {
       return this.current.start !== -1 && this.current.end !== -1;
     },
   	textHtml() {
     	let text = '';
       let currentEntity = null;
-      
+      let currentSlot = null;
+
     	for (let i = 0; i < this.text.length; ++i) {
-      	let entity = this.entities.find(o => o.start === i);
-        
+        const entityIdx = this.entities.findIndex(o => o.start === i);
+        const entity = this.entities[entityIdx];
+
         if (entity) {
-        	text += '<span class="entity">';
+          currentSlot = this.slots[entity.slot];
+        	text += `<span class="training-input__slot" data-index="${entityIdx}" style="background-color: ${currentSlot.color}">`;
           
           currentEntity = entity;
         }
         
         if (currentEntity && currentEntity.end === i) {
-        	text += '</span>';
+          // text += `<span class="training-input__slot-name">${currentSlot.name}</span></span>`;
+          text += '</span>';
           currentEntity = null;
+          currentSlot = null;
         }
         
         text += this.text[i];
@@ -109,19 +139,42 @@ export default {
     resetCurrent() {
       this.current = { start: -1, end: -1, value: '' };
     },
+    globalClick(e) {
+      if (e.target.parentElement === this.$refs.input && e.target.className === 'training-input__slot') {
+        const idx = e.target.getAttribute('data-index');
+        const entity = this.entities[idx];
+
+        this.current = { ...entity };
+        
+        return;
+      }
+
+      if (e.target.parentElement !== this.$refs.popup && e.target !== this.$refs.input) {
+        this.resetCurrent();
+      }
+    },
   	textSelected(evt) {
-      this.left = evt.layerX;
+      this.left = evt.clientX + window.scrollX;
+      this.top = evt.clientY + window.scrollY;
+
       this.text = this.$refs.input.innerText;
       this.resetCurrent();
     
-    	const { start, end } = this.getSelectionOffsetFrom(this.$el);
+    	const { start, end } = this.getSelectionOffsetFrom(this.$refs.input);
             
       if (start !== end) {
         this.current.start = start;
         this.current.end = end;
         this.current.value = this.text.substring(start, end);
       }
-    }
+    },
+    slotSelected(id) {
+      this.$emit('slotted', {
+        ...this.current,
+        slot: id,
+      });
+      this.resetCurrent();
+    },
   },
 }
 </script>
@@ -130,27 +183,70 @@ export default {
 @import "./../_vars.scss";
 
 .training-input {
-  position: relative;
+  // position: relative;
 
   &__input {
     @include type(small);
     color: color(text, 1);
+    outline: none;
     padding: baseline(0.25) baseline(0.5);
     min-height: baseline();
   }
 
+  &__slot {
+    border-radius: 25px;
+    color: color(text-inverse);
+    cursor: pointer;
+    padding: 0 baseline(0.25);
+  }
+
+  // &__slot-name {
+  //   @include type(tiny);
+  //   color: color(text-inverse, 1);
+  //   margin-left: 5px;
+  //   vertical-align: top;
+  // }
+
   &__popup {
-    // border: 1px solid color(divider);
-    // border-radius: 25px;
-    // padding: baseline(0.5);
+    display: block;
     position: absolute;
+    z-index: 10;
   }
 
   &__button {
     background-color: white;
+    border: 2px solid color(divider);
+    border-bottom-width: 0;
+    color: color(text, 1);
+    cursor: pointer;
     display: block;
-    padding: baseline(0.5);
+    font-weight: bold;
+    padding: baseline(0.5) baseline();
+    transition: all 0.2s;
     width: 100%;
+
+    &:first-child {
+      border-top-left-radius: 25px;
+      border-top-right-radius: 25px;
+    }
+
+    &:last-child {
+      border-bottom-left-radius: 25px;
+      border-bottom-right-radius: 25px;
+      border-bottom-width: 2px;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    &:active {
+      transform: scale(1);
+    }
+
+    &:focus {
+      box-shadow: 0 0 5px color(divider);
+    }
   }
 }
 </style>
