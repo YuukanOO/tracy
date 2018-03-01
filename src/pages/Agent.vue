@@ -1,6 +1,7 @@
 <template>
   <div class="agent">
     <pagebar :title="agent.name" :subtitle="agent.description">
+      <btn inverse @click.prevent="train">Train</btn>
       <btn inverse @click.prevent="edit">Edit agent</btn>
     </pagebar>
 
@@ -22,6 +23,10 @@
         Add a skill to your agent to make it useful!
       </blankslate>
     </c-section>
+
+    <modal title="Train data" v-model="trainModal">
+      <textinput label="JSON" v-model="trainData" multiple />
+    </modal>
 
     <form>
       <modal title="Edit agent" v-model="agentModal">
@@ -80,6 +85,8 @@ export default {
     return {
       agentModal: false,
       skillsModal: false,
+      trainModal: false,
+      trainData: '',
       selectedSkills: [],
       data: {}
     };
@@ -96,6 +103,10 @@ export default {
     },
   },
   methods: {
+    async train() {
+      this.trainData = JSON.stringify(await this.$store.dispatch(actions.trainAgent.name, this.agent.id), null, 2);
+      this.trainModal = true;
+    },
     hasSkill(id) {
       return this.selectedSkills.indexOf(id) !== -1;
     },

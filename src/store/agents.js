@@ -310,6 +310,46 @@ export const actions = {
   removeSample({ commit }, ids) {
     commit(mutations.deleteSample.name, ids);
   },
+  trainAgent({ state }, id) {
+    const result = {
+      rasa_nlu_data: {
+        common_examples: [],
+        regex_features: [],
+        entity_synonyms: [],
+      },
+    };
+    const agent = getters.agent(state)(id);
+
+    agent.skills.forEach((skillID) => {
+      const skill = getters.skill(state)(skillID);
+
+      skill.intents.forEach((intent) => {
+        intent.training.forEach((sample) => {
+          // Each sample should be duplicated based on entity
+          if (sample.slots.length === 0) {
+            // No slots defined, just add the sample
+            result.rasa_nlu_data.common_examples.push({
+              text: sample.text.replace(/\n/, ''),
+              intent: intent.name,
+              entities: [],
+            });
+          } else {
+            // Slots defined, loop through each of them and if it is attached
+            // to an entity, duplicate lines!
+            for (let i = 0; i < sample.slots.length; i += 1) {
+              for (let j = 0; j < sample.slots.length; j += 1) {
+                if (i !== j) {
+                  // TODO
+                }
+              }
+            }
+          }
+        });
+      });
+    });
+
+    return result;
+  },
 };
 
 const state = {
