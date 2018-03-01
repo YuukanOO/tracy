@@ -1,24 +1,26 @@
 <template>
   <div class="training-input">
-    <div contenteditable ref="input" class="training-input__input" @keyup="$emit('input', $refs.input.innerText)" v-html="textHtml" @mouseup.stop="textSelected">
+    <div contenteditable ref="input" class="training-input__input" @keyup="emitInput" v-html="textHtml" @mouseup.stop="textSelected">
       
     </div>
-    <div class="training-input__popup" ref="popup" v-if="popupVisible" :style="{ top: top + 'px', left: left + 'px' }">
-      <button 
-        @click.prevent="slotSelected(slot.id)" 
-        class="training-input__button" 
-        v-for="slot in availableSlots" 
-        :key="slot.id"
-        :style="{ color: slot.color }"
-        >
-        {{slot.name}}
-      </button>
-      <button 
-        class="training-input__button"
-        @click.prevent="slotSelected(null)">
-        Remove
-      </button>
-    </div>
+    <transition name="popup">
+      <div class="training-input__popup" ref="popup" v-if="popupVisible" :style="{ top: top + 'px', left: left + 'px' }">
+        <button 
+          @click.prevent="slotSelected(slot.id)" 
+          class="training-input__button" 
+          v-for="slot in availableSlots" 
+          :key="slot.id"
+          :style="{ color: slot.color }"
+          >
+          {{slot.name}}
+        </button>
+        <button 
+          class="training-input__button"
+          @click.prevent="slotSelected(null)">
+          Remove
+        </button>
+      </div>
+    </transition>
   </div>
 </template>
 
@@ -63,6 +65,8 @@ export default {
     	let text = '';
       let currentEntity = null;
       let currentSlot = null;
+
+      // TODO: dynamic construction of vuejs components
 
     	for (let i = 0; i < this.text.length; ++i) {
         const entityIdx = this.entities.findIndex(o => o.start === i);
@@ -139,7 +143,17 @@ export default {
     resetCurrent() {
       this.current = { start: -1, end: -1, value: '' };
     },
+    emitInput(evt) {
+      if (evt.keyCode === 13) {
+        this.$emit('enter', evt);
+        evt.preventDefault();
+      } else {
+        this.$emit('input', this.$refs.input.innerText.trim());
+      }
+    },
     globalClick(e) {
+      // TODO: some fixes
+
       if (e.target.parentElement === this.$refs.input && e.target.className === 'training-input__slot') {
         const idx = e.target.getAttribute('data-index');
         const entity = this.entities[idx];
@@ -157,7 +171,7 @@ export default {
       this.left = evt.clientX + window.scrollX;
       this.top = evt.clientY + window.scrollY;
 
-      this.text = this.$refs.input.innerText;
+      this.text = this.$refs.input.innerText.trim();
       this.resetCurrent();
     
     	const { start, end } = this.getSelectionOffsetFrom(this.$refs.input);
@@ -210,7 +224,13 @@ export default {
   &__popup {
     display: block;
     position: absolute;
+    transition: all 0.2s;
     z-index: 10;
+
+    &.popup-enter, 
+    &.popup-leave-to {
+      transform: scale(0);
+    }
   }
 
   &__button {

@@ -27,6 +27,7 @@ export default {
   @include col($x: center, $y: center);
   color: color(text-inverse);
   flex: 1;
+  text-align: center;
 
   &__title {
     @include type(h4);

@@ -37,10 +37,12 @@ const getters = {
   entity: state => id => state.entities[id],
   agent: state => id => state.agents[id],
   skill: state => id => state.skills[id],
-  intent: state => skill => id => state.skills[skill].intents.find(o => o.id === id),
+  // eslint-disable-next-line eqeqeq
+  intent: state => skill => id => state.skills[skill].intents.find(o => o.id == id),
   slot: state => skill => intent => id => getters.intent(state)(skill)(intent).slots[id],
   sample: state => skill => intent => id =>
-    getters.intent(state)(skill)(intent).training.find(o => o.id === id),
+    // eslint-disable-next-line eqeqeq
+    getters.intent(state)(skill)(intent).training.find(o => o.id == id),
 };
 
 const mutations = {

@@ -44,10 +44,11 @@
       <btn inverse slot="actions" @click.prevent="createSample">Add a sample</btn>
       <c-table>
         <list-item tag="tbody">
-          <table-row :scale="false" v-for="sample in intent.training" :key="sample.id">
+          <table-row class="intent__sample" :scale="false" v-for="sample in intent.training" :key="sample.id">
             <table-col input :style="{ overflow: 'visible' }">
               <training-input
                 :value="sample.text"
+                @enter="createSample"
                 @input="setSampleText(sample.id, $event)"
                 @slotted="setSampleSlot(sample.id, $event)"
                 :slots="intent.slots"
@@ -158,6 +159,9 @@ export default {
     },
     async createSample() {
       await this.$store.dispatch(actions.upsertSample.name, this.ids);
+
+      // TODO: Maybe try to find something better
+      setTimeout(() => document.querySelector('.intent__sample:last-child .training-input__input').focus(), 50);
     },
     async removeSample(id) {
       await this.$store.dispatch(actions.removeSample.name, {
