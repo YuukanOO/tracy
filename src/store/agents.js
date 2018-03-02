@@ -186,8 +186,8 @@ const mutations = {
     const slot = getters.slot(state)(skillID)(intentID)(id);
 
     if (slot) {
-      slot.name = name || slot.name;
-      slot.entity = entity || slot.entity;
+      slot.name = name !== undefined ? name : slot.name;
+      slot.entity = entity !== undefined ? entity : slot.entity;
     }
   },
   addSample(state, { skillID, intentID }) {
@@ -209,7 +209,7 @@ const mutations = {
     const sample = getters.sample(state)(skillID)(intentID)(id);
 
     if (sample) {
-      sample.text = text || sample.text;
+      sample.text = text !== undefined ? text : sample.text;
 
       if (slot) {
         if (!slot.slot) {

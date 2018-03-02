@@ -20,7 +20,7 @@
         <list-item tag="tbody">
           <table-row v-for="slot in slots" :key="slot.id">
             <table-col class="table-col--color"><div :style="{ backgroundColor: slot.color }"></div></table-col>
-            <table-col input><input type="text" :value="slot.name" @input="setSlotName(slot.id, $event.target.value)" /></table-col>
+            <table-col input><input type="text" :placeholder="$getSlotName(slot)" :value="slot.name" @input="setSlotName(slot.id, $event.target.value)" /></table-col>
             <table-col input>
               <select :value="slot.entity" @change="setSlotEntity(slot.id, $event.target.value)">
                 <option value="">---</option>

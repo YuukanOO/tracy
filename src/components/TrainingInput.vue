@@ -12,7 +12,7 @@
           :key="slot.id"
           :style="{ color: slot.color }"
           >
-          {{slot.name}}
+          {{$getSlotName(slot)}}
         </button>
         <button 
           class="training-input__button"
