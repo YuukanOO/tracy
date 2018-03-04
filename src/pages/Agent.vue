@@ -25,7 +25,7 @@
     </c-section>
 
     <modal title="Train data" v-model="trainModal">
-      <textinput label="JSON" v-model="trainData" multiple />
+      <textinput label="JSON" v-model="trainData" multiple rows="15" />
     </modal>
 
     <form>

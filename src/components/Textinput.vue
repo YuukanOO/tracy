@@ -10,6 +10,7 @@
       @input="$emit('input', $event.target.value)" />
     <textarea v-else class="textinput__input textinput--multiple"
       :value="value" 
+      :rows="rows"
       :id="_uid"
       @input="$emit('input', $event.target.value)"
     />
@@ -21,6 +22,10 @@ export default {
   name: 'Textinput',
   props: {
     value: {},
+    rows: {
+      type: String,
+      default: '5',
+    },
     label: String,
     multiple: {
       type: Boolean,
