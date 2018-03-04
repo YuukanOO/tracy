@@ -318,6 +318,7 @@ export const actions = {
         entity_synonyms: [],
       },
     };
+    const regexFeatures = {};
     const agent = getters.agent(state)(id);
 
     agent.skills.forEach((skillID) => {
@@ -340,6 +341,11 @@ export const actions = {
 
             if (ent.type === 'values') {
               entities[o.id] = ent.content.split('\n').map(oo => oo.trim());
+            } else if (ent.type === 'regex') {
+              regexFeatures[n] = {
+                name: n,
+                pattern: ent.content,
+              };
             }
           }
 
@@ -399,6 +405,8 @@ export const actions = {
         });
       });
     });
+
+    result.rasa_nlu_data.regex_features = Object.values(regexFeatures);
 
     return result;
   },
