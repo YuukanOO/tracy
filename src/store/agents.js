@@ -1,4 +1,5 @@
 import Vue from 'vue';
+import { getSlotName } from './../plugins';
 
 const colors = [
   '#F44336',
@@ -34,7 +35,7 @@ export function permutate(currentVals, remainingAttrs) {
 
 // console.log(permutate([], {
 //   color: ['red', 'green'],
-//   size: ['big', 'small', 'medium'],
+//   size: ['big', 'small', 'medium', 'bigger', 'biggest'],
 //   type: ['saison', 'oldtimer'],
 // }));
 
@@ -352,7 +353,41 @@ export const actions = {
 
       skill.intents.forEach((intent) => {
         intent.training.forEach((sample) => {
+          const text = sample.text.replace('\n', '');
+          const slotValues = {};
+          // Let's collect each possible values for each slots
+          sample.slots.forEach((s) => {
+            const slot = intent.slots[s.slot];
+            const name = getSlotName(getters.entity(state))(slot);
 
+            if (slot.entity) {
+              const entity = getters.entity(state)(slot.entity);
+
+              if (entity.type === 'values') {
+                slotValues[name] = entity.content.split('\n').map(o => o.trim());
+                return;
+              } else if (entity.type === 'regex') {
+                regexFeatures[name] = {
+                  name,
+                  pattern: entity.content,
+                };
+              }
+            }
+
+            slotValues[name] = [s.value];
+          });
+
+          if (Object.keys(slotValues).length > 0) {
+            const combinations = permutate([], slotValues);
+
+            console.log(combinations);
+          } else {
+            result.rasa_nlu_data.common_examples.push({
+              text,
+              intent: intent.name,
+              entities: [],
+            });
+          }
         });
       });
 
