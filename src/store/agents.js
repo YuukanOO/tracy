@@ -355,8 +355,9 @@ export const actions = {
         intent.training.forEach((sample) => {
           const text = sample.text.replace('\n', '');
           const slotValues = {};
+
           // Let's collect each possible values for each slots
-          sample.slots.forEach((s) => {
+          sample.slots.sort((a, b) => a.start > b.start).forEach((s) => {
             const slot = intent.slots[s.slot];
             const name = getSlotName(getters.entity(state))(slot);
 
@@ -377,10 +378,42 @@ export const actions = {
             slotValues[name] = [s.value];
           });
 
+          // And then generate all possible text with entities and values accordingly
           if (Object.keys(slotValues).length > 0) {
             const combinations = permutate([], slotValues);
 
             console.log(combinations);
+
+            combinations.forEach((values) => {
+              let newText = '';
+              let curStart = 0;
+              let curOffset = 0;
+              const entities = [];
+
+              values.forEach((value, i) => {
+                const sampleSlot = sample.slots[i];
+
+                newText += text.substring(curStart, sampleSlot.start) + value;
+                curStart = sampleSlot.end;
+
+                entities.push({
+                  start: sampleSlot.start + curOffset,
+                  end: sampleSlot.start + curOffset + value.length,
+                  value,
+                  entity: getSlotName(getters.entity(state))(intent.slots[sampleSlot.slot]),
+                });
+
+                curOffset += (value.length - (sampleSlot.end - sampleSlot.start));
+              });
+
+              newText += text.substring(curStart);
+
+              result.rasa_nlu_data.common_examples.push({
+                text: newText,
+                intent: intent.name,
+                entities,
+              });
+            });
           } else {
             result.rasa_nlu_data.common_examples.push({
               text,
@@ -390,87 +423,6 @@ export const actions = {
           }
         });
       });
-
-      // skill.intents.forEach((intent) => {
-      //   const transforms = {};
-      //   const entities = {};
-
-      //   let atLeastOneEntity = false;
-
-      //   Object.values(intent.slots).forEach((o) => {
-      //     let n = o.name;
-
-      //     if (o.entity) {
-      //       const ent = getters.entity(state)(o.entity);
-
-      //       atLeastOneEntity = true;
-      //       n = ent.name;
-
-      //       if (ent.type === 'values') {
-      //         entities[o.id] = ent.content.split('\n').map(oo => oo.trim());
-      //       } else if (ent.type === 'regex') {
-      //         regexFeatures[n] = {
-      //           name: n,
-      //           pattern: ent.content,
-      //         };
-      //       }
-      //     }
-
-      //     transforms[o.id] = (v, offset = 0) => ({
-      //       start: v.start + offset,
-      //       end: v.end + offset,
-      //       value: v.value,
-      //       entity: n,
-      //     });
-      //   });
-
-      //   intent.training.forEach((sample) => {
-      //     const text = sample.text.replace(/\n/, '');
-
-      //     // Each sample should be duplicated based on entity
-      //     if (sample.slots.length === 0) {
-      //       // No slots defined, just add the sample
-      //       result.rasa_nlu_data.common_examples.push({
-      //         text,
-      //         intent: intent.name,
-      //         entities: [],
-      //       });
-      //     } else if (atLeastOneEntity) {
-      //       for (let i = 0; i < sample.slots.length; i += 1) {
-      //         const sampleSlot = sample.slots[i];
-      //         const availableEntities = entities[sampleSlot.slot];
-
-      //         if (availableEntities) {
-      //           availableEntities.forEach((e) => {
-      //             const initialLength = sampleSlot.end - sampleSlot.start;
-      //             const offset = e.length - initialLength;
-
-      //             const newText = text.substring(0, sampleSlot.start) + e + text.substring(sampleSlot.end);
-
-      //             result.rasa_nlu_data.common_examples.push({
-      //               text: newText,
-      //               intent: intent.name,
-      //               entities: [
-      //                 ...sample.slots.slice(0, i),
-      //                 ...sample.slots.slice(i + 1),
-      //               ].map(v => transforms[v.slot](v, v.start > sampleSlot.start ? offset : 0)).concat({
-      //                 ...transforms[sampleSlot.slot](sampleSlot),
-      //                 end: sampleSlot.start + e.length,
-      //                 value: e,
-      //               }),
-      //             });
-      //           });
-      //         }
-      //       }
-      //     } else {
-      //       result.rasa_nlu_data.common_examples.push({
-      //         text,
-      //         intent: intent.name,
-      //         entities: sample.slots.map(v => transforms[v.slot](v)),
-      //       });
-      //     }
-      //   });
-      // });
     });
 
     result.rasa_nlu_data.regex_features = Object.values(regexFeatures);
