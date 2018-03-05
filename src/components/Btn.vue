@@ -1,6 +1,6 @@
 <template>
-  <button @click="$emit('click', $event)" :type="submit ? 'submit' : 'button'" 
-    :class="{ 'btn': true, 'btn--inverse': inverse, 'btn--secondary': secondary, 'btn--danger': danger }">
+  <button :disabled="disabled" @click="$emit('click', $event)" :type="submit ? 'submit' : 'button'" 
+    :class="{ 'btn': true, 'btn--inverse': inverse, 'btn--secondary': secondary, 'btn--danger': danger, 'btn--disabled': disabled }">
     <slot />
   </button>
 </template>
@@ -9,6 +9,7 @@
 export default {
   name: 'Btn',
   props: {
+    disabled: Boolean,
     submit: {
       type: Boolean,
       default: false,
@@ -112,6 +113,11 @@ export default {
     &:active {
       border-color: color(danger);
     }
+  }
+
+  &--disabled {
+    cursor: not-allowed;
+    transform: scale(1) !important;
   }
 }
 </style>

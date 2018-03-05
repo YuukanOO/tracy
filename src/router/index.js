@@ -14,6 +14,10 @@ export default function createRouter() {
   return new Router({
     routes: [
       {
+        path: '/',
+        redirect: { name: 'agents' },
+      },
+      {
         path: '/agents',
         name: 'agents',
         component: Agents,

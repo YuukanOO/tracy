@@ -6,12 +6,14 @@
       type="text" 
       :id="_uid" 
       class="textinput__input" 
+      ref="input"
       :value="value" 
       @input="$emit('input', $event.target.value)" />
     <textarea v-else class="textinput__input textinput--multiple"
       :value="value" 
       :rows="rows"
       :id="_uid"
+      ref="textarea"
       @input="$emit('input', $event.target.value)"
     />
   </div>
@@ -30,6 +32,15 @@ export default {
     multiple: {
       type: Boolean,
       default: false,
+    },
+  },
+  methods: {
+    select() {
+      if (this.multiple) {
+        this.$refs.textarea.select();
+      } else {
+        this.$refs.input.select();
+      }
     },
   },
 }

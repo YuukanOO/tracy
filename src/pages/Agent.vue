@@ -25,7 +25,8 @@
     </c-section>
 
     <modal title="Train data" v-model="trainModal">
-      <textinput label="JSON" v-model="trainData" multiple rows="15" />
+      <textinput label="JSON" ref="trainInput" v-model="trainData" multiple rows="15" />
+      <btn slot="actions" @click.prevent="copyTrainData">{{copyMsg}}</btn>
     </modal>
 
     <form>
@@ -88,7 +89,8 @@ export default {
       trainModal: false,
       trainData: '',
       selectedSkills: [],
-      data: {}
+      data: {},
+      copyMsg: 'Copy to clipboard',
     };
   },
   computed: {
@@ -106,6 +108,13 @@ export default {
     async train() {
       this.trainData = JSON.stringify(await this.$store.dispatch(actions.trainAgent.name, this.agent.id), null, 2);
       this.trainModal = true;
+    },
+    copyTrainData() {
+      this.copyMsg = 'Copied to clipboard!';
+      this.$refs.trainInput.select();
+      document.execCommand('copy');
+
+      setTimeout(() => this.copyMsg = 'Copy to clipboard', 1500);
     },
     hasSkill(id) {
       return this.selectedSkills.indexOf(id) !== -1;
