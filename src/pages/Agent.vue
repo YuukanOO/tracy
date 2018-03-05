@@ -31,8 +31,8 @@
 
     <form>
       <modal title="Edit agent" v-model="agentModal">
-        <textinput label="Name" v-model="data.name" />
-        <textinput label="Description" v-model="data.description" />
+        <textinput v-validate="'required'" :err="errors.collect('name')" name="name" label="Name" v-model="data.name" />
+        <textinput v-validate="'required'" :err="errors.collect('description')" label="Description" v-model="data.description" name="description" />
 
         <btn slot="actions" danger @click.prevent="remove">Delete</btn>
         <btn submit slot="actions" @click.prevent="save">Save</btn>

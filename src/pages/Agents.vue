@@ -23,8 +23,8 @@
     
     <form>
       <modal title="Create an agent" v-model="agentModal">
-        <textinput label="Name" v-model="agent.name" />
-        <textinput label="Description" v-model="agent.description" />
+        <textinput v-validate="'required'" :err="errors.collect('name')" name="name" label="Name" v-model="agent.name" />
+        <textinput v-validate="'required'" :err="errors.collect('description')" label="Description" v-model="agent.description" name="description" />
 
         <btn submit slot="actions" @click.prevent="save">Save</btn>
       </modal>

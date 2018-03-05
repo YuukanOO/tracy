@@ -4,6 +4,7 @@
     <input 
       v-if="multiple === false"
       type="text" 
+      :name="name"
       :id="_uid" 
       class="textinput__input" 
       ref="input"
@@ -11,6 +12,7 @@
       @input="$emit('input', $event.target.value)" />
     <textarea v-else class="textinput__input textinput--multiple"
       :value="value" 
+      :name="name"
       :rows="rows"
       :id="_uid"
       ref="textarea"
@@ -23,6 +25,14 @@
 export default {
   name: 'Textinput',
   props: {
+    err: {
+      type: Array,
+      default: () => [],
+    },
+    name: {
+      type: String,
+      required: true,
+    },
     value: {},
     rows: {
       type: String,
