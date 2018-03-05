@@ -355,6 +355,7 @@ export const actions = {
         intent.training.forEach((sample) => {
           const text = sample.text.replace('\n', '');
           const slotValues = {};
+          const synonyms = {};
 
           // Let's collect each possible values for each slots
           sample.slots.sort((a, b) => a.start > b.start).forEach((s) => {
@@ -365,7 +366,18 @@ export const actions = {
               const entity = getters.entity(state)(slot.entity);
 
               if (entity.type === 'values') {
-                slotValues[name] = entity.content.split('\n').map(o => o.trim());
+                // Check for synonyms
+                slotValues[name] = entity.content.split('\n').reduce((acc, o) => {
+                  const values = o.split(',').map(oo => oo.trim());
+
+                  if (values.length > 1) {
+                    values.slice(1).forEach((v) => {
+                      synonyms[v] = values[0]; // eslint-disable-line
+                    });
+                  }
+
+                  return acc.concat(values);
+                }, []);
                 return;
               } else if (entity.type === 'regex') {
                 regexFeatures[name] = {
@@ -382,7 +394,7 @@ export const actions = {
           if (Object.keys(slotValues).length > 0) {
             const combinations = permutate([], slotValues);
 
-            console.log(combinations);
+            // console.log(combinations);
 
             combinations.forEach((values) => {
               let newText = '';
@@ -399,7 +411,7 @@ export const actions = {
                 entities.push({
                   start: sampleSlot.start + curOffset,
                   end: sampleSlot.start + curOffset + value.length,
-                  value,
+                  value: (synonyms[value] || value),
                   entity: getSlotName(getters.entity(state))(intent.slots[sampleSlot.slot]),
                 });
 
