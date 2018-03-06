@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "8c8417b35e820f831686"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "c615d97af6377c717793"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -1295,7 +1295,7 @@ exports.default = {
   name: 'Topbar',
   data: function data() {
     return {
-      version: "1.0.1"
+      version: "1.0.2"
     };
   }
 };
@@ -28582,7 +28582,8 @@ var actions = exports.actions = {
             var slot = intent.slots[s.slot];
 
             // Prefix it with index to ensure sorting
-            var name = i + '_' + (0, _plugins.getSlotName)(getters.entity(state))(slot);
+            var slotName = (0, _plugins.getSlotName)(getters.entity(state))(slot);
+            var name = i + '_' + slotName;
 
             if (slot.entity) {
               var entity = getters.entity(state)(slot.entity);
@@ -28605,7 +28606,7 @@ var actions = exports.actions = {
                 return;
               } else if (entity.type === 'regex') {
                 regexFeatures[name] = {
-                  name: name,
+                  name: slotName,
                   pattern: entity.content
                 };
               }
