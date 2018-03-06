@@ -18,7 +18,7 @@
     </list-item>
 
     <blankslate v-if="agents.length === 0" title="No agent yet!">
-      Looks like you do not have any agent yet! Go ahead and create one!
+      Agents represents an assistant. Attach skills to it and retrieve Rasa NLU training data. Go ahead and create your first agent!
     </blankslate>
     
     <form>

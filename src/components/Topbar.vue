@@ -1,7 +1,7 @@
 <template>
   <div class="topbar">
     <div class="topbar__wrapper">
-      <router-link class="topbar__link" to="/">rasa-tinyui <span class="topbar__version">{{version}}</span></router-link>
+      <router-link class="topbar__link" to="/">tracy <span class="topbar__version">{{version}}</span></router-link>
       <div>
         <router-link class="topbar__link" :to="{ name: 'agents' }">agents</router-link>
         <router-link class="topbar__link" :to="{ name: 'skills' }">skills</router-link>

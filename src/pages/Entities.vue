@@ -18,7 +18,7 @@
     </list-item>
 
     <blankslate v-if="entities.length === 0" title="No entity yet!">
-      Looks like you do not have any entity yet! Go ahead and create one!
+      Entities hold values used to duplicates you sample data and make training easier! Go ahead and create one!
     </blankslate>
 
     <form>

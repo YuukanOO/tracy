@@ -22,7 +22,7 @@
         </list-item>
       </c-table>
       <blankslate title="No intent yet" v-if="skill.intents.length === 0">
-        Add intents to your skill!
+        Add intents to your skill to make it useful!
       </blankslate>
     </c-section>
 

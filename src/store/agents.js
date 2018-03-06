@@ -113,6 +113,19 @@ const mutations = {
     });
   },
   deleteEntity(state, id) {
+    getters.skills(state).forEach((s) => {
+      s.intents.forEach((int) => {
+        Object.values(int.slots).forEach((sl) => {
+          if (sl.entity == id) { // eslint-disable-line
+            const slot = getters.slot(state)(s.id)(int.id)(sl.id);
+
+            if (slot) {
+              slot.entity = '';
+            }
+          }
+        });
+      });
+    });
     Vue.delete(state.entities, id);
   },
   setEntity(state, {
@@ -145,6 +158,13 @@ const mutations = {
     }
   },
   deleteSkill(state, id) {
+    getters.agents(state).forEach((agent) => {
+      for (let i = agent.skills.length - 1; i >= 0; i -= 1) {
+        if (agent.skills[i] === id) {
+          agent.skills.splice(i, 1);
+        }
+      }
+    });
     Vue.delete(state.skills, id);
   },
   addIntent(state, { name, description, skillID }) {
@@ -205,6 +225,15 @@ const mutations = {
     const intent = getters.intent(state)(skillID)(intentID);
 
     if (intent) {
+      // Delete in training samples
+      intent.training.forEach((sample) => {
+        for (let i = sample.slots.length - 1; i >= 0; i -= 1) {
+          if (sample.slots[i].slot === id) {
+            sample.slots.splice(i, 1);
+          }
+        }
+      });
+
       Vue.delete(intent.slots, id);
     }
   },
@@ -357,6 +386,11 @@ export const actions = {
 
         intent.training.forEach((sample) => {
           const text = sample.text.replace('\n', '');
+
+          if (!text) {
+            return;
+          }
+
           const slotValues = {};
           const synonyms = {};
 

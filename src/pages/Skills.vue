@@ -18,7 +18,7 @@
     </list-item>
 
     <blankslate v-if="skills.length === 0" title="No skill yet!">
-      Looks like you do not have any skill yet! Go ahead and create one!
+      Skills hold together multiple intents within a same bounded context. Go ahead and create your first skill!
     </blankslate>
 
     <form>
