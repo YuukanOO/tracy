@@ -24,7 +24,7 @@ export default {
   @include type(small);
   background-color: white;
   color: color(text, 1);
-  overflow: hidden;
+  // overflow: hidden;
   padding: baseline(0.5) baseline();
 
   &--title {
