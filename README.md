@@ -1,7 +1,7 @@
 tracy
 ===
 
-A simple and easy to use trainer to generate RASA needed files.
+A simple and easy to use trainer to generate Rasa needed files.
 
 Inspired by [Chatito](https://rodrigopivi.github.io/Chatito/) and [Rasa NLU Trainer](https://rasahq.github.io/rasa-nlu-trainer/).
 
