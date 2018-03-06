@@ -399,7 +399,8 @@ export const actions = {
             const slot = intent.slots[s.slot];
 
             // Prefix it with index to ensure sorting
-            const name = `${i}_${getSlotName(getters.entity(state))(slot)}`;
+            const slotName = getSlotName(getters.entity(state))(slot);
+            const name = `${i}_${slotName}`;
 
             if (slot.entity) {
               const entity = getters.entity(state)(slot.entity);
@@ -420,7 +421,7 @@ export const actions = {
                 return;
               } else if (entity.type === 'regex') {
                 regexFeatures[name] = {
-                  name,
+                  name: slotName,
                   pattern: entity.content,
                 };
               }
