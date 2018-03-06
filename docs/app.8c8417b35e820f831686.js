@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "23140344e75ba0a3aa05"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "8c8417b35e820f831686"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -1224,6 +1224,9 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
+//
+//
+//
 
 exports.default = {
   name: 'Textinput',
@@ -1234,10 +1237,8 @@ exports.default = {
         return [];
       }
     },
-    name: {
-      type: String,
-      required: false
-    },
+    name: String,
+    help: String,
     value: {},
     rows: {
       type: String,
@@ -1294,7 +1295,7 @@ exports.default = {
   name: 'Topbar',
   data: function data() {
     return {
-      version: "1.0.0"
+      version: "1.0.1"
     };
   }
 };
@@ -1613,6 +1614,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
 function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; } //
+//
+//
+//
 //
 //
 //
@@ -3148,7 +3152,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, "/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__| -- typography         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__|       -- grid         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__| -- responsive         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__|      -- color         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n.textinput + * {\n  margin-top: 1.5rem;\n}\n.textinput__label {\n  font-size: 0.889rem;\n  line-height: 1.68729;\n  display: block;\n  font-weight: bold;\n  padding-left: 0.75rem;\n  padding-bottom: 0.375rem;\n  transition: all 0.2s;\n}\n.textinput__input {\n  font-size: 0.889rem;\n  line-height: 1.68729;\n  background-color: transparent;\n  border: 2px solid rgba(0, 0, 0, 0.12);\n  border-radius: 25px;\n  font-family: inherit;\n  outline: none;\n  padding: 0.375rem 0.75rem;\n  width: 100%;\n  transition: all 0.2s;\n}\n.textinput__input:focus {\n    border-color: #7C00BC;\n    box-shadow: 0 0 10px #7C00BC;\n}\n.textinput__input:hover {\n    border-color: #7C00BC;\n}\n.textinput--error .textinput__label {\n  color: #E53935;\n}\n.textinput--error .textinput__input {\n  border-color: #E53935;\n}\n", ""]);
+exports.push([module.i, "/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__| -- typography         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__|       -- grid         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__| -- responsive         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__|      -- color         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n.textinput + * {\n  margin-top: 1.5rem;\n}\n.textinput__help {\n  font-size: 0.702rem;\n  line-height: 2.13675;\n  color: rgba(0, 0, 0, 0.54);\n  padding: 0 0.75rem;\n}\n.textinput__label {\n  font-size: 0.889rem;\n  line-height: 1.68729;\n  display: block;\n  font-weight: bold;\n  padding-left: 0.75rem;\n  padding-bottom: 0.375rem;\n  transition: all 0.2s;\n}\n.textinput__input {\n  font-size: 0.889rem;\n  line-height: 1.68729;\n  background-color: transparent;\n  border: 2px solid rgba(0, 0, 0, 0.12);\n  border-radius: 25px;\n  font-family: inherit;\n  outline: none;\n  padding: 0.375rem 0.75rem;\n  width: 100%;\n  transition: all 0.2s;\n}\n.textinput__input:focus {\n    border-color: #7C00BC;\n    box-shadow: 0 0 10px #7C00BC;\n}\n.textinput__input:hover {\n    border-color: #7C00BC;\n}\n.textinput--error .textinput__label {\n  color: #E53935;\n}\n.textinput--error .textinput__input {\n  border-color: #E53935;\n}\n", ""]);
 
 // exports
 
@@ -3193,7 +3197,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, "\n.selected-col {\n  text-align: right;\n}\n", ""]);
+exports.push([module.i, "/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__| -- typography         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__|       -- grid         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__| -- responsive         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__|      -- color         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n.selected-col {\n  text-align: right;\n}\n.empty-text {\n  color: rgba(0, 0, 0, 0.54);\n}\n", ""]);
 
 // exports
 
@@ -12364,7 +12368,13 @@ var render = function() {
                 _vm.$emit("input", $event.target.value)
               }
             }
-          })
+          }),
+      _vm._v(" "),
+      _vm.help
+        ? _c("p", { staticClass: "textinput__help" }, [
+            _vm._v("\n    " + _vm._s(_vm.help) + "\n  ")
+          ])
+        : _vm._e()
     ]
   )
 }
@@ -12872,6 +12882,12 @@ var render = function() {
                 })
               ),
               _vm._v(" "),
+              _vm.skills.length === 0
+                ? _c("p", { staticClass: "empty-text" }, [
+                    _vm._v("\n        No skill found!\n      ")
+                  ])
+                : _vm._e(),
+              _vm._v(" "),
               _c(
                 "btn",
                 {
@@ -13244,7 +13260,12 @@ var render = function() {
               _vm._v(" "),
               _vm.entity.type === "values"
                 ? _c("textinput", {
-                    attrs: { label: "Entity values", multiple: "" },
+                    attrs: {
+                      label: "Entity values",
+                      multiple: "",
+                      help:
+                        "One value per line, synonyms separated by a comma, ie: New York, NYC, NY"
+                    },
                     model: {
                       value: _vm.entity.content,
                       callback: function($$v) {

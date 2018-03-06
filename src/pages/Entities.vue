@@ -28,7 +28,7 @@
           <radio label="Values" value="values" v-model="entity.type" />
           <radio label="Regex" value="regex" v-model="entity.type" />
         </radio-group>
-        <textinput label="Entity values" multiple v-model="entity.content" v-if="entity.type === 'values'" />
+        <textinput label="Entity values" multiple v-model="entity.content" v-if="entity.type === 'values'" help="One value per line, synonyms separated by a comma, ie: New York, NYC, NY" />
         <textinput label="Regex value" v-model="entity.content" v-if="entity.type === 'regex'" />
 
         <btn slot="actions" v-if="entity.id" @click.prevent="remove" danger>Delete</btn>

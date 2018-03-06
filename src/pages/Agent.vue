@@ -53,6 +53,9 @@
             </table-col>
           </table-row>
         </c-table>
+        <p class="empty-text" v-if="skills.length === 0">
+          No skill found!
+        </p>
 
         <btn slot="actions" submit @click.prevent="saveSkills">Save</btn>
       </modal>
@@ -158,7 +161,13 @@ export default {
 </script>
 
 <style lang="scss">
+@import "./../_vars.scss";
+
 .selected-col {
   text-align: right;
+}
+
+.empty-text {
+  color: color(text, 1);
 }
 </style>

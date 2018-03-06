@@ -18,6 +18,9 @@
       ref="textarea"
       @input="$emit('input', $event.target.value)"
     />
+    <p class="textinput__help" v-if="help">
+      {{help}}
+    </p>
   </div>
 </template>
 
@@ -29,10 +32,8 @@ export default {
       type: Array,
       default: () => [],
     },
-    name: {
-      type: String,
-      required: false,
-    },
+    name: String,
+    help: String,
     value: {},
     rows: {
       type: String,
@@ -67,6 +68,12 @@ export default {
 .textinput {
   & + * {
     margin-top: baseline();
+  }
+
+  &__help {
+    @include type(tiny);
+    color: color(text, 1);
+    padding: 0 baseline(0.5);
   }
 
   &__label {
