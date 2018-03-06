@@ -23,7 +23,7 @@
 
     <form>
       <modal v-model="skillModal" title="Create a skill">
-        <textinput label="Name" v-model="skill.name" />
+        <textinput v-validate="'required'" label="Name" v-model="skill.name" name="name" data-vv-scope="skill" :err="errors.collect('name', 'skill')" />
         <textinput label="Description" v-model="skill.description" />
 
         <btn slot="actions" submit @click.prevent="save">Save</btn>
@@ -63,8 +63,10 @@ export default {
       this.skillModal = true;
     },
     async save() {
-      await this.$store.dispatch(actions.upsertSkill.name, this.skill);
-      this.skillModal = false;
+      if (await this.$validator.validateAll('skill')) {
+        await this.$store.dispatch(actions.upsertSkill.name, this.skill);
+        this.skillModal = false;
+      }
     },
   },
 }

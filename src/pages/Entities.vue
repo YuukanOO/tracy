@@ -23,7 +23,7 @@
 
     <form>
       <modal v-model="entityModal" :title="`${entity.id ? 'Update' : 'Create'} an entity`">
-        <textinput label="Name" v-model="entity.name" />
+        <textinput v-validate="'required'" label="Name" v-model="entity.name" name="name" data-vv-scope="entity" :err="errors.collect('name', 'entity')" />
         <radio-group>
           <radio label="Values" value="values" v-model="entity.type" />
           <radio label="Regex" value="regex" v-model="entity.type" />
@@ -68,8 +68,10 @@ export default {
   },
   methods: {
     async save() {
-      await this.$store.dispatch(actions.upsertEntity.name, this.entity);
-      this.entityModal = false;
+      if (await this.$validator.validateAll('entity')) {
+        await this.$store.dispatch(actions.upsertEntity.name, this.entity);
+        this.entityModal = false;
+      }
     },
     async remove() {
       await this.$store.dispatch(actions.removeEntity.name, this.entity.id);

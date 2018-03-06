@@ -1,5 +1,5 @@
 <template>
-  <div class="textinput">
+  <div :class="{ 'textinput' : true, 'textinput--error': hasError }">
     <label :for="_uid" class="textinput__label">{{label}}</label>
     <input 
       v-if="multiple === false"
@@ -31,7 +31,7 @@ export default {
     },
     name: {
       type: String,
-      required: true,
+      required: false,
     },
     value: {},
     rows: {
@@ -42,6 +42,11 @@ export default {
     multiple: {
       type: Boolean,
       default: false,
+    },
+  },
+  computed: {
+    hasError() {
+      return this.err.length > 0;
     },
   },
   methods: {
@@ -70,6 +75,7 @@ export default {
     font-weight: bold;
     padding-left: baseline(0.5);
     padding-bottom: baseline(0.25);
+    transition: all 0.2s;
   }
 
   &__input {
@@ -90,6 +96,16 @@ export default {
 
     &:hover {
       border-color: color(brand);
+    }
+  }
+
+  &--error {
+    .textinput__label {
+      color: color(danger);
+    }
+
+    .textinput__input {
+      border-color: color(danger);
     }
   }
 }

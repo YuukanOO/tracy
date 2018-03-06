@@ -1,5 +1,5 @@
 <template>
-  <td :class="{ 'table-col': true, 'table-col--title': title, 'table-col--action': action, 'table-col--input': input }">
+  <td :class="{ 'table-col': true, 'table-col--title': title, 'table-col--action': action, 'table-col--input': input, 'table-col--optional': optional }">
     <slot />
   </td>
 </template>
@@ -11,6 +11,7 @@ export default {
     title: Boolean,
     action: Boolean,
     input: Boolean,
+    optional: Boolean,
   },
 }
 </script>
@@ -39,6 +40,16 @@ export default {
   &--action {
     width: 40px;
     text-align: right;
+  }
+
+  &--optional {
+    // TODO: on mobile, we can mask them
+    
+    // visibility: hidden;
+
+    // @include on(tablet) {
+    //   visibility: visible;
+    // }
   }
 }
 </style>

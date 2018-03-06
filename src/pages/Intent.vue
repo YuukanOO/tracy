@@ -6,7 +6,7 @@
 
     <form>
       <modal title="Edit intent" v-model="intentModal">
-        <textinput label="Name" v-model="data.name" />
+        <textinput v-validate="'required'" label="Name" v-model="data.name" name="name" data-vv-scope="intent" :err="errors.collect('name', 'intent')" />
         <textinput label="Description" v-model="data.description" />
 
         <btn slot="actions" danger @click.prevent="remove">Delete</btn>
@@ -170,8 +170,10 @@ export default {
       });
     },
     async save() {
-      await this.$store.dispatch(actions.upsertIntent.name, this.data);
-      this.intentModal = false;
+      if (await this.$validator.validateAll('intent')) {
+        await this.$store.dispatch(actions.upsertIntent.name, this.data);
+        this.intentModal = false;
+      }
     },
     async remove() {
       await this.$store.dispatch(actions.removeIntent.name, this.data);

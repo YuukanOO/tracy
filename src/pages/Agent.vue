@@ -15,7 +15,7 @@
             v-for="skill in agentSkills" 
             :key="skill.id">
             <table-col title>{{skill.name}}</table-col>
-            <table-col>{{skill.description}}</table-col>
+            <table-col optional>{{skill.description}}</table-col>
           </table-row>
         </list-item>
       </c-table>
@@ -31,8 +31,8 @@
 
     <form>
       <modal title="Edit agent" v-model="agentModal">
-        <textinput v-validate="'required'" :err="errors.collect('name')" name="name" label="Name" v-model="data.name" />
-        <textinput v-validate="'required'" :err="errors.collect('description')" label="Description" v-model="data.description" name="description" />
+        <textinput v-validate="'required'" :err="errors.collect('name', 'agent')" data-vv-scope="agent" name="name" label="Name" v-model="data.name" />
+        <textinput label="Description" v-model="data.description" />
 
         <btn slot="actions" danger @click.prevent="remove">Delete</btn>
         <btn submit slot="actions" @click.prevent="save">Save</btn>
@@ -148,8 +148,10 @@ export default {
       this.$router.push({ name: 'agents' });
     },
     async save() {
-      await this.$store.dispatch(actions.upsertAgent.name, this.data);
-      this.agentModal = false;
+      if (await this.$validator.validateAll('agent')) {
+        await this.$store.dispatch(actions.upsertAgent.name, this.data);
+        this.agentModal = false;
+      }
     },
   },
 }

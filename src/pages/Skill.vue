@@ -28,7 +28,7 @@
 
     <form>
       <modal title="Edit skill" v-model="skillModal">
-        <textinput label="Name" v-model="data.name" />
+        <textinput v-validate="'required'" label="Name" v-model="data.name" name="name" data-vv-scope="skill" :err="errors.collect('name', 'skill')" />
         <textinput label="Description" v-model="data.description" />
 
         <btn slot="actions" danger @click.prevent="remove">Delete</btn>
@@ -38,7 +38,7 @@
 
     <form>
       <modal title="Create an intent" v-model="intentModal">
-        <textinput label="Name" v-model="data.name" />
+        <textinput v-validate="'required'" label="Name" v-model="data.name" name="name" data-vv-scope="intent" :err="errors.collect('name', 'intent')" />
         <textinput label="Description" v-model="data.description" />
 
         <btn submit slot="actions" @click.prevent="saveIntent">Save</btn>
@@ -93,12 +93,16 @@ export default {
       this.$router.push({ name: 'skills' });
     },
     async saveIntent() {
-      await this.$store.dispatch(actions.upsertIntent.name, this.data);
-      this.intentModal = false;
+      if (await this.$validator.validateAll('intent')) {
+        await this.$store.dispatch(actions.upsertIntent.name, this.data);
+        this.intentModal = false;
+      }
     },
     async save() {
-      await this.$store.dispatch(actions.upsertSkill.name, this.data);
-      this.skillModal = false;
+      if (await this.$validator.validateAll('skill')) {
+        await this.$store.dispatch(actions.upsertSkill.name, this.data);
+        this.skillModal = false;
+      }
     },
   },
 }

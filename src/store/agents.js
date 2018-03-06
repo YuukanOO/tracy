@@ -1,4 +1,5 @@
 import Vue from 'vue';
+import slugify from 'slugify';
 import { getSlotName } from './../plugins';
 
 const colors = [
@@ -352,15 +353,19 @@ export const actions = {
       const skill = getters.skill(state)(skillID);
 
       skill.intents.forEach((intent) => {
+        const intentName = `${slugify(skill.name)}:${slugify(intent.name)}`.toLowerCase();
+
         intent.training.forEach((sample) => {
           const text = sample.text.replace('\n', '');
           const slotValues = {};
           const synonyms = {};
 
           // Let's collect each possible values for each slots
-          sample.slots.sort((a, b) => a.start > b.start).forEach((s) => {
+          sample.slots.sort((a, b) => a.start > b.start).forEach((s, i) => {
             const slot = intent.slots[s.slot];
-            const name = getSlotName(getters.entity(state))(slot);
+
+            // Prefix it with index to ensure sorting
+            const name = `${i}_${getSlotName(getters.entity(state))(slot)}`;
 
             if (slot.entity) {
               const entity = getters.entity(state)(slot.entity);
@@ -394,8 +399,6 @@ export const actions = {
           if (Object.keys(slotValues).length > 0) {
             const combinations = permutate([], slotValues);
 
-            // console.log(combinations);
-
             combinations.forEach((values) => {
               let newText = '';
               let curStart = 0;
@@ -422,14 +425,14 @@ export const actions = {
 
               result.rasa_nlu_data.common_examples.push({
                 text: newText,
-                intent: intent.name,
+                intent: intentName,
                 entities,
               });
             });
           } else {
             result.rasa_nlu_data.common_examples.push({
               text,
-              intent: intent.name,
+              intent: intentName,
               entities: [],
             });
           }
