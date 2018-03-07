@@ -53,6 +53,7 @@ export default {
   right: 0;
   bottom: 0;
   transition: all 0.2s;
+  z-index: 1;
 
   &__title {
     @include type(body);

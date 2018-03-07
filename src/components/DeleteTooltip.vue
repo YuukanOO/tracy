@@ -37,6 +37,7 @@
     bottom: 125%;
     text-align: center;
     transform: translateX(-50%);
+    white-space: nowrap;
   }
 
   // &.pop-enter, 

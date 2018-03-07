@@ -1,0 +1,1923 @@
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__| -- typography         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__|       -- grid         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__| -- responsive         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__|      -- color         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+.agents {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  flex: 1;
+}
+.agents__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: -13.5px;
+}
+.agents__item {
+    flex-basis: auto;
+    flex-grow: 0;
+    flex-shrink: 1;
+    margin: 13.5px;
+    width: calc(100% - 27px);
+}
+@media all and (min-width: 768px) {
+.agents__item {
+        flex-basis: auto;
+        flex-grow: 0;
+        flex-shrink: 1;
+        margin: 13.5px;
+        width: calc(33.33333% - 27px);
+}
+}
+@media all and (min-width: 992px) {
+.agents__item {
+        flex-basis: auto;
+        flex-grow: 0;
+        flex-shrink: 1;
+        margin: 13.5px;
+        width: calc(25% - 27px);
+}
+}
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__| -- typography         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__|       -- grid         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__| -- responsive         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__|      -- color         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+.blankslate {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  color: white;
+  flex: 1;
+  text-align: center;
+}
+.blankslate__title {
+    font-size: 1.424rem;
+    line-height: 1.05337;
+    font-weight: bold;
+}
+.blankslate__subtitle {
+    color: rgba(255, 255, 255, 0.54);
+}
+.blankslate__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 1.5rem 0;
+}
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__| -- typography         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__|       -- grid         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__| -- responsive         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__|      -- color         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+.pagebar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin-bottom: 0.75rem;
+  padding: 0.75rem 0;
+}
+.pagebar__title {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: white;
+    font-weight: bold;
+    overflow: hidden;
+    padding: 0.75rem 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.pagebar__title small {
+      font-size: 0.889rem;
+      line-height: 1.68729;
+      color: rgba(255, 255, 255, 0.54);
+      font-weight: normal;
+}
+.pagebar__delimiter {
+    color: rgba(255, 255, 255, 0.54);
+}
+.pagebar__actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__| -- typography         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__|       -- grid         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__| -- responsive         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__|      -- color         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+.btn {
+  position: relative;
+}
+.btn + .btn {
+    margin-left: 0.75rem;
+}
+.btn__btn {
+    font-size: 0.889rem;
+    line-height: 1.68729;
+    background-color: transparent;
+    border: 2px solid #7C00BC;
+    border-radius: 25px;
+    font-weight: bold;
+    color: #7C00BC;
+    cursor: pointer;
+    padding: 0.375rem 0.75rem;
+    outline: none;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+.btn__btn:focus {
+      box-shadow: 0 0 10px #7C00BC;
+}
+.btn__btn:hover {
+      background-color: #7C00BC;
+      color: white;
+      transform: scale(1.1);
+}
+.btn__btn:active {
+      background-color: #5a0089;
+      border-color: #5a0089;
+      transform: scale(1);
+}
+.btn__btn--inverse {
+      border-color: white;
+      color: white;
+}
+.btn__btn--inverse:focus {
+        box-shadow: 0 0 10px #b423ff;
+}
+.btn__btn--inverse:hover {
+        background-color: white;
+        color: #7C00BC;
+}
+.btn__btn--secondary {
+      border-color: #757575;
+      color: rgba(0, 0, 0, 0.54);
+}
+.btn__btn--secondary:focus {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.54);
+}
+.btn__btn--secondary:hover {
+        background-color: rgba(0, 0, 0, 0.54);
+}
+.btn__btn--secondary:active {
+        border-color: #757575;
+}
+.btn__btn--danger {
+      border-color: #E53935;
+      color: #E53935;
+}
+.btn__btn--danger:focus {
+        box-shadow: 0 0 10px #E53935;
+}
+.btn__btn--danger:hover {
+        background-color: #E53935;
+}
+.btn__btn--danger:active {
+        border-color: #E53935;
+}
+.btn__btn--disabled {
+      cursor: not-allowed;
+      transform: scale(1) !important;
+}
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__| -- typography         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__|       -- grid         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__| -- responsive         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__|      -- color         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+.delete-tooltip {
+  transition: all 0.2s;
+}
+.delete-tooltip__triangle {
+    border-top: 12px solid black;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    display: block;
+    height: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    position: absolute;
+}
+.delete-tooltip__popup {
+    font-size: 0.702rem;
+    line-height: 2.13675;
+    background-color: black;
+    border-radius: 15px;
+    color: white;
+    display: block;
+    padding: 0.375rem 0.75rem;
+    position: absolute;
+    left: 50%;
+    bottom: 125%;
+    text-align: center;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__| -- typography         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__|       -- grid         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__| -- responsive         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__|      -- color         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+.modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  background-color: rgba(0, 0, 0, 0.42);
+  overflow-y: auto;
+  padding: 1.5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: all 0.2s;
+  z-index: 1;
+}
+.modal__title {
+    font-size: 1rem;
+    line-height: 1.5;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    color: #7C00BC;
+    padding: 0.75rem 1.5rem;
+    font-weight: bold;
+}
+.modal__content {
+    padding: 1.5rem;
+}
+.modal__actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+    padding: 0.75rem 1.5rem;
+}
+.modal__card {
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.87);
+    border-radius: 25px;
+    width: 100%;
+    transition: all 0.2s;
+    transform: scale(1);
+}
+@media all and (min-width: 768px) {
+.modal__card {
+        width: 450px;
+}
+}
+.modal.fade-enter, .modal.fade-leave-to {
+    opacity: 0;
+}
+.modal.fade-enter .modal__card, .modal.fade-leave-to .modal__card {
+      transform: scale(0);
+}
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__| -- typography         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__|       -- grid         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__| -- responsive         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__|      -- color         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+.textinput + * {
+  margin-top: 1.5rem;
+}
+.textinput__help {
+  font-size: 0.702rem;
+  line-height: 2.13675;
+  color: rgba(0, 0, 0, 0.54);
+  padding: 0 0.75rem;
+}
+.textinput__label {
+  font-size: 0.889rem;
+  line-height: 1.68729;
+  display: block;
+  font-weight: bold;
+  padding-left: 0.75rem;
+  padding-bottom: 0.375rem;
+  transition: all 0.2s;
+}
+.textinput__input {
+  font-size: 0.889rem;
+  line-height: 1.68729;
+  background-color: transparent;
+  border: 2px solid rgba(0, 0, 0, 0.12);
+  border-radius: 25px;
+  font-family: inherit;
+  outline: none;
+  padding: 0.375rem 0.75rem;
+  width: 100%;
+  transition: all 0.2s;
+}
+.textinput__input:focus {
+    border-color: #7C00BC;
+    box-shadow: 0 0 10px #7C00BC;
+}
+.textinput__input:hover {
+    border-color: #7C00BC;
+}
+.textinput--error .textinput__label {
+  color: #E53935;
+}
+.textinput--error .textinput__input {
+  border-color: #E53935;
+}
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__| -- typography         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__|       -- grid         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__| -- responsive         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__|      -- color         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+.card {
+  background-color: white;
+  border-radius: 35px;
+  box-shadow: 0 0 5px #5a0089;
+  outline: none;
+  text-decoration: none;
+  transition: all 0.2s;
+  transform: scale(1);
+}
+.card__title {
+    color: #7C00BC;
+    padding: 1.5rem;
+    padding-bottom: 0;
+    display: block;
+    font-weight: bold;
+}
+.card--title-only .card__title {
+    padding-bottom: 1.5rem;
+}
+.card__subtitle {
+    font-size: 0.889rem;
+    line-height: 1.68729;
+    color: rgba(0, 0, 0, 0.54);
+    display: block;
+    padding: 1.5rem;
+    padding-top: 0;
+}
+.card__meta {
+    font-size: 0.889rem;
+    line-height: 1.68729;
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+    color: rgba(0, 0, 0, 0.54);
+    display: block;
+    text-align: right;
+    padding: 0.75rem 1.5rem;
+}
+.card:focus {
+    box-shadow: 0 0 10px #b423ff;
+}
+.card:hover {
+    transform: scale(1.1);
+}
+.card:active {
+    transform: scale(1);
+}
+
+.list-item-enter,
+.list-item-leave-to {
+  transform: scale(0) !important;
+}
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__| -- typography         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__|       -- grid         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__| -- responsive         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__|      -- color         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+.selected-col {
+  text-align: right;
+}
+.empty-text {
+  color: rgba(0, 0, 0, 0.54);
+}
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__| -- typography         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__|       -- grid         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__| -- responsive         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__|      -- color         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+.checkbox::after {
+  content: '';
+  border: 1px solid #7C00BC;
+  border-radius: 5px;
+  color: black;
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  transition: all 0.2s;
+}
+.checkbox--checked::after {
+  background-color: #7C00BC;
+  transform: rotate(90deg);
+}
+.checkbox__input {
+  visibility: hidden;
+}
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__| -- typography         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__|       -- grid         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__| -- responsive         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__|      -- color         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+.section {
+  background-color: #9e00ef;
+  border-radius: 25px;
+  box-shadow: 0 0 5px #5a0089;
+  margin-bottom: 1.5rem;
+}
+.section__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #b423ff;
+    padding: 0.75rem 1.5rem;
+}
+.section__title {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: white;
+    font-weight: bold;
+}
+.section__content {
+    padding: 1.5rem;
+}
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__| -- typography         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__|       -- grid         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__| -- responsive         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__|      -- color         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+.table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.table--inverse td {
+    background-color: rgba(0, 0, 0, 0.04);
+}
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__| -- typography         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__|       -- grid         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__| -- responsive         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__|      -- color         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+.table-row {
+  transition: all 0.2s;
+}
+.table-row + .table-row {
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+.table-row--clickable {
+    cursor: pointer;
+}
+.table-row:first-child td:first-child {
+    border-top-left-radius: 25px;
+}
+.table-row:first-child td:last-child {
+    border-top-right-radius: 25px;
+}
+.table-row:last-child td:first-child {
+    border-bottom-left-radius: 25px;
+}
+.table-row:last-child td:last-child {
+    border-bottom-right-radius: 25px;
+}
+.table-row:focus {
+    box-shadow: 0 0 10px #b423ff;
+}
+.table-row--scale:hover {
+    transform: scale(1.03);
+}
+.table-row--scale:active {
+    transform: scale(1);
+}
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__| -- typography         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__|       -- grid         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__| -- responsive         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__|      -- color         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+.table-col {
+  font-size: 0.889rem;
+  line-height: 1.68729;
+  background-color: white;
+  color: rgba(0, 0, 0, 0.54);
+  padding: 0.75rem 1.5rem;
+}
+.table-col--title {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #7C00BC;
+    font-weight: bold;
+}
+.table-col--input {
+    padding: 0;
+}
+.table-col--action {
+    width: 40px;
+    text-align: right;
+}
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__| -- typography         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__|       -- grid         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__| -- responsive         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__|      -- color         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+.skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  flex: 1;
+}
+.skills__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: -13.5px;
+}
+.skills__item {
+    flex-basis: auto;
+    flex-grow: 0;
+    flex-shrink: 1;
+    margin: 13.5px;
+    width: calc(100% - 27px);
+}
+@media all and (min-width: 768px) {
+.skills__item {
+        flex-basis: auto;
+        flex-grow: 0;
+        flex-shrink: 1;
+        margin: 13.5px;
+        width: calc(33.33333% - 27px);
+}
+}
+@media all and (min-width: 992px) {
+.skills__item {
+        flex-basis: auto;
+        flex-grow: 0;
+        flex-shrink: 1;
+        margin: 13.5px;
+        width: calc(25% - 27px);
+}
+}
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__| -- typography         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__|       -- grid         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__| -- responsive         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__|      -- color         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__| -- typography         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__|       -- grid         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__| -- responsive         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__|      -- color         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+.intent__table .table-col--input,
+.intent__table .table-col--color {
+  border-right: 1px solid rgba(0, 0, 0, 0.12);
+}
+.intent__table .table-col--color {
+  width: 0;
+}
+.intent__table .table-col--color > * {
+    border-radius: 25px;
+    height: 16px;
+    width: 16px;
+}
+.intent__table input,
+.intent__table select {
+  font-size: 0.889rem;
+  line-height: 1.68729;
+  border: none;
+  color: rgba(0, 0, 0, 0.54);
+  outline: none;
+  padding: 0.375rem 0.75rem;
+  width: 100%;
+}
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__| -- typography         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__|       -- grid         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__| -- responsive         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__|      -- color         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+.training-input__input {
+  font-size: 0.889rem;
+  line-height: 1.68729;
+  color: rgba(0, 0, 0, 0.54);
+  outline: none;
+  padding: 0.375rem 0.75rem;
+  min-height: 1.5rem;
+}
+.training-input__slot {
+  border-radius: 25px;
+  color: white;
+  cursor: pointer;
+  padding: 0 0.375rem;
+}
+.training-input__popup {
+  display: block;
+  position: absolute;
+  transition: all 0.2s;
+  z-index: 10;
+}
+.training-input__popup.popup-enter, .training-input__popup.popup-leave-to {
+    transform: scale(0);
+}
+.training-input__button {
+  background-color: white;
+  border: 2px solid rgba(0, 0, 0, 0.12);
+  border-bottom-width: 0;
+  color: rgba(0, 0, 0, 0.54);
+  cursor: pointer;
+  display: block;
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  transition: all 0.2s;
+  width: 100%;
+}
+.training-input__button:first-child {
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+.training-input__button:last-child {
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-bottom-width: 2px;
+}
+.training-input__button:hover {
+    transform: scale(1.1);
+}
+.training-input__button:active {
+    transform: scale(1);
+}
+.training-input__button:focus {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.12);
+}
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__| -- typography         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__|       -- grid         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__| -- responsive         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__|      -- color         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+.delete-btn {
+  position: relative;
+}
+.delete-btn__btn {
+    background-color: transparent;
+    border: 2px solid #E53935;
+    border-radius: 25px;
+    color: #E53935;
+    cursor: pointer;
+    padding: 0 6px;
+    transition: all 0.2s;
+}
+.delete-btn__btn:focus {
+      box-shadow: 0 0 10px #E53935;
+}
+.delete-btn__btn:hover {
+      background-color: #E53935;
+      color: white;
+      transform: scale(1.3);
+}
+.delete-btn__btn:active {
+      background-color: #cd1e1a;
+      border-color: #cd1e1a;
+      transform: scale(1);
+}
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__| -- typography         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__|       -- grid         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__| -- responsive         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__|      -- color         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+.entities {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  flex: 1;
+}
+.entities__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: -13.5px;
+}
+.entities__item {
+    flex-basis: auto;
+    flex-grow: 0;
+    flex-shrink: 1;
+    margin: 13.5px;
+    width: calc(100% - 27px);
+}
+@media all and (min-width: 768px) {
+.entities__item {
+        flex-basis: auto;
+        flex-grow: 0;
+        flex-shrink: 1;
+        margin: 13.5px;
+        width: calc(33.33333% - 27px);
+}
+}
+@media all and (min-width: 992px) {
+.entities__item {
+        flex-basis: auto;
+        flex-grow: 0;
+        flex-shrink: 1;
+        margin: 13.5px;
+        width: calc(25% - 27px);
+}
+}
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__| -- typography         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__|       -- grid         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__| -- responsive         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__|      -- color         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+.radio {
+  background-color: white;
+  border: 2px solid rgba(0, 0, 0, 0.12);
+  border-left-width: 0;
+  border-right-width: 0;
+  padding: 5px;
+}
+.radio + * {
+    margin-top: 1.5rem;
+}
+.radio:first-child {
+    border-left-width: 2px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+.radio:last-child {
+    border-right-width: 2px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+.radio__input {
+    display: none;
+}
+.radio__label {
+    font-size: 0.889rem;
+    line-height: 1.68729;
+    border-radius: 25px;
+    cursor: pointer;
+    display: block;
+    font-weight: bold;
+    padding: 0.375rem 0.75rem;
+    text-align: center;
+    transition: all 0.2s;
+}
+.radio--selected .radio__label {
+    background-color: #7C00BC;
+    color: white;
+}
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__| -- typography         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__|       -- grid         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__| -- responsive         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__|      -- color         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+.radio-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.radio-group > * {
+    margin-top: 0 !important;
+    flex: 1;
+}
+.radio-group + * {
+    margin-top: 1.5rem;
+}
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__| -- typography         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__|       -- grid         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__| -- responsive         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__|      -- color         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  background-color: #7C00BC;
+  display: flex;
+  height: 100%;
+  font-size: 1.125em;
+}
+body {
+  font-size: 1rem;
+  line-height: 1.5;
+  background-color: #7C00BC;
+  color: rgba(0, 0, 0, 0.87);
+  display: flex;
+  flex: 1;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  flex: 1;
+}
+.app__content {
+    margin: 0 auto;
+    max-width: 900px;
+    padding: 0 1.5rem;
+    width: 100%;
+}
+@media all and (min-width: 992px) {
+.app__content {
+        padding: 0;
+}
+}
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__| -- typography         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__|       -- grid         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__| -- responsive         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__|      -- color         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+.topbar {
+  border-bottom: 1px solid #9e00ef;
+  padding: 0.75rem 0;
+}
+.topbar__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 900px;
+    padding: 0 1.5rem;
+    width: 100%;
+}
+@media all and (min-width: 992px) {
+.topbar__wrapper {
+        padding: 0;
+}
+}
+.topbar__version {
+    font-size: 0.702rem;
+    line-height: 2.13675;
+    background-color: #9e00ef;
+    border-radius: 25px;
+    display: inline-block;
+    padding: 2px 7px;
+}
+.topbar__link {
+    font-size: 0.889rem;
+    line-height: 1.68729;
+    color: white;
+    text-decoration: none;
+}
+.topbar__link + .topbar__link {
+      margin-left: 1.5rem;
+}
+.topbar__link:hover, .topbar__link:focus {
+      color: #e6e6e6;
+}

@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "c615d97af6377c717793"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "3b5da82dc095a96c906c"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -1295,7 +1295,7 @@ exports.default = {
   name: 'Topbar',
   data: function data() {
     return {
-      version: "1.0.2"
+      version: "1.0.3"
     };
   }
 };
@@ -2919,461 +2919,178 @@ exports.default = {
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-02d0375a\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Checkbox.vue":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__| -- typography         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__|       -- grid         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__| -- responsive         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__|      -- color         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n.checkbox::after {\n  content: '';\n  border: 1px solid #7C00BC;\n  border-radius: 5px;\n  color: black;\n  display: inline-block;\n  height: 16px;\n  width: 16px;\n  transition: all 0.2s;\n}\n.checkbox--checked::after {\n  background-color: #7C00BC;\n  transform: rotate(90deg);\n}\n.checkbox__input {\n  visibility: hidden;\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-0af5b73c\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/TableRow.vue":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__| -- typography         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__|       -- grid         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__| -- responsive         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__|      -- color         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n.table-row {\n  transition: all 0.2s;\n}\n.table-row + .table-row {\n    border-top: 1px solid rgba(0, 0, 0, 0.12);\n}\n.table-row--clickable {\n    cursor: pointer;\n}\n.table-row:first-child td:first-child {\n    border-top-left-radius: 25px;\n}\n.table-row:first-child td:last-child {\n    border-top-right-radius: 25px;\n}\n.table-row:last-child td:first-child {\n    border-bottom-left-radius: 25px;\n}\n.table-row:last-child td:last-child {\n    border-bottom-right-radius: 25px;\n}\n.table-row:focus {\n    box-shadow: 0 0 10px #b423ff;\n}\n.table-row--scale:hover {\n    transform: scale(1.03);\n}\n.table-row--scale:active {\n    transform: scale(1);\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-0f86b34c\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/pages/Intent.vue":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__| -- typography         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__|       -- grid         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__| -- responsive         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__|      -- color         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n.intent__table .table-col--input,\n.intent__table .table-col--color {\n  border-right: 1px solid rgba(0, 0, 0, 0.12);\n}\n.intent__table .table-col--color {\n  width: 0;\n}\n.intent__table .table-col--color > * {\n    border-radius: 25px;\n    height: 16px;\n    width: 16px;\n}\n.intent__table input,\n.intent__table select {\n  font-size: 0.889rem;\n  line-height: 1.68729;\n  border: none;\n  color: rgba(0, 0, 0, 0.54);\n  outline: none;\n  padding: 0.375rem 0.75rem;\n  width: 100%;\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-17421fae\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Topbar.vue":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__| -- typography         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__|       -- grid         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__| -- responsive         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__|      -- color         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n.topbar {\n  border-bottom: 1px solid #9e00ef;\n  padding: 0.75rem 0;\n}\n.topbar__wrapper {\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n    align-items: center;\n    flex-wrap: wrap;\n    margin: 0 auto;\n    max-width: 900px;\n    padding: 0 1.5rem;\n    width: 100%;\n}\n@media all and (min-width: 992px) {\n.topbar__wrapper {\n        padding: 0;\n}\n}\n.topbar__version {\n    font-size: 0.702rem;\n    line-height: 2.13675;\n    background-color: #9e00ef;\n    border-radius: 25px;\n    display: inline-block;\n    padding: 2px 7px;\n}\n.topbar__link {\n    font-size: 0.889rem;\n    line-height: 1.68729;\n    color: white;\n    text-decoration: none;\n}\n.topbar__link + .topbar__link {\n      margin-left: 1.5rem;\n}\n.topbar__link:hover, .topbar__link:focus {\n      color: #e6e6e6;\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-182784cc\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/pages/Agents.vue":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__| -- typography         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__|       -- grid         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__| -- responsive         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__|      -- color         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n.agents {\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-start;\n  align-items: stretch;\n  flex-wrap: nowrap;\n  flex: 1;\n}\n.agents__list {\n    display: flex;\n    flex-direction: row;\n    justify-content: flex-start;\n    align-items: flex-start;\n    flex-wrap: wrap;\n    margin: -13.5px;\n}\n.agents__item {\n    flex-basis: auto;\n    flex-grow: 0;\n    flex-shrink: 1;\n    margin: 13.5px;\n    width: calc(100% - 27px);\n}\n@media all and (min-width: 768px) {\n.agents__item {\n        flex-basis: auto;\n        flex-grow: 0;\n        flex-shrink: 1;\n        margin: 13.5px;\n        width: calc(33.33333% - 27px);\n}\n}\n@media all and (min-width: 992px) {\n.agents__item {\n        flex-basis: auto;\n        flex-grow: 0;\n        flex-shrink: 1;\n        margin: 13.5px;\n        width: calc(25% - 27px);\n}\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-1d12b885\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Section.vue":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__| -- typography         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__|       -- grid         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__| -- responsive         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__|      -- color         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n.section {\n  background-color: #9e00ef;\n  border-radius: 25px;\n  box-shadow: 0 0 5px #5a0089;\n  margin-bottom: 1.5rem;\n}\n.section__header {\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n    align-items: center;\n    flex-wrap: wrap;\n    border-bottom: 1px solid #b423ff;\n    padding: 0.75rem 1.5rem;\n}\n.section__title {\n    font-size: 1rem;\n    line-height: 1.5;\n    color: white;\n    font-weight: bold;\n}\n.section__content {\n    padding: 1.5rem;\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-1e45883c\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/TableCol.vue":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__| -- typography         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__|       -- grid         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__| -- responsive         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__|      -- color         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n.table-col {\n  font-size: 0.889rem;\n  line-height: 1.68729;\n  background-color: white;\n  color: rgba(0, 0, 0, 0.54);\n  padding: 0.75rem 1.5rem;\n}\n.table-col--title {\n    font-size: 1rem;\n    line-height: 1.5;\n    color: #7C00BC;\n    font-weight: bold;\n}\n.table-col--input {\n    padding: 0;\n}\n.table-col--action {\n    width: 40px;\n    text-align: right;\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-2e07be55\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Blankslate.vue":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__| -- typography         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__|       -- grid         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__| -- responsive         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__|      -- color         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n.blankslate {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  flex-wrap: nowrap;\n  color: white;\n  flex: 1;\n  text-align: center;\n}\n.blankslate__title {\n    font-size: 1.424rem;\n    line-height: 1.05337;\n    font-weight: bold;\n}\n.blankslate__subtitle {\n    color: rgba(255, 255, 255, 0.54);\n}\n.blankslate__content {\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    flex-wrap: nowrap;\n    padding: 1.5rem 0;\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-331d4d58\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/RadioGroup.vue":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__| -- typography         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__|       -- grid         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__| -- responsive         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__|      -- color         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n.radio-group {\n  display: flex;\n  flex-direction: row;\n  justify-content: flex-start;\n  align-items: center;\n  flex-wrap: wrap;\n}\n.radio-group > * {\n    margin-top: 0 !important;\n    flex: 1;\n}\n.radio-group + * {\n    margin-top: 1.5rem;\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-33a485a0\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/TrainingInput.vue":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__| -- typography         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__|       -- grid         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__| -- responsive         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__|      -- color         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n.training-input__input {\n  font-size: 0.889rem;\n  line-height: 1.68729;\n  color: rgba(0, 0, 0, 0.54);\n  outline: none;\n  padding: 0.375rem 0.75rem;\n  min-height: 1.5rem;\n}\n.training-input__slot {\n  border-radius: 25px;\n  color: white;\n  cursor: pointer;\n  padding: 0 0.375rem;\n}\n.training-input__popup {\n  display: block;\n  position: absolute;\n  transition: all 0.2s;\n  z-index: 10;\n}\n.training-input__popup.popup-enter, .training-input__popup.popup-leave-to {\n    transform: scale(0);\n}\n.training-input__button {\n  background-color: white;\n  border: 2px solid rgba(0, 0, 0, 0.12);\n  border-bottom-width: 0;\n  color: rgba(0, 0, 0, 0.54);\n  cursor: pointer;\n  display: block;\n  font-weight: bold;\n  padding: 0.75rem 1.5rem;\n  transition: all 0.2s;\n  width: 100%;\n}\n.training-input__button:first-child {\n    border-top-left-radius: 25px;\n    border-top-right-radius: 25px;\n}\n.training-input__button:last-child {\n    border-bottom-left-radius: 25px;\n    border-bottom-right-radius: 25px;\n    border-bottom-width: 2px;\n}\n.training-input__button:hover {\n    transform: scale(1.1);\n}\n.training-input__button:active {\n    transform: scale(1);\n}\n.training-input__button:focus {\n    box-shadow: 0 0 5px rgba(0, 0, 0, 0.12);\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-3e27dd44\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Pagebar.vue":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__| -- typography         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__|       -- grid         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__| -- responsive         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__|      -- color         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n.pagebar {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  align-items: center;\n  flex-wrap: nowrap;\n  margin-bottom: 0.75rem;\n  padding: 0.75rem 0;\n}\n.pagebar__title {\n    font-size: 1rem;\n    line-height: 1.5;\n    color: white;\n    font-weight: bold;\n    overflow: hidden;\n    padding: 0.75rem 0;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n}\n.pagebar__title small {\n      font-size: 0.889rem;\n      line-height: 1.68729;\n      color: rgba(255, 255, 255, 0.54);\n      font-weight: normal;\n}\n.pagebar__delimiter {\n    color: rgba(255, 255, 255, 0.54);\n}\n.pagebar__actions {\n    display: flex;\n    flex-direction: row;\n    justify-content: flex-start;\n    align-items: center;\n    flex-wrap: wrap;\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-4684d6ca\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Radio.vue":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__| -- typography         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__|       -- grid         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__| -- responsive         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__|      -- color         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n.radio {\n  background-color: white;\n  border: 2px solid rgba(0, 0, 0, 0.12);\n  border-left-width: 0;\n  border-right-width: 0;\n  padding: 5px;\n}\n.radio + * {\n    margin-top: 1.5rem;\n}\n.radio:first-child {\n    border-left-width: 2px;\n    border-top-left-radius: 25px;\n    border-bottom-left-radius: 25px;\n}\n.radio:last-child {\n    border-right-width: 2px;\n    border-top-right-radius: 25px;\n    border-bottom-right-radius: 25px;\n}\n.radio__input {\n    display: none;\n}\n.radio__label {\n    font-size: 0.889rem;\n    line-height: 1.68729;\n    border-radius: 25px;\n    cursor: pointer;\n    display: block;\n    font-weight: bold;\n    padding: 0.375rem 0.75rem;\n    text-align: center;\n    transition: all 0.2s;\n}\n.radio--selected .radio__label {\n    background-color: #7C00BC;\n    color: white;\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-48e438a8\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/animations/ListItem.vue":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "\n.list-item-enter,\n.list-item-leave-to {\n  transform: scale(0) !important;\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7468287c\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Btn.vue":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__| -- typography         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__|       -- grid         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__| -- responsive         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__|      -- color         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n.btn {\n  position: relative;\n}\n.btn + .btn {\n    margin-left: 0.75rem;\n}\n.btn__btn {\n    font-size: 0.889rem;\n    line-height: 1.68729;\n    background-color: transparent;\n    border: 2px solid #7C00BC;\n    border-radius: 25px;\n    font-weight: bold;\n    color: #7C00BC;\n    cursor: pointer;\n    padding: 0.375rem 0.75rem;\n    outline: none;\n    text-decoration: none;\n    transition: all 0.2s;\n}\n.btn__btn:focus {\n      box-shadow: 0 0 10px #7C00BC;\n}\n.btn__btn:hover {\n      background-color: #7C00BC;\n      color: white;\n      transform: scale(1.1);\n}\n.btn__btn:active {\n      background-color: #5a0089;\n      border-color: #5a0089;\n      transform: scale(1);\n}\n.btn__btn--inverse {\n      border-color: white;\n      color: white;\n}\n.btn__btn--inverse:focus {\n        box-shadow: 0 0 10px #b423ff;\n}\n.btn__btn--inverse:hover {\n        background-color: white;\n        color: #7C00BC;\n}\n.btn__btn--secondary {\n      border-color: #757575;\n      color: rgba(0, 0, 0, 0.54);\n}\n.btn__btn--secondary:focus {\n        box-shadow: 0 0 10px rgba(0, 0, 0, 0.54);\n}\n.btn__btn--secondary:hover {\n        background-color: rgba(0, 0, 0, 0.54);\n}\n.btn__btn--secondary:active {\n        border-color: #757575;\n}\n.btn__btn--danger {\n      border-color: #E53935;\n      color: #E53935;\n}\n.btn__btn--danger:focus {\n        box-shadow: 0 0 10px #E53935;\n}\n.btn__btn--danger:hover {\n        background-color: #E53935;\n}\n.btn__btn--danger:active {\n        border-color: #E53935;\n}\n.btn__btn--disabled {\n      cursor: not-allowed;\n      transform: scale(1) !important;\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7669635e\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/DeleteBtn.vue":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__| -- typography         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__|       -- grid         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__| -- responsive         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__|      -- color         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n.delete-btn {\n  position: relative;\n}\n.delete-btn__btn {\n    background-color: transparent;\n    border: 2px solid #E53935;\n    border-radius: 25px;\n    color: #E53935;\n    cursor: pointer;\n    padding: 0 6px;\n    transition: all 0.2s;\n}\n.delete-btn__btn:focus {\n      box-shadow: 0 0 10px #E53935;\n}\n.delete-btn__btn:hover {\n      background-color: #E53935;\n      color: white;\n      transform: scale(1.3);\n}\n.delete-btn__btn:active {\n      background-color: #cd1e1a;\n      border-color: #cd1e1a;\n      transform: scale(1);\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7938db46\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Textinput.vue":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__| -- typography         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__|       -- grid         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__| -- responsive         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__|      -- color         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n.textinput + * {\n  margin-top: 1.5rem;\n}\n.textinput__help {\n  font-size: 0.702rem;\n  line-height: 2.13675;\n  color: rgba(0, 0, 0, 0.54);\n  padding: 0 0.75rem;\n}\n.textinput__label {\n  font-size: 0.889rem;\n  line-height: 1.68729;\n  display: block;\n  font-weight: bold;\n  padding-left: 0.75rem;\n  padding-bottom: 0.375rem;\n  transition: all 0.2s;\n}\n.textinput__input {\n  font-size: 0.889rem;\n  line-height: 1.68729;\n  background-color: transparent;\n  border: 2px solid rgba(0, 0, 0, 0.12);\n  border-radius: 25px;\n  font-family: inherit;\n  outline: none;\n  padding: 0.375rem 0.75rem;\n  width: 100%;\n  transition: all 0.2s;\n}\n.textinput__input:focus {\n    border-color: #7C00BC;\n    box-shadow: 0 0 10px #7C00BC;\n}\n.textinput__input:hover {\n    border-color: #7C00BC;\n}\n.textinput--error .textinput__label {\n  color: #E53935;\n}\n.textinput--error .textinput__input {\n  border-color: #E53935;\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7afb8418\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/layouts/App.vue":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__| -- typography         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__|       -- grid         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__| -- responsive         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__|      -- color         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\nhtml {\n  background-color: #7C00BC;\n  display: flex;\n  height: 100%;\n  font-size: 1.125em;\n}\nbody {\n  font-size: 1rem;\n  line-height: 1.5;\n  background-color: #7C00BC;\n  color: rgba(0, 0, 0, 0.87);\n  display: flex;\n  flex: 1;\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\";\n}\n.app {\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-start;\n  align-items: stretch;\n  flex-wrap: nowrap;\n  flex: 1;\n}\n.app__content {\n    margin: 0 auto;\n    max-width: 900px;\n    padding: 0 1.5rem;\n    width: 100%;\n}\n@media all and (min-width: 992px) {\n.app__content {\n        padding: 0;\n}\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-8316a600\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/pages/Skills.vue":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__| -- typography         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__|       -- grid         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__| -- responsive         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__|      -- color         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n.skills {\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-start;\n  align-items: stretch;\n  flex-wrap: nowrap;\n  flex: 1;\n}\n.skills__list {\n    display: flex;\n    flex-direction: row;\n    justify-content: flex-start;\n    align-items: flex-start;\n    flex-wrap: wrap;\n    margin: -13.5px;\n}\n.skills__item {\n    flex-basis: auto;\n    flex-grow: 0;\n    flex-shrink: 1;\n    margin: 13.5px;\n    width: calc(100% - 27px);\n}\n@media all and (min-width: 768px) {\n.skills__item {\n        flex-basis: auto;\n        flex-grow: 0;\n        flex-shrink: 1;\n        margin: 13.5px;\n        width: calc(33.33333% - 27px);\n}\n}\n@media all and (min-width: 992px) {\n.skills__item {\n        flex-basis: auto;\n        flex-grow: 0;\n        flex-shrink: 1;\n        margin: 13.5px;\n        width: calc(25% - 27px);\n}\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-a3d6f992\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/pages/Agent.vue":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__| -- typography         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__|       -- grid         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__| -- responsive         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__|      -- color         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n.selected-col {\n  text-align: right;\n}\n.empty-text {\n  color: rgba(0, 0, 0, 0.54);\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-ae710410\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/DeleteTooltip.vue":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__| -- typography         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__|       -- grid         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__| -- responsive         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__|      -- color         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n.delete-tooltip {\n  transition: all 0.2s;\n}\n.delete-tooltip__triangle {\n    border-top: 12px solid black;\n    border-left: 15px solid transparent;\n    border-right: 15px solid transparent;\n    display: block;\n    height: 0;\n    left: 50%;\n    transform: translateX(-50%);\n    width: 0;\n    position: absolute;\n}\n.delete-tooltip__popup {\n    font-size: 0.702rem;\n    line-height: 2.13675;\n    background-color: black;\n    border-radius: 15px;\n    color: white;\n    display: block;\n    padding: 0.375rem 0.75rem;\n    position: absolute;\n    left: 50%;\n    bottom: 125%;\n    text-align: center;\n    transform: translateX(-50%);\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-bfe8ca24\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Table.vue":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__| -- typography         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__|       -- grid         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__| -- responsive         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__|      -- color         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n.table {\n  border-collapse: collapse;\n  width: 100%;\n}\n.table--inverse td {\n    background-color: rgba(0, 0, 0, 0.04);\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-c5d95dc0\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Card.vue":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__| -- typography         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__|       -- grid         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__| -- responsive         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__|      -- color         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n.card {\n  background-color: white;\n  border-radius: 35px;\n  box-shadow: 0 0 5px #5a0089;\n  outline: none;\n  text-decoration: none;\n  transition: all 0.2s;\n  transform: scale(1);\n}\n.card__title {\n    color: #7C00BC;\n    padding: 1.5rem;\n    padding-bottom: 0;\n    display: block;\n    font-weight: bold;\n}\n.card--title-only .card__title {\n    padding-bottom: 1.5rem;\n}\n.card__subtitle {\n    font-size: 0.889rem;\n    line-height: 1.68729;\n    color: rgba(0, 0, 0, 0.54);\n    display: block;\n    padding: 1.5rem;\n    padding-top: 0;\n}\n.card__meta {\n    font-size: 0.889rem;\n    line-height: 1.68729;\n    border-top: 1px solid rgba(0, 0, 0, 0.12);\n    color: rgba(0, 0, 0, 0.54);\n    display: block;\n    text-align: right;\n    padding: 0.75rem 1.5rem;\n}\n.card:focus {\n    box-shadow: 0 0 10px #b423ff;\n}\n.card:hover {\n    transform: scale(1.1);\n}\n.card:active {\n    transform: scale(1);\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-d0325b66\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Modal.vue":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__| -- typography         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__|       -- grid         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__| -- responsive         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__|      -- color         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n.modal {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  flex-wrap: nowrap;\n  background-color: rgba(0, 0, 0, 0.42);\n  overflow-y: auto;\n  padding: 1.5rem;\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  transition: all 0.2s;\n}\n.modal__title {\n    font-size: 1rem;\n    line-height: 1.5;\n    border-bottom: 1px solid rgba(0, 0, 0, 0.12);\n    color: #7C00BC;\n    padding: 0.75rem 1.5rem;\n    font-weight: bold;\n}\n.modal__content {\n    padding: 1.5rem;\n}\n.modal__actions {\n    display: flex;\n    flex-direction: row;\n    justify-content: flex-end;\n    align-items: center;\n    flex-wrap: wrap;\n    border-top: 1px solid rgba(0, 0, 0, 0.12);\n    padding: 0.75rem 1.5rem;\n}\n.modal__card {\n    background-color: white;\n    box-shadow: 0 0 10px rgba(0, 0, 0, 0.87);\n    border-radius: 25px;\n    width: 100%;\n    transition: all 0.2s;\n    transform: scale(1);\n}\n@media all and (min-width: 768px) {\n.modal__card {\n        width: 450px;\n}\n}\n.modal.fade-enter, .modal.fade-leave-to {\n    opacity: 0;\n}\n.modal.fade-enter .modal__card, .modal.fade-leave-to .modal__card {\n      transform: scale(0);\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-d62b2902\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/pages/Entities.vue":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__| -- typography         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__|       -- grid         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__| -- responsive         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__|      -- color         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n.entities {\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-start;\n  align-items: stretch;\n  flex-wrap: nowrap;\n  flex: 1;\n}\n.entities__list {\n    display: flex;\n    flex-direction: row;\n    justify-content: flex-start;\n    align-items: flex-start;\n    flex-wrap: wrap;\n    margin: -13.5px;\n}\n.entities__item {\n    flex-basis: auto;\n    flex-grow: 0;\n    flex-shrink: 1;\n    margin: 13.5px;\n    width: calc(100% - 27px);\n}\n@media all and (min-width: 768px) {\n.entities__item {\n        flex-basis: auto;\n        flex-grow: 0;\n        flex-shrink: 1;\n        margin: 13.5px;\n        width: calc(33.33333% - 27px);\n}\n}\n@media all and (min-width: 992px) {\n.entities__item {\n        flex-basis: auto;\n        flex-grow: 0;\n        flex-shrink: 1;\n        margin: 13.5px;\n        width: calc(25% - 27px);\n}\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-ebb0f6fa\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/pages/Skill.vue":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__| -- typography         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__|       -- grid         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__| -- responsive         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n/**\r\n *     __                               \r\n * .--|  |.----.-----.-----.-----.-----.\r\n * |  _  ||   _|  _  |  _  |  -__|  -__|\r\n * |_____||__| |_____|   __|_____|_____|\r\n *                   |__|      -- color         \r\n *\r\n * v1.0.2\r\n *\r\n * A tiny SCSS Toolkit to ease your workflow!\r\n * https://github.com/YuukanOO/dropee\r\n */\n", ""]);
-
-// exports
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/lib/css-base.js":
+/***/ "./node_modules/extract-text-webpack-plugin/dist/loader.js?{\"omit\":1,\"remove\":true}!./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-02d0375a\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Checkbox.vue":
 /***/ (function(module, exports) {
 
-/*
-	MIT License http://www.opensource.org/licenses/mit-license.php
-	Author Tobias Koppers @sokra
-*/
-// css base code, injected by the css-loader
-module.exports = function(useSourceMap) {
-	var list = [];
+// removed by extract-text-webpack-plugin
 
-	// return the list of modules as css string
-	list.toString = function toString() {
-		return this.map(function (item) {
-			var content = cssWithMappingToString(item, useSourceMap);
-			if(item[2]) {
-				return "@media " + item[2] + "{" + content + "}";
-			} else {
-				return content;
-			}
-		}).join("");
-	};
+/***/ }),
 
-	// import a list of modules into the list
-	list.i = function(modules, mediaQuery) {
-		if(typeof modules === "string")
-			modules = [[null, modules, ""]];
-		var alreadyImportedModules = {};
-		for(var i = 0; i < this.length; i++) {
-			var id = this[i][0];
-			if(typeof id === "number")
-				alreadyImportedModules[id] = true;
-		}
-		for(i = 0; i < modules.length; i++) {
-			var item = modules[i];
-			// skip already imported module
-			// this implementation is not 100% perfect for weird media query combinations
-			//  when a module is imported multiple times with different media queries.
-			//  I hope this will never occur (Hey this way we have smaller bundles)
-			if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
-				if(mediaQuery && !item[2]) {
-					item[2] = mediaQuery;
-				} else if(mediaQuery) {
-					item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
-				}
-				list.push(item);
-			}
-		}
-	};
-	return list;
-};
+/***/ "./node_modules/extract-text-webpack-plugin/dist/loader.js?{\"omit\":1,\"remove\":true}!./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-0af5b73c\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/TableRow.vue":
+/***/ (function(module, exports) {
 
-function cssWithMappingToString(item, useSourceMap) {
-	var content = item[1] || '';
-	var cssMapping = item[3];
-	if (!cssMapping) {
-		return content;
-	}
+// removed by extract-text-webpack-plugin
 
-	if (useSourceMap && typeof btoa === 'function') {
-		var sourceMapping = toComment(cssMapping);
-		var sourceURLs = cssMapping.sources.map(function (source) {
-			return '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */'
-		});
+/***/ }),
 
-		return [content].concat(sourceURLs).concat([sourceMapping]).join('\n');
-	}
+/***/ "./node_modules/extract-text-webpack-plugin/dist/loader.js?{\"omit\":1,\"remove\":true}!./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-0f86b34c\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/pages/Intent.vue":
+/***/ (function(module, exports) {
 
-	return [content].join('\n');
-}
+// removed by extract-text-webpack-plugin
 
-// Adapted from convert-source-map (MIT)
-function toComment(sourceMap) {
-	// eslint-disable-next-line no-undef
-	var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));
-	var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;
+/***/ }),
 
-	return '/*# ' + data + ' */';
-}
+/***/ "./node_modules/extract-text-webpack-plugin/dist/loader.js?{\"omit\":1,\"remove\":true}!./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-17421fae\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Topbar.vue":
+/***/ (function(module, exports) {
 
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./node_modules/extract-text-webpack-plugin/dist/loader.js?{\"omit\":1,\"remove\":true}!./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-182784cc\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/pages/Agents.vue":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./node_modules/extract-text-webpack-plugin/dist/loader.js?{\"omit\":1,\"remove\":true}!./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-1d12b885\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Section.vue":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./node_modules/extract-text-webpack-plugin/dist/loader.js?{\"omit\":1,\"remove\":true}!./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-1e45883c\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/TableCol.vue":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./node_modules/extract-text-webpack-plugin/dist/loader.js?{\"omit\":1,\"remove\":true}!./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-2e07be55\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Blankslate.vue":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./node_modules/extract-text-webpack-plugin/dist/loader.js?{\"omit\":1,\"remove\":true}!./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-331d4d58\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/RadioGroup.vue":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./node_modules/extract-text-webpack-plugin/dist/loader.js?{\"omit\":1,\"remove\":true}!./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-33a485a0\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/TrainingInput.vue":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./node_modules/extract-text-webpack-plugin/dist/loader.js?{\"omit\":1,\"remove\":true}!./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-3e27dd44\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Pagebar.vue":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./node_modules/extract-text-webpack-plugin/dist/loader.js?{\"omit\":1,\"remove\":true}!./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-4684d6ca\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Radio.vue":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./node_modules/extract-text-webpack-plugin/dist/loader.js?{\"omit\":1,\"remove\":true}!./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-48e438a8\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/animations/ListItem.vue":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./node_modules/extract-text-webpack-plugin/dist/loader.js?{\"omit\":1,\"remove\":true}!./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7468287c\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Btn.vue":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./node_modules/extract-text-webpack-plugin/dist/loader.js?{\"omit\":1,\"remove\":true}!./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7669635e\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/DeleteBtn.vue":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./node_modules/extract-text-webpack-plugin/dist/loader.js?{\"omit\":1,\"remove\":true}!./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7938db46\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Textinput.vue":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./node_modules/extract-text-webpack-plugin/dist/loader.js?{\"omit\":1,\"remove\":true}!./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7afb8418\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/layouts/App.vue":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./node_modules/extract-text-webpack-plugin/dist/loader.js?{\"omit\":1,\"remove\":true}!./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-8316a600\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/pages/Skills.vue":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./node_modules/extract-text-webpack-plugin/dist/loader.js?{\"omit\":1,\"remove\":true}!./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-a3d6f992\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/pages/Agent.vue":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./node_modules/extract-text-webpack-plugin/dist/loader.js?{\"omit\":1,\"remove\":true}!./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-ae710410\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/DeleteTooltip.vue":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./node_modules/extract-text-webpack-plugin/dist/loader.js?{\"omit\":1,\"remove\":true}!./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-bfe8ca24\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Table.vue":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./node_modules/extract-text-webpack-plugin/dist/loader.js?{\"omit\":1,\"remove\":true}!./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-c5d95dc0\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Card.vue":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./node_modules/extract-text-webpack-plugin/dist/loader.js?{\"omit\":1,\"remove\":true}!./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-d0325b66\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Modal.vue":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./node_modules/extract-text-webpack-plugin/dist/loader.js?{\"omit\":1,\"remove\":true}!./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-d62b2902\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/pages/Entities.vue":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./node_modules/extract-text-webpack-plugin/dist/loader.js?{\"omit\":1,\"remove\":true}!./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-ebb0f6fa\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/pages/Skill.vue":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 
@@ -16267,975 +15984,6 @@ if (inBrowser && window.Vue) {
 
 /***/ }),
 
-/***/ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-02d0375a\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Checkbox.vue":
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-02d0375a\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Checkbox.vue");
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var add = __webpack_require__("./node_modules/vue-style-loader/lib/addStylesClient.js").default
-var update = add("73bffd8e", content, false, {});
-// Hot Module Replacement
-if(true) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-02d0375a\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Checkbox.vue", function() {
-     var newContent = __webpack_require__("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-02d0375a\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Checkbox.vue");
-     if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-
-/***/ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-0af5b73c\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/TableRow.vue":
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-0af5b73c\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/TableRow.vue");
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var add = __webpack_require__("./node_modules/vue-style-loader/lib/addStylesClient.js").default
-var update = add("6267e1f2", content, false, {});
-// Hot Module Replacement
-if(true) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-0af5b73c\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/TableRow.vue", function() {
-     var newContent = __webpack_require__("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-0af5b73c\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/TableRow.vue");
-     if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-
-/***/ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-0f86b34c\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/pages/Intent.vue":
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-0f86b34c\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/pages/Intent.vue");
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var add = __webpack_require__("./node_modules/vue-style-loader/lib/addStylesClient.js").default
-var update = add("6220b890", content, false, {});
-// Hot Module Replacement
-if(true) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-0f86b34c\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/pages/Intent.vue", function() {
-     var newContent = __webpack_require__("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-0f86b34c\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/pages/Intent.vue");
-     if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-
-/***/ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-17421fae\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Topbar.vue":
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-17421fae\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Topbar.vue");
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var add = __webpack_require__("./node_modules/vue-style-loader/lib/addStylesClient.js").default
-var update = add("f8c2b83a", content, false, {});
-// Hot Module Replacement
-if(true) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-17421fae\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Topbar.vue", function() {
-     var newContent = __webpack_require__("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-17421fae\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Topbar.vue");
-     if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-
-/***/ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-182784cc\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/pages/Agents.vue":
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-182784cc\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/pages/Agents.vue");
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var add = __webpack_require__("./node_modules/vue-style-loader/lib/addStylesClient.js").default
-var update = add("47c88c08", content, false, {});
-// Hot Module Replacement
-if(true) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-182784cc\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/pages/Agents.vue", function() {
-     var newContent = __webpack_require__("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-182784cc\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/pages/Agents.vue");
-     if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-
-/***/ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-1d12b885\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Section.vue":
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-1d12b885\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Section.vue");
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var add = __webpack_require__("./node_modules/vue-style-loader/lib/addStylesClient.js").default
-var update = add("0bd6c0ae", content, false, {});
-// Hot Module Replacement
-if(true) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-1d12b885\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Section.vue", function() {
-     var newContent = __webpack_require__("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-1d12b885\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Section.vue");
-     if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-
-/***/ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-1e45883c\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/TableCol.vue":
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-1e45883c\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/TableCol.vue");
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var add = __webpack_require__("./node_modules/vue-style-loader/lib/addStylesClient.js").default
-var update = add("760c25d3", content, false, {});
-// Hot Module Replacement
-if(true) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-1e45883c\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/TableCol.vue", function() {
-     var newContent = __webpack_require__("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-1e45883c\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/TableCol.vue");
-     if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-
-/***/ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-2e07be55\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Blankslate.vue":
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-2e07be55\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Blankslate.vue");
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var add = __webpack_require__("./node_modules/vue-style-loader/lib/addStylesClient.js").default
-var update = add("0d5f8831", content, false, {});
-// Hot Module Replacement
-if(true) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-2e07be55\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Blankslate.vue", function() {
-     var newContent = __webpack_require__("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-2e07be55\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Blankslate.vue");
-     if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-
-/***/ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-331d4d58\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/RadioGroup.vue":
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-331d4d58\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/RadioGroup.vue");
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var add = __webpack_require__("./node_modules/vue-style-loader/lib/addStylesClient.js").default
-var update = add("892ef650", content, false, {});
-// Hot Module Replacement
-if(true) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-331d4d58\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/RadioGroup.vue", function() {
-     var newContent = __webpack_require__("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-331d4d58\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/RadioGroup.vue");
-     if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-
-/***/ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-33a485a0\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/TrainingInput.vue":
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-33a485a0\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/TrainingInput.vue");
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var add = __webpack_require__("./node_modules/vue-style-loader/lib/addStylesClient.js").default
-var update = add("ba7bb87e", content, false, {});
-// Hot Module Replacement
-if(true) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-33a485a0\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/TrainingInput.vue", function() {
-     var newContent = __webpack_require__("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-33a485a0\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/TrainingInput.vue");
-     if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-
-/***/ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-3e27dd44\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Pagebar.vue":
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-3e27dd44\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Pagebar.vue");
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var add = __webpack_require__("./node_modules/vue-style-loader/lib/addStylesClient.js").default
-var update = add("a7ec8fce", content, false, {});
-// Hot Module Replacement
-if(true) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-3e27dd44\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Pagebar.vue", function() {
-     var newContent = __webpack_require__("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-3e27dd44\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Pagebar.vue");
-     if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-
-/***/ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-4684d6ca\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Radio.vue":
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-4684d6ca\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Radio.vue");
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var add = __webpack_require__("./node_modules/vue-style-loader/lib/addStylesClient.js").default
-var update = add("ebc3d360", content, false, {});
-// Hot Module Replacement
-if(true) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-4684d6ca\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Radio.vue", function() {
-     var newContent = __webpack_require__("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-4684d6ca\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Radio.vue");
-     if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-
-/***/ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-48e438a8\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/animations/ListItem.vue":
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-48e438a8\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/animations/ListItem.vue");
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var add = __webpack_require__("./node_modules/vue-style-loader/lib/addStylesClient.js").default
-var update = add("4b6f8bfc", content, false, {});
-// Hot Module Replacement
-if(true) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-48e438a8\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/animations/ListItem.vue", function() {
-     var newContent = __webpack_require__("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-48e438a8\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/animations/ListItem.vue");
-     if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-
-/***/ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7468287c\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Btn.vue":
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7468287c\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Btn.vue");
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var add = __webpack_require__("./node_modules/vue-style-loader/lib/addStylesClient.js").default
-var update = add("f69e6d1a", content, false, {});
-// Hot Module Replacement
-if(true) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7468287c\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Btn.vue", function() {
-     var newContent = __webpack_require__("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7468287c\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Btn.vue");
-     if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-
-/***/ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7669635e\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/DeleteBtn.vue":
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7669635e\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/DeleteBtn.vue");
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var add = __webpack_require__("./node_modules/vue-style-loader/lib/addStylesClient.js").default
-var update = add("63cbf1d1", content, false, {});
-// Hot Module Replacement
-if(true) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7669635e\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/DeleteBtn.vue", function() {
-     var newContent = __webpack_require__("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7669635e\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/DeleteBtn.vue");
-     if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-
-/***/ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7938db46\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Textinput.vue":
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7938db46\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Textinput.vue");
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var add = __webpack_require__("./node_modules/vue-style-loader/lib/addStylesClient.js").default
-var update = add("11e861e9", content, false, {});
-// Hot Module Replacement
-if(true) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7938db46\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Textinput.vue", function() {
-     var newContent = __webpack_require__("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7938db46\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Textinput.vue");
-     if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-
-/***/ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7afb8418\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/layouts/App.vue":
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7afb8418\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/layouts/App.vue");
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var add = __webpack_require__("./node_modules/vue-style-loader/lib/addStylesClient.js").default
-var update = add("c5b99a64", content, false, {});
-// Hot Module Replacement
-if(true) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7afb8418\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/layouts/App.vue", function() {
-     var newContent = __webpack_require__("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7afb8418\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/layouts/App.vue");
-     if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-
-/***/ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-8316a600\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/pages/Skills.vue":
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-8316a600\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/pages/Skills.vue");
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var add = __webpack_require__("./node_modules/vue-style-loader/lib/addStylesClient.js").default
-var update = add("80989462", content, false, {});
-// Hot Module Replacement
-if(true) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-8316a600\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/pages/Skills.vue", function() {
-     var newContent = __webpack_require__("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-8316a600\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/pages/Skills.vue");
-     if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-
-/***/ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-a3d6f992\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/pages/Agent.vue":
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-a3d6f992\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/pages/Agent.vue");
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var add = __webpack_require__("./node_modules/vue-style-loader/lib/addStylesClient.js").default
-var update = add("24ae4aaa", content, false, {});
-// Hot Module Replacement
-if(true) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-a3d6f992\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/pages/Agent.vue", function() {
-     var newContent = __webpack_require__("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-a3d6f992\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/pages/Agent.vue");
-     if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-
-/***/ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-ae710410\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/DeleteTooltip.vue":
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-ae710410\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/DeleteTooltip.vue");
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var add = __webpack_require__("./node_modules/vue-style-loader/lib/addStylesClient.js").default
-var update = add("1d66e3e3", content, false, {});
-// Hot Module Replacement
-if(true) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-ae710410\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/DeleteTooltip.vue", function() {
-     var newContent = __webpack_require__("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-ae710410\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/DeleteTooltip.vue");
-     if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-
-/***/ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-bfe8ca24\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Table.vue":
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-bfe8ca24\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Table.vue");
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var add = __webpack_require__("./node_modules/vue-style-loader/lib/addStylesClient.js").default
-var update = add("29f45a4e", content, false, {});
-// Hot Module Replacement
-if(true) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-bfe8ca24\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Table.vue", function() {
-     var newContent = __webpack_require__("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-bfe8ca24\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Table.vue");
-     if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-
-/***/ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-c5d95dc0\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Card.vue":
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-c5d95dc0\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Card.vue");
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var add = __webpack_require__("./node_modules/vue-style-loader/lib/addStylesClient.js").default
-var update = add("50f666ad", content, false, {});
-// Hot Module Replacement
-if(true) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-c5d95dc0\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Card.vue", function() {
-     var newContent = __webpack_require__("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-c5d95dc0\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Card.vue");
-     if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-
-/***/ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-d0325b66\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Modal.vue":
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-d0325b66\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Modal.vue");
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var add = __webpack_require__("./node_modules/vue-style-loader/lib/addStylesClient.js").default
-var update = add("7e5463da", content, false, {});
-// Hot Module Replacement
-if(true) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-d0325b66\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Modal.vue", function() {
-     var newContent = __webpack_require__("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-d0325b66\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Modal.vue");
-     if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-
-/***/ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-d62b2902\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/pages/Entities.vue":
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-d62b2902\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/pages/Entities.vue");
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var add = __webpack_require__("./node_modules/vue-style-loader/lib/addStylesClient.js").default
-var update = add("2fbd8939", content, false, {});
-// Hot Module Replacement
-if(true) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-d62b2902\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/pages/Entities.vue", function() {
-     var newContent = __webpack_require__("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-d62b2902\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/pages/Entities.vue");
-     if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-
-/***/ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-ebb0f6fa\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/pages/Skill.vue":
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-ebb0f6fa\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/pages/Skill.vue");
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var add = __webpack_require__("./node_modules/vue-style-loader/lib/addStylesClient.js").default
-var update = add("300d837c", content, false, {});
-// Hot Module Replacement
-if(true) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-ebb0f6fa\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/pages/Skill.vue", function() {
-     var newContent = __webpack_require__("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-ebb0f6fa\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/pages/Skill.vue");
-     if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-
-/***/ "./node_modules/vue-style-loader/lib/addStylesClient.js":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (immutable) */ __webpack_exports__["default"] = addStylesClient;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__listToStyles__ = __webpack_require__("./node_modules/vue-style-loader/lib/listToStyles.js");
-/*
-  MIT License http://www.opensource.org/licenses/mit-license.php
-  Author Tobias Koppers @sokra
-  Modified by Evan You @yyx990803
-*/
-
-
-
-var hasDocument = typeof document !== 'undefined'
-
-if (typeof DEBUG !== 'undefined' && DEBUG) {
-  if (!hasDocument) {
-    throw new Error(
-    'vue-style-loader cannot be used in a non-browser environment. ' +
-    "Use { target: 'node' } in your Webpack config to indicate a server-rendering environment."
-  ) }
-}
-
-/*
-type StyleObject = {
-  id: number;
-  parts: Array<StyleObjectPart>
-}
-
-type StyleObjectPart = {
-  css: string;
-  media: string;
-  sourceMap: ?string
-}
-*/
-
-var stylesInDom = {/*
-  [id: number]: {
-    id: number,
-    refs: number,
-    parts: Array<(obj?: StyleObjectPart) => void>
-  }
-*/}
-
-var head = hasDocument && (document.head || document.getElementsByTagName('head')[0])
-var singletonElement = null
-var singletonCounter = 0
-var isProduction = false
-var noop = function () {}
-var options = null
-var ssrIdKey = 'data-vue-ssr-id'
-
-// Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
-// tags it will allow on a page
-var isOldIE = typeof navigator !== 'undefined' && /msie [6-9]\b/.test(navigator.userAgent.toLowerCase())
-
-function addStylesClient (parentId, list, _isProduction, _options) {
-  isProduction = _isProduction
-
-  options = _options || {}
-
-  var styles = Object(__WEBPACK_IMPORTED_MODULE_0__listToStyles__["a" /* default */])(parentId, list)
-  addStylesToDom(styles)
-
-  return function update (newList) {
-    var mayRemove = []
-    for (var i = 0; i < styles.length; i++) {
-      var item = styles[i]
-      var domStyle = stylesInDom[item.id]
-      domStyle.refs--
-      mayRemove.push(domStyle)
-    }
-    if (newList) {
-      styles = Object(__WEBPACK_IMPORTED_MODULE_0__listToStyles__["a" /* default */])(parentId, newList)
-      addStylesToDom(styles)
-    } else {
-      styles = []
-    }
-    for (var i = 0; i < mayRemove.length; i++) {
-      var domStyle = mayRemove[i]
-      if (domStyle.refs === 0) {
-        for (var j = 0; j < domStyle.parts.length; j++) {
-          domStyle.parts[j]()
-        }
-        delete stylesInDom[domStyle.id]
-      }
-    }
-  }
-}
-
-function addStylesToDom (styles /* Array<StyleObject> */) {
-  for (var i = 0; i < styles.length; i++) {
-    var item = styles[i]
-    var domStyle = stylesInDom[item.id]
-    if (domStyle) {
-      domStyle.refs++
-      for (var j = 0; j < domStyle.parts.length; j++) {
-        domStyle.parts[j](item.parts[j])
-      }
-      for (; j < item.parts.length; j++) {
-        domStyle.parts.push(addStyle(item.parts[j]))
-      }
-      if (domStyle.parts.length > item.parts.length) {
-        domStyle.parts.length = item.parts.length
-      }
-    } else {
-      var parts = []
-      for (var j = 0; j < item.parts.length; j++) {
-        parts.push(addStyle(item.parts[j]))
-      }
-      stylesInDom[item.id] = { id: item.id, refs: 1, parts: parts }
-    }
-  }
-}
-
-function createStyleElement () {
-  var styleElement = document.createElement('style')
-  styleElement.type = 'text/css'
-  head.appendChild(styleElement)
-  return styleElement
-}
-
-function addStyle (obj /* StyleObjectPart */) {
-  var update, remove
-  var styleElement = document.querySelector('style[' + ssrIdKey + '~="' + obj.id + '"]')
-
-  if (styleElement) {
-    if (isProduction) {
-      // has SSR styles and in production mode.
-      // simply do nothing.
-      return noop
-    } else {
-      // has SSR styles but in dev mode.
-      // for some reason Chrome can't handle source map in server-rendered
-      // style tags - source maps in <style> only works if the style tag is
-      // created and inserted dynamically. So we remove the server rendered
-      // styles and inject new ones.
-      styleElement.parentNode.removeChild(styleElement)
-    }
-  }
-
-  if (isOldIE) {
-    // use singleton mode for IE9.
-    var styleIndex = singletonCounter++
-    styleElement = singletonElement || (singletonElement = createStyleElement())
-    update = applyToSingletonTag.bind(null, styleElement, styleIndex, false)
-    remove = applyToSingletonTag.bind(null, styleElement, styleIndex, true)
-  } else {
-    // use multi-style-tag mode in all other cases
-    styleElement = createStyleElement()
-    update = applyToTag.bind(null, styleElement)
-    remove = function () {
-      styleElement.parentNode.removeChild(styleElement)
-    }
-  }
-
-  update(obj)
-
-  return function updateStyle (newObj /* StyleObjectPart */) {
-    if (newObj) {
-      if (newObj.css === obj.css &&
-          newObj.media === obj.media &&
-          newObj.sourceMap === obj.sourceMap) {
-        return
-      }
-      update(obj = newObj)
-    } else {
-      remove()
-    }
-  }
-}
-
-var replaceText = (function () {
-  var textStore = []
-
-  return function (index, replacement) {
-    textStore[index] = replacement
-    return textStore.filter(Boolean).join('\n')
-  }
-})()
-
-function applyToSingletonTag (styleElement, index, remove, obj) {
-  var css = remove ? '' : obj.css
-
-  if (styleElement.styleSheet) {
-    styleElement.styleSheet.cssText = replaceText(index, css)
-  } else {
-    var cssNode = document.createTextNode(css)
-    var childNodes = styleElement.childNodes
-    if (childNodes[index]) styleElement.removeChild(childNodes[index])
-    if (childNodes.length) {
-      styleElement.insertBefore(cssNode, childNodes[index])
-    } else {
-      styleElement.appendChild(cssNode)
-    }
-  }
-}
-
-function applyToTag (styleElement, obj) {
-  var css = obj.css
-  var media = obj.media
-  var sourceMap = obj.sourceMap
-
-  if (media) {
-    styleElement.setAttribute('media', media)
-  }
-  if (options.ssrId) {
-    styleElement.setAttribute(ssrIdKey, obj.id)
-  }
-
-  if (sourceMap) {
-    // https://developer.chrome.com/devtools/docs/javascript-debugging
-    // this makes source maps inside style tags work properly in Chrome
-    css += '\n/*# sourceURL=' + sourceMap.sources[0] + ' */'
-    // http://stackoverflow.com/a/26603875
-    css += '\n/*# sourceMappingURL=data:application/json;base64,' + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + ' */'
-  }
-
-  if (styleElement.styleSheet) {
-    styleElement.styleSheet.cssText = css
-  } else {
-    while (styleElement.firstChild) {
-      styleElement.removeChild(styleElement.firstChild)
-    }
-    styleElement.appendChild(document.createTextNode(css))
-  }
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-style-loader/lib/listToStyles.js":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = listToStyles;
-/**
- * Translates the list format produced by css-loader into something
- * easier to manipulate.
- */
-function listToStyles (parentId, list) {
-  var styles = []
-  var newStyles = {}
-  for (var i = 0; i < list.length; i++) {
-    var item = list[i]
-    var id = item[0]
-    var css = item[1]
-    var media = item[2]
-    var sourceMap = item[3]
-    var part = {
-      id: parentId + ':' + i,
-      css: css,
-      media: media,
-      sourceMap: sourceMap
-    }
-    if (!newStyles[id]) {
-      styles.push(newStyles[id] = { id: id, parts: [part] })
-    } else {
-      newStyles[id].parts.push(part)
-    }
-  }
-  return styles
-}
-
-
-/***/ }),
-
 /***/ "./node_modules/vue/dist/vue.runtime.esm.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -26345,7 +25093,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var disposed = false
 function injectStyle (context) {
   if (disposed) return
-  __webpack_require__("./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-48e438a8\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/animations/ListItem.vue")
+  __webpack_require__("./node_modules/extract-text-webpack-plugin/dist/loader.js?{\"omit\":1,\"remove\":true}!./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-48e438a8\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/animations/ListItem.vue")
 }
 /* script */
 
@@ -26457,7 +25205,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var disposed = false
 function injectStyle (context) {
   if (disposed) return
-  __webpack_require__("./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-2e07be55\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Blankslate.vue")
+  __webpack_require__("./node_modules/extract-text-webpack-plugin/dist/loader.js?{\"omit\":1,\"remove\":true}!./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-2e07be55\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Blankslate.vue")
 }
 /* script */
 
@@ -26518,7 +25266,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var disposed = false
 function injectStyle (context) {
   if (disposed) return
-  __webpack_require__("./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7468287c\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Btn.vue")
+  __webpack_require__("./node_modules/extract-text-webpack-plugin/dist/loader.js?{\"omit\":1,\"remove\":true}!./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7468287c\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Btn.vue")
 }
 /* script */
 
@@ -26579,7 +25327,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var disposed = false
 function injectStyle (context) {
   if (disposed) return
-  __webpack_require__("./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-c5d95dc0\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Card.vue")
+  __webpack_require__("./node_modules/extract-text-webpack-plugin/dist/loader.js?{\"omit\":1,\"remove\":true}!./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-c5d95dc0\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Card.vue")
 }
 /* script */
 
@@ -26640,7 +25388,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var disposed = false
 function injectStyle (context) {
   if (disposed) return
-  __webpack_require__("./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-02d0375a\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Checkbox.vue")
+  __webpack_require__("./node_modules/extract-text-webpack-plugin/dist/loader.js?{\"omit\":1,\"remove\":true}!./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-02d0375a\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Checkbox.vue")
 }
 /* script */
 
@@ -26701,7 +25449,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var disposed = false
 function injectStyle (context) {
   if (disposed) return
-  __webpack_require__("./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7669635e\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/DeleteBtn.vue")
+  __webpack_require__("./node_modules/extract-text-webpack-plugin/dist/loader.js?{\"omit\":1,\"remove\":true}!./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7669635e\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/DeleteBtn.vue")
 }
 /* script */
 
@@ -26759,7 +25507,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var disposed = false
 function injectStyle (context) {
   if (disposed) return
-  __webpack_require__("./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-ae710410\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/DeleteTooltip.vue")
+  __webpack_require__("./node_modules/extract-text-webpack-plugin/dist/loader.js?{\"omit\":1,\"remove\":true}!./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-ae710410\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/DeleteTooltip.vue")
 }
 /* script */
 var __vue_script__ = null
@@ -26819,7 +25567,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var disposed = false
 function injectStyle (context) {
   if (disposed) return
-  __webpack_require__("./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-d0325b66\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Modal.vue")
+  __webpack_require__("./node_modules/extract-text-webpack-plugin/dist/loader.js?{\"omit\":1,\"remove\":true}!./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-d0325b66\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Modal.vue")
 }
 /* script */
 
@@ -26880,7 +25628,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var disposed = false
 function injectStyle (context) {
   if (disposed) return
-  __webpack_require__("./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-3e27dd44\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Pagebar.vue")
+  __webpack_require__("./node_modules/extract-text-webpack-plugin/dist/loader.js?{\"omit\":1,\"remove\":true}!./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-3e27dd44\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Pagebar.vue")
 }
 /* script */
 
@@ -26941,7 +25689,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var disposed = false
 function injectStyle (context) {
   if (disposed) return
-  __webpack_require__("./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-4684d6ca\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Radio.vue")
+  __webpack_require__("./node_modules/extract-text-webpack-plugin/dist/loader.js?{\"omit\":1,\"remove\":true}!./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-4684d6ca\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Radio.vue")
 }
 /* script */
 
@@ -26999,7 +25747,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var disposed = false
 function injectStyle (context) {
   if (disposed) return
-  __webpack_require__("./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-331d4d58\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/RadioGroup.vue")
+  __webpack_require__("./node_modules/extract-text-webpack-plugin/dist/loader.js?{\"omit\":1,\"remove\":true}!./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-331d4d58\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/RadioGroup.vue")
 }
 /* script */
 var __vue_script__ = null
@@ -27059,7 +25807,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var disposed = false
 function injectStyle (context) {
   if (disposed) return
-  __webpack_require__("./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-1d12b885\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Section.vue")
+  __webpack_require__("./node_modules/extract-text-webpack-plugin/dist/loader.js?{\"omit\":1,\"remove\":true}!./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-1d12b885\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Section.vue")
 }
 /* script */
 
@@ -27120,7 +25868,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var disposed = false
 function injectStyle (context) {
   if (disposed) return
-  __webpack_require__("./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-bfe8ca24\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Table.vue")
+  __webpack_require__("./node_modules/extract-text-webpack-plugin/dist/loader.js?{\"omit\":1,\"remove\":true}!./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-bfe8ca24\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Table.vue")
 }
 /* script */
 
@@ -27181,7 +25929,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var disposed = false
 function injectStyle (context) {
   if (disposed) return
-  __webpack_require__("./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-1e45883c\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/TableCol.vue")
+  __webpack_require__("./node_modules/extract-text-webpack-plugin/dist/loader.js?{\"omit\":1,\"remove\":true}!./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-1e45883c\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/TableCol.vue")
 }
 /* script */
 
@@ -27242,7 +25990,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var disposed = false
 function injectStyle (context) {
   if (disposed) return
-  __webpack_require__("./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-0af5b73c\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/TableRow.vue")
+  __webpack_require__("./node_modules/extract-text-webpack-plugin/dist/loader.js?{\"omit\":1,\"remove\":true}!./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-0af5b73c\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/TableRow.vue")
 }
 /* script */
 
@@ -27303,7 +26051,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var disposed = false
 function injectStyle (context) {
   if (disposed) return
-  __webpack_require__("./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7938db46\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Textinput.vue")
+  __webpack_require__("./node_modules/extract-text-webpack-plugin/dist/loader.js?{\"omit\":1,\"remove\":true}!./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7938db46\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Textinput.vue")
 }
 /* script */
 
@@ -27364,7 +26112,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var disposed = false
 function injectStyle (context) {
   if (disposed) return
-  __webpack_require__("./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-17421fae\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Topbar.vue")
+  __webpack_require__("./node_modules/extract-text-webpack-plugin/dist/loader.js?{\"omit\":1,\"remove\":true}!./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-17421fae\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/Topbar.vue")
 }
 /* script */
 
@@ -27425,7 +26173,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var disposed = false
 function injectStyle (context) {
   if (disposed) return
-  __webpack_require__("./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-33a485a0\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/TrainingInput.vue")
+  __webpack_require__("./node_modules/extract-text-webpack-plugin/dist/loader.js?{\"omit\":1,\"remove\":true}!./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-33a485a0\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/components/TrainingInput.vue")
 }
 /* script */
 
@@ -27486,7 +26234,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var disposed = false
 function injectStyle (context) {
   if (disposed) return
-  __webpack_require__("./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7afb8418\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/layouts/App.vue")
+  __webpack_require__("./node_modules/extract-text-webpack-plugin/dist/loader.js?{\"omit\":1,\"remove\":true}!./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7afb8418\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/layouts/App.vue")
 }
 /* script */
 
@@ -27547,7 +26295,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var disposed = false
 function injectStyle (context) {
   if (disposed) return
-  __webpack_require__("./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-a3d6f992\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/pages/Agent.vue")
+  __webpack_require__("./node_modules/extract-text-webpack-plugin/dist/loader.js?{\"omit\":1,\"remove\":true}!./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-a3d6f992\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/pages/Agent.vue")
 }
 /* script */
 
@@ -27608,7 +26356,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var disposed = false
 function injectStyle (context) {
   if (disposed) return
-  __webpack_require__("./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-182784cc\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/pages/Agents.vue")
+  __webpack_require__("./node_modules/extract-text-webpack-plugin/dist/loader.js?{\"omit\":1,\"remove\":true}!./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-182784cc\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/pages/Agents.vue")
 }
 /* script */
 
@@ -27669,7 +26417,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var disposed = false
 function injectStyle (context) {
   if (disposed) return
-  __webpack_require__("./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-d62b2902\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/pages/Entities.vue")
+  __webpack_require__("./node_modules/extract-text-webpack-plugin/dist/loader.js?{\"omit\":1,\"remove\":true}!./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-d62b2902\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/pages/Entities.vue")
 }
 /* script */
 
@@ -27730,7 +26478,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var disposed = false
 function injectStyle (context) {
   if (disposed) return
-  __webpack_require__("./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-0f86b34c\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/pages/Intent.vue")
+  __webpack_require__("./node_modules/extract-text-webpack-plugin/dist/loader.js?{\"omit\":1,\"remove\":true}!./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-0f86b34c\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/pages/Intent.vue")
 }
 /* script */
 
@@ -27791,7 +26539,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var disposed = false
 function injectStyle (context) {
   if (disposed) return
-  __webpack_require__("./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-ebb0f6fa\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/pages/Skill.vue")
+  __webpack_require__("./node_modules/extract-text-webpack-plugin/dist/loader.js?{\"omit\":1,\"remove\":true}!./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-ebb0f6fa\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/pages/Skill.vue")
 }
 /* script */
 
@@ -27852,7 +26600,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var disposed = false
 function injectStyle (context) {
   if (disposed) return
-  __webpack_require__("./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-8316a600\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/pages/Skills.vue")
+  __webpack_require__("./node_modules/extract-text-webpack-plugin/dist/loader.js?{\"omit\":1,\"remove\":true}!./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-8316a600\",\"scoped\":false,\"sourceMap\":false}!./node_modules/sass-loader/lib/loader.js!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./src/pages/Skills.vue")
 }
 /* script */
 
