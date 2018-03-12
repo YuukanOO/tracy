@@ -5,4 +5,5 @@ TODO
 - [ ] Cover Rasa Core stuff
 - [ ] Some minor refactoring
 - [ ] Import / Export of skills and/or agents
+- [ ] Support for snips-nlu
 - [ ] Production build
