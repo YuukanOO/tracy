@@ -14,6 +14,14 @@
       </modal>
     </form>
 
+    <form>
+      <modal title="Import samples" v-model="importModal">
+        <textinput label="Data" rows="10" help="Separated by newlines" multiple v-model="importSamples" />
+
+        <btn submit slot="actions" @click.prevent="createSamples">Import</btn>
+      </modal>
+    </form>
+
     <c-section title="Slots">
       <btn inverse slot="actions" @click.prevent="createSlot">Add a slot</btn>
       <c-table class="intent__table">
@@ -41,6 +49,7 @@
     </c-section>
 
     <c-section title="Training data">
+      <btn inverse slot="actions" @click.prevent="openSamples">Import samples</btn>
       <btn inverse slot="actions" @click.prevent="createSample">Add a sample</btn>
       <c-table>
         <list-item tag="tbody">
@@ -94,6 +103,8 @@ export default {
   data() {
     return {
       intentModal: false,
+      importModal: false,
+      importSamples: "",
       data: {},
       ids: {
         skillID: this.$route.params.skillID,
@@ -119,6 +130,10 @@ export default {
     edit() {
       this.data = { ...this.intent };
       this.intentModal = true;
+    },
+    openSamples() {
+      this.importSamples = "";
+      this.importModal = true;
     },
     async setSlotEntity(id, entity) {
       await this.$store.dispatch(actions.upsertSlot.name, {
@@ -156,6 +171,13 @@ export default {
         id,
         ...this.ids,
       });
+    },
+    async createSamples() {
+      await this.$store.dispatch(actions.importSamples.name, {
+        ...this.ids,
+        data: this.importSamples.split('\n').map(o => o.trim()).filter(o => o !== ''),
+      });
+      this.importModal = false;
     },
     async createSample() {
       await this.$store.dispatch(actions.upsertSample.name, this.ids);

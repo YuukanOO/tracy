@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "3b5da82dc095a96c906c"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "24761f82801d4eec6c6b"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -1295,7 +1295,7 @@ exports.default = {
   name: 'Topbar',
   data: function data() {
     return {
-      version: "1.0.3"
+      version: "1.0.4"
     };
   }
 };
@@ -2239,6 +2239,15 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 var _agents = __webpack_require__("./src/store/agents.js");
 
@@ -2303,6 +2312,8 @@ exports.default = {
   data: function data() {
     return {
       intentModal: false,
+      importModal: false,
+      importSamples: "",
       data: {},
       ids: {
         skillID: this.$route.params.skillID,
@@ -2329,6 +2340,10 @@ exports.default = {
     edit: function edit() {
       this.data = _extends({}, this.intent);
       this.intentModal = true;
+    },
+    openSamples: function openSamples() {
+      this.importSamples = "";
+      this.importModal = true;
     },
     setSlotEntity: function setSlotEntity(id, entity) {
       var _this = this;
@@ -2458,7 +2473,7 @@ exports.default = {
         }, _callee6, _this6);
       }))();
     },
-    createSample: function createSample() {
+    createSamples: function createSamples() {
       var _this7 = this;
 
       return _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee7() {
@@ -2467,7 +2482,35 @@ exports.default = {
             switch (_context7.prev = _context7.next) {
               case 0:
                 _context7.next = 2;
-                return _this7.$store.dispatch(_agents.actions.upsertSample.name, _this7.ids);
+                return _this7.$store.dispatch(_agents.actions.importSamples.name, _extends({}, _this7.ids, {
+                  data: _this7.importSamples.split('\n').map(function (o) {
+                    return o.trim();
+                  }).filter(function (o) {
+                    return o !== '';
+                  })
+                }));
+
+              case 2:
+                _this7.importModal = false;
+
+              case 3:
+              case 'end':
+                return _context7.stop();
+            }
+          }
+        }, _callee7, _this7);
+      }))();
+    },
+    createSample: function createSample() {
+      var _this8 = this;
+
+      return _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee8() {
+        return regeneratorRuntime.wrap(function _callee8$(_context8) {
+          while (1) {
+            switch (_context8.prev = _context8.next) {
+              case 0:
+                _context8.next = 2;
+                return _this8.$store.dispatch(_agents.actions.upsertSample.name, _this8.ids);
 
               case 2:
 
@@ -2478,34 +2521,13 @@ exports.default = {
 
               case 3:
               case 'end':
-                return _context7.stop();
-            }
-          }
-        }, _callee7, _this7);
-      }))();
-    },
-    removeSample: function removeSample(id) {
-      var _this8 = this;
-
-      return _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee8() {
-        return regeneratorRuntime.wrap(function _callee8$(_context8) {
-          while (1) {
-            switch (_context8.prev = _context8.next) {
-              case 0:
-                _context8.next = 2;
-                return _this8.$store.dispatch(_agents.actions.removeSample.name, _extends({
-                  id: id
-                }, _this8.ids));
-
-              case 2:
-              case 'end':
                 return _context8.stop();
             }
           }
         }, _callee8, _this8);
       }))();
     },
-    save: function save() {
+    removeSample: function removeSample(id) {
       var _this9 = this;
 
       return _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee9() {
@@ -2514,21 +2536,11 @@ exports.default = {
             switch (_context9.prev = _context9.next) {
               case 0:
                 _context9.next = 2;
-                return _this9.$validator.validateAll('intent');
+                return _this9.$store.dispatch(_agents.actions.removeSample.name, _extends({
+                  id: id
+                }, _this9.ids));
 
               case 2:
-                if (!_context9.sent) {
-                  _context9.next = 6;
-                  break;
-                }
-
-                _context9.next = 5;
-                return _this9.$store.dispatch(_agents.actions.upsertIntent.name, _this9.data);
-
-              case 5:
-                _this9.intentModal = false;
-
-              case 6:
               case 'end':
                 return _context9.stop();
             }
@@ -2536,7 +2548,7 @@ exports.default = {
         }, _callee9, _this9);
       }))();
     },
-    remove: function remove() {
+    save: function save() {
       var _this10 = this;
 
       return _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee10() {
@@ -2545,17 +2557,48 @@ exports.default = {
             switch (_context10.prev = _context10.next) {
               case 0:
                 _context10.next = 2;
-                return _this10.$store.dispatch(_agents.actions.removeIntent.name, _this10.data);
+                return _this10.$validator.validateAll('intent');
 
               case 2:
-                _this10.$router.push({ name: 'skill', params: { id: _this10.$route.params.skillID } });
+                if (!_context10.sent) {
+                  _context10.next = 6;
+                  break;
+                }
 
-              case 3:
+                _context10.next = 5;
+                return _this10.$store.dispatch(_agents.actions.upsertIntent.name, _this10.data);
+
+              case 5:
+                _this10.intentModal = false;
+
+              case 6:
               case 'end':
                 return _context10.stop();
             }
           }
         }, _callee10, _this10);
+      }))();
+    },
+    remove: function remove() {
+      var _this11 = this;
+
+      return _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee11() {
+        return regeneratorRuntime.wrap(function _callee11$(_context11) {
+          while (1) {
+            switch (_context11.prev = _context11.next) {
+              case 0:
+                _context11.next = 2;
+                return _this11.$store.dispatch(_agents.actions.removeIntent.name, _this11.data);
+
+              case 2:
+                _this11.$router.push({ name: 'skill', params: { id: _this11.$route.params.skillID } });
+
+              case 3:
+              case 'end':
+                return _context11.stop();
+            }
+          }
+        }, _callee11, _this11);
       }))();
     }
   }
@@ -11153,6 +11196,59 @@ var render = function() {
       ),
       _vm._v(" "),
       _c(
+        "form",
+        [
+          _c(
+            "modal",
+            {
+              attrs: { title: "Import samples" },
+              model: {
+                value: _vm.importModal,
+                callback: function($$v) {
+                  _vm.importModal = $$v
+                },
+                expression: "importModal"
+              }
+            },
+            [
+              _c("textinput", {
+                attrs: {
+                  label: "Data",
+                  rows: "10",
+                  help: "Separated by newlines",
+                  multiple: ""
+                },
+                model: {
+                  value: _vm.importSamples,
+                  callback: function($$v) {
+                    _vm.importSamples = $$v
+                  },
+                  expression: "importSamples"
+                }
+              }),
+              _vm._v(" "),
+              _c(
+                "btn",
+                {
+                  attrs: { slot: "actions", submit: "" },
+                  on: {
+                    click: function($event) {
+                      $event.preventDefault()
+                      _vm.createSamples($event)
+                    }
+                  },
+                  slot: "actions"
+                },
+                [_vm._v("Import")]
+              )
+            ],
+            1
+          )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
         "c-section",
         { attrs: { title: "Slots" } },
         [
@@ -11278,6 +11374,21 @@ var render = function() {
         "c-section",
         { attrs: { title: "Training data" } },
         [
+          _c(
+            "btn",
+            {
+              attrs: { slot: "actions", inverse: "" },
+              on: {
+                click: function($event) {
+                  $event.preventDefault()
+                  _vm.openSamples($event)
+                }
+              },
+              slot: "actions"
+            },
+            [_vm._v("Import samples")]
+          ),
+          _vm._v(" "),
           _c(
             "btn",
             {
@@ -27135,7 +27246,8 @@ var mutations = {
   },
   addSample: function addSample(state, _ref14) {
     var skillID = _ref14.skillID,
-        intentID = _ref14.intentID;
+        intentID = _ref14.intentID,
+        text = _ref14.text;
 
     var intent = getters.intent(state)(skillID)(intentID);
 
@@ -27144,7 +27256,7 @@ var mutations = {
 
       intent.training.push({
         id: id,
-        text: '',
+        text: text !== undefined ? text : '',
         slots: []
       });
     }
@@ -27294,8 +27406,22 @@ var actions = exports.actions = {
 
     commit(mutations.deleteSample.name, ids);
   },
-  trainAgent: function trainAgent(_ref30, id) {
-    var state = _ref30.state;
+  importSamples: function importSamples(_ref30, _ref31) {
+    var commit = _ref30.commit;
+    var data = _ref31.data,
+        skillID = _ref31.skillID,
+        intentID = _ref31.intentID;
+
+    data.forEach(function (text) {
+      commit(mutations.addSample.name, {
+        skillID: skillID,
+        intentID: intentID,
+        text: text
+      });
+    });
+  },
+  trainAgent: function trainAgent(_ref32, id) {
+    var state = _ref32.state;
 
     var result = {
       rasa_nlu_data: {

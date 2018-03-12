@@ -39,6 +39,10 @@ export default {
     padding: baseline(0.5) baseline();
   }
 
+  &__actions {
+    @include row();
+  }
+
   &__title {
     @include type(body);
     color: color(text-inverse, 0);

@@ -247,7 +247,7 @@ const mutations = {
       slot.entity = entity !== undefined ? entity : slot.entity;
     }
   },
-  addSample(state, { skillID, intentID }) {
+  addSample(state, { skillID, intentID, text }) {
     const intent = getters.intent(state)(skillID)(intentID);
 
     if (intent) {
@@ -255,7 +255,7 @@ const mutations = {
 
       intent.training.push({
         id,
-        text: '',
+        text: text !== undefined ? text : '',
         slots: [],
       });
     }
@@ -366,6 +366,15 @@ export const actions = {
   },
   removeSample({ commit }, ids) {
     commit(mutations.deleteSample.name, ids);
+  },
+  importSamples({ commit }, { data, skillID, intentID }) {
+    data.forEach((text) => {
+      commit(mutations.addSample.name, {
+        skillID,
+        intentID,
+        text,
+      });
+    });
   },
   trainAgent({ state }, id) {
     const result = {

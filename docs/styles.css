@@ -918,6 +918,13 @@
     border-bottom: 1px solid #b423ff;
     padding: 0.75rem 1.5rem;
 }
+.section__actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
 .section__title {
     font-size: 1rem;
     line-height: 1.5;
