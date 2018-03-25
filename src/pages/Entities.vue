@@ -13,7 +13,7 @@
         class="entities__item" 
         :title="entity.name" 
       >
-        {{entity.type}}
+        {{entity.builtin ? 'built-in' : entity.type}}
       </card>
     </list-item>
 
@@ -24,12 +24,14 @@
     <form>
       <modal v-model="entityModal" :title="`${entity.id ? 'Update' : 'Create'} an entity`">
         <textinput v-validate="'required'" label="Name" v-model="entity.name" name="name" data-vv-scope="entity" :err="errors.collect('name', 'entity')" />
-        <radio-group>
+        <checkbox v-model="entity.builtin" label="Built-in entity" />
+        <radio-group v-if="is('rasa') && !entity.builtin">
           <radio label="Values" value="values" v-model="entity.type" />
           <radio label="Regex" value="regex" v-model="entity.type" />
         </radio-group>
-        <textinput label="Entity values" multiple v-model="entity.content" v-if="entity.type === 'values'" help="One value per line, synonyms separated by a comma, ie: New York, NYC, NY" />
-        <textinput label="Regex value" v-model="entity.content" v-if="entity.type === 'regex'" />
+        <checkbox v-if="is('snips') && !entity.builtin" v-model="entity.extensible" label="Auto-extensible" />
+        <textinput label="Entity values" multiple v-model="entity.content" v-if="entity.type === 'values' && !entity.builtin" help="One value per line, synonyms separated by a comma, ie: New York, NYC, NY" />
+        <textinput label="Regex value" v-model="entity.content" v-if="entity.type === 'regex' && !entity.builtin" />
 
         <btn slot="actions" v-if="entity.id" @click.prevent="remove" danger>Delete</btn>
         <btn slot="actions" submit @click.prevent="save">Save</btn>
@@ -44,6 +46,7 @@ import { mapGetters } from 'vuex';
 import ListItem from './../animations/ListItem.vue';
 
 import Card from './../components/Card.vue';
+import Checkbox from './../components/Checkbox.vue';
 import Textinput from './../components/Textinput.vue';
 import Radio from './../components/Radio.vue';
 import RadioGroup from './../components/RadioGroup.vue';
@@ -56,7 +59,12 @@ import { actions } from './../store/agents';
 
 export default {
   name: 'Entities',
-  components: { Pagebar, Btn, Blankslate, Modal, Textinput, Radio, Card, ListItem, RadioGroup },
+  components: { 
+    Pagebar, Btn, Blankslate, 
+    Modal, Textinput, Radio, 
+    Card, ListItem, RadioGroup,
+    Checkbox,
+  },
   data() {
     return {
       entityModal: false,
@@ -64,7 +72,7 @@ export default {
     };
   },
   computed: {
-    ...mapGetters(['entities']),
+    ...mapGetters(['entities', 'is']),
   },
   methods: {
     async save() {
@@ -82,7 +90,7 @@ export default {
       this.entityModal = true;
     },
     create() {
-      this.entity = { name: '', type: 'values', content: '' };
+      this.entity = { name: '', type: 'values', content: '', extensible: true, builtin: false };
       this.entityModal = true;
     },
   },

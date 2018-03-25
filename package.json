@@ -1,6 +1,6 @@
 {
   "name": "tracy",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "description": "Tiny interface to generate stuff for rasa",
   "main": "index.js",
   "scripts": {
@@ -36,7 +36,6 @@
     "webpack-dev-server": "^2.11.1"
   },
   "dependencies": {
-    "slugify": "^1.2.9",
     "vee-validate": "^2.0.5",
     "vue": "^2.5.13",
     "vue-router": "^3.0.1",

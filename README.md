@@ -1,7 +1,7 @@
 tracy
 ===
 
-A simple and easy to use trainer to generate Rasa needed files.
+A simple and easy to use trainer to generate **Rasa NLU** and **Snips NLU** needed files.
 
 Inspired by [Chatito](https://rodrigopivi.github.io/Chatito/) and [Rasa NLU Trainer](https://rasahq.github.io/rasa-nlu-trainer/).
 
@@ -9,7 +9,7 @@ Inspired by [Chatito](https://rodrigopivi.github.io/Chatito/) and [Rasa NLU Trai
 
 ## How does that work?
 
-Start a project with an **agent**. Create **skills** with multiple **intents** and affect them to your agent. Use **entities** to ease the training process by multiplying your training data sets. That's not magic, it just use intent slots to check if entity values should be used and generates every possible permutations.
+Start a project with an **agent**. Create **skills** with multiple **intents** and affect them to your agent. Use **entities** to ease the training process by multiplying your training data sets. That's not magic, it just use intent slots to check if entity values should be used and generates every possible permutations (for Rasa at least).
 
 Data are persisted via LocalStorage.
 

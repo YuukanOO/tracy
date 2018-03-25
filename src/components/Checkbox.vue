@@ -1,6 +1,7 @@
 <template>
-  <div :class="{ 'checkbox': true, 'checkbox--checked': value }">
-    <input type="checkbox" class="checkbox__input" :checked="value" @change="$emit('change', !value)" />
+  <div :class="{ 'checkbox': true, 'checkbox--checked': value }" @click="$emit('input', !value)">
+    <input type="checkbox" class="checkbox__input" :checked="value" @change="$emit('input', !value)" />
+    <label v-if="label" class="checkbox__label">{{label}}</label>
   </div>
 </template>
 
@@ -8,6 +9,7 @@
 export default {
   name: 'Checkbox',
   props: {
+    label: String,
     value: {},
   },
 }
@@ -17,7 +19,14 @@ export default {
 @import "./../_vars.scss";
 
 .checkbox {
-  &::after {
+  cursor: pointer;
+  padding-left: baseline(0.5);
+
+  & + * {
+    margin-top: baseline();
+  }
+
+  &::before {
     content: '';
     border: 1px solid color(brand);
     border-radius: 5px;
@@ -29,15 +38,21 @@ export default {
   }
 
   &--checked {
-    &::after {
+    &::before {
       background-color: color(brand);
       transform: rotate(90deg);
     }
+  }
 
+  &__label {
+    @include type(small);
+    cursor: pointer;
+    font-weight: bold;
+    padding-left: baseline(0.5);
   }
 
   &__input {
-    visibility: hidden;
+    display: none;
   }
 }
 </style>

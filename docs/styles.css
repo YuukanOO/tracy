@@ -838,22 +838,36 @@
  * A tiny SCSS Toolkit to ease your workflow!
  * https://github.com/YuukanOO/dropee
  */
-.checkbox::after {
-  content: '';
-  border: 1px solid #7C00BC;
-  border-radius: 5px;
-  color: black;
-  display: inline-block;
-  height: 16px;
-  width: 16px;
-  transition: all 0.2s;
+.checkbox {
+  cursor: pointer;
+  padding-left: 0.75rem;
 }
-.checkbox--checked::after {
-  background-color: #7C00BC;
-  transform: rotate(90deg);
+.checkbox + * {
+    margin-top: 1.5rem;
+}
+.checkbox::before {
+    content: '';
+    border: 1px solid #7C00BC;
+    border-radius: 5px;
+    color: black;
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    transition: all 0.2s;
+}
+.checkbox--checked::before {
+    background-color: #7C00BC;
+    transform: rotate(90deg);
+}
+.checkbox__label {
+    font-size: 0.889rem;
+    line-height: 1.68729;
+    cursor: pointer;
+    font-weight: bold;
+    padding-left: 0.75rem;
 }
 .checkbox__input {
-  visibility: hidden;
+    display: none;
 }
 /**
  *     __                               
@@ -1908,6 +1922,26 @@ body {
         padding: 0;
 }
 }
+.topbar__wrapper > * {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: wrap;
+}
+.topbar__mode {
+    font-size: 0.889rem;
+    line-height: 1.68729;
+    color: white;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.topbar__mode-label {
+    font-size: 0.889rem;
+    line-height: 1.68729;
+    color: rgba(255, 255, 255, 0.54);
+    margin-left: 0.75rem;
+}
 .topbar__version {
     font-size: 0.702rem;
     line-height: 2.13675;
@@ -1927,4 +1961,82 @@ body {
 }
 .topbar__link:hover, .topbar__link:focus {
       color: #e6e6e6;
+}
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__| -- typography         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__|       -- grid         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__| -- responsive         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+/**
+ *     __                               
+ * .--|  |.----.-----.-----.-----.-----.
+ * |  _  ||   _|  _  |  _  |  -__|  -__|
+ * |_____||__| |_____|   __|_____|_____|
+ *                   |__|      -- color         
+ *
+ * v1.0.2
+ *
+ * A tiny SCSS Toolkit to ease your workflow!
+ * https://github.com/YuukanOO/dropee
+ */
+.dropdown {
+  cursor: pointer;
+  padding: 0.75rem;
+  position: relative;
+}
+.dropdown:hover .dropdown__values, .dropdown:focus .dropdown__values {
+    visibility: visible;
+}
+.dropdown__values {
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 0 0 5px #5a0089;
+    position: absolute;
+    transition: all 0.2s;
+    visibility: hidden;
+    text-align: center;
+    min-width: 100px;
+}
+.dropdown__value {
+    color: rgba(0, 0, 0, 0.87);
+    padding: 0.75rem;
+    transition: all 0.2s;
+}
+.dropdown__value + .dropdown__value {
+      border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+.dropdown__value--selected {
+      color: #7C00BC;
+      font-weight: bold;
 }
