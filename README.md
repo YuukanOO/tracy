@@ -9,11 +9,15 @@ Inspired by [Chatito](https://rodrigopivi.github.io/Chatito/) and [Rasa NLU Trai
 
 ## How does that work?
 
-Start a project with an **agent**. Create **skills** with multiple **intents** and affect them to your agent. Use **entities** to ease the training process by multiplying your training data sets. That's not magic, it just use intent slots to check if entity values should be used and generates every possible permutations (for Rasa at least).
+An **agent** represents a project (bot, assistant, whatever).
 
-Data are persisted via LocalStorage.
+A **skill** represents what your agent can do. To define its capabilities, you must create **intents** within a skill to keep it logically organized (or you can put all your intents in one skill if you wish).
 
-*TODO: more documentation on how it works...*
+An **intent** is made of **slots** and **samples**. **Slots** defines what could be extracted from your **samples**. A **slot** could be of a particular **entity** type. This way, you can easily shared common stuff such as locations, enums or so.
+
+Once you have define some **skills**, you can attached them to your **agent** and click the **Train** button to export the resulting dataset.
+
+Data are persisted via LocalStorage as of now.
 
 ## Development
 
