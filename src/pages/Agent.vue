@@ -25,7 +25,13 @@
     </c-section>
 
     <modal title="Train data" v-model="trainModal">
-      <textinput label="JSON" ref="trainInput" v-model="trainData" multiple rows="15" />
+      <textinput
+        v-if="is('snips')"
+        label="Language code" 
+        :value="lang"
+        @input="updateLang($event)"
+      />
+      <textinput label="JSON" ref="trainInput" :value="trainedData" multiple rows="15" />
       <btn slot="actions" @click.prevent="copyTrainData">{{copyMsg}}</btn>
     </modal>
 
@@ -64,6 +70,7 @@
 </template>
 
 <script>
+import { mapGetters, mapActions } from 'vuex';
 import { actions } from './../store/agents';
 
 import ListItem from './../animations/ListItem.vue';
@@ -97,6 +104,7 @@ export default {
     };
   },
   computed: {
+    ...mapGetters(['lang', 'is']),
     agent() {
       return this.$store.getters.agent(this.$route.params.id);
     },
@@ -106,10 +114,20 @@ export default {
     skills() {
       return this.$store.getters.skills;
     },
+    trainedData() {
+      const data = { ...this.trainData };
+
+      if (this.is('snips')) {
+        data.language = this.lang;
+      }
+
+      return JSON.stringify(data, null, 2);
+    },
   },
   methods: {
+    ...mapActions(['updateLang']),
     async train() {
-      this.trainData = JSON.stringify(await this.$store.dispatch(actions.trainAgent.name, this.agent.id), null, 2);
+      this.trainData = await this.$store.dispatch(actions.trainAgent.name, this.agent.id);
       this.trainModal = true;
     },
     copyTrainData() {

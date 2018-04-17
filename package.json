@@ -1,6 +1,6 @@
 {
   "name": "tracy",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Tiny interface to generate stuff for rasa",
   "main": "index.js",
   "scripts": {
