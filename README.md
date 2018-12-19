@@ -5,6 +5,8 @@ A simple and easy to use trainer to generate **Rasa NLU** and **Snips NLU** need
 
 Inspired by [Chatito](https://rodrigopivi.github.io/Chatito/) and [Rasa NLU Trainer](https://rasahq.github.io/rasa-nlu-trainer/).
 
+*Want to create your own personal assistant? Check my other project [pytlas](https://github.com/atlassistant/pytlas)!*
+
 ![Screenshot](docs/intent.png)
 
 ## How does that work?
