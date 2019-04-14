@@ -67,12 +67,22 @@ export default {
       let currentSlot = null;
 
       // TODO: dynamic construction of vuejs components
+      function closeCurrentEntity() {
+        text += '</span>';
+        currentEntity = null;
+        currentSlot = null;
+      }
 
     	for (let i = 0; i < this.text.length; ++i) {
         const entityIdx = this.entities.findIndex(o => o.start === i);
         const entity = this.entities[entityIdx];
 
         if (entity) {
+          // Different entity, don't forget to close the previous one
+          if (entity !== currentEntity) {
+            closeCurrentEntity();
+          }
+
           currentSlot = this.slots[entity.slot];
         	text += `<span class="training-input__slot" data-index="${entityIdx}" style="background-color: ${currentSlot.color}">`;
           
@@ -80,10 +90,7 @@ export default {
         }
         
         if (currentEntity && currentEntity.end === i) {
-          // text += `<span class="training-input__slot-name">${currentSlot.name}</span></span>`;
-          text += '</span>';
-          currentEntity = null;
-          currentSlot = null;
+          closeCurrentEntity();
         }
         
         text += this.text[i];
